@@ -1,0 +1,10 @@
+@calc
+
+1π add ⟨a:i b:i⟩→i = a+b
+1π divide ⟨a:i b:i⟩→f
+  pre b≠0
+  body a/b
+1π multiply ⟨a:i b:i⟩→i = a*b
+1π subtract ⟨a:i b:i⟩→i = a-b
+
+4ι main ⟨⟩→_ = (parser=argparse.ArgumentParser(description="A simple calculator CLI.") ; subparsers=parser.add_subparsers(dest="operation",required=true,help="Operation to perform") ; add_parser=subparsers.add_parser("add",help="Add two numbers") ; add_parser.add_argument("a",type=int,help="First number") ; add_parser.add_argument("b",type=int,help="Second number") ; add_parser.set_defaults(func=args↦print(add(args.a,args.b))) ; subtract_parser=subparsers.add_parser("subtract",help="Subtract two numbers") ; subtract_parser.add_argument("a",type=int,help="First number") ; subtract_parser.add_argument("b",type=int,help="Second number") ; subtract_parser.set_defaults(func=args↦print(subtract(args.a,args.b))) ; multiply_parser=subparsers.add_parser("multiply",help="Multiply two numbers") ; multiply_parser.add_argument("a",type=int,help="First number") ; multiply_parser.add_argument("b",type=int,help="Second number") ; multiply_parser.set_defaults(func=args↦print(multiply(args.a,args.b))) ; divide_parser=subparsers.add_parser("divide",help="Divide two numbers") ; divide_parser.add_argument("a",type=int,help="First number") ; divide_parser.add_argument("b",type=int,help="Second number") ; divide_parser.set_defaults(func=args↦print(divide(args.a,args.b))) ; args=parser.parse_args() ; (args.func(args)) catch ValueError(e) ⇒ (print(s"Error: ⟦e⟧") ; parser.exit(1) ; ∅) ; ∅)

@@ -1,0 +1,21 @@
+# Python bytecode and test/lint caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Packaging/build outputs
+build/
+dist/
+*.egg-info/
+.forge-auto-preview/
+.forge-evolve-preview/
+.atomadic-forge/
+
+# Local virtual environments
+.venv/
+venv/
+
+# Tokenizer artifacts (regenerated)
+tokenizer_*.json
+tools/.merge_audit_baseline.json

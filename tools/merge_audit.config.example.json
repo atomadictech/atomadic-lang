@@ -1,0 +1,17 @@
+{
+  "_comment": "Example merge_audit config — copy and customise. Each source.path must point at a tier-organised Python package root (the directory that contains aN_* subdirectories). The 'prefix' is prepended to each source file when copied into the merged tree to avoid name collisions.",
+  "sources": [
+    {"prefix": "frg",  "path": "C:\\!!AtomadicStandard\\atomadic-forge\\src\\atomadic_forge"},
+    {"prefix": "dlx",  "path": "C:\\!!AtomadicStandard\\atomadic-forge-deluxe\\src\\atomadic_forge_deluxe"},
+    {"prefix": "seed", "path": "C:\\!!AtomadicStandard\\forge-deluxe-seed\\src\\forge_deluxe_seed"},
+    {"prefix": "lng",  "path": "C:\\!!AtomadicStandard\\atomadic-lang\\src\\atomadic_lang"}
+  ],
+  "merged_package_name": "atomadic_omega",
+  "tier_dirs": [
+    "a0_qk_constants",
+    "a1_at_functions",
+    "a2_mo_composites",
+    "a3_og_features",
+    "a4_sy_orchestration"
+  ]
+}

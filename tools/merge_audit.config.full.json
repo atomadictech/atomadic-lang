@@ -1,0 +1,18 @@
+{
+  "_comment": "Full-portfolio config for max-stress runs. Includes ASS-ADE-SEED (deprecated but high-volume — useful for forge stress testing).",
+  "sources": [
+    {"prefix": "frg",  "path": "C:\\!!AtomadicStandard\\atomadic-forge\\src\\atomadic_forge"},
+    {"prefix": "dlx",  "path": "C:\\!!AtomadicStandard\\atomadic-forge-deluxe\\src\\atomadic_forge_deluxe"},
+    {"prefix": "seed", "path": "C:\\!!AtomadicStandard\\forge-deluxe-seed\\src\\forge_deluxe_seed"},
+    {"prefix": "ase",  "path": "C:\\!aaaa-nexus\\ASS-ADE-SEED\\src\\ass_ade"},
+    {"prefix": "lng",  "path": "C:\\!!AtomadicStandard\\atomadic-lang\\src\\atomadic_lang"}
+  ],
+  "merged_package_name": "atomadic_omega",
+  "tier_dirs": [
+    "a0_qk_constants",
+    "a1_at_functions",
+    "a2_mo_composites",
+    "a3_og_features",
+    "a4_sy_orchestration"
+  ]
+}

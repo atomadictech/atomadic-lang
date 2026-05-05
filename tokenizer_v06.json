@@ -1,0 +1,10485 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[BOS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[EOS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "[STRUCTURAL_OPEN]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "[STRUCTURAL_CLOSE]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "[UNK]",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[BOS]": 2,
+      "[EOS]": 3,
+      "[MASK]": 4,
+      "[STRUCTURAL_OPEN]": 5,
+      "[STRUCTURAL_CLOSE]": 6,
+      "!": 7,
+      "\"": 8,
+      "#": 9,
+      "$": 10,
+      "'": 11,
+      "(": 12,
+      ")": 13,
+      "*": 14,
+      "+": 15,
+      ",": 16,
+      "-": 17,
+      ".": 18,
+      "/": 19,
+      "0": 20,
+      "1": 21,
+      "2": 22,
+      "3": 23,
+      "4": 24,
+      "5": 25,
+      "6": 26,
+      "7": 27,
+      "8": 28,
+      "9": 29,
+      ":": 30,
+      ";": 31,
+      "=": 32,
+      ">": 33,
+      "?": 34,
+      "@": 35,
+      "A": 36,
+      "B": 37,
+      "C": 38,
+      "D": 39,
+      "E": 40,
+      "F": 41,
+      "G": 42,
+      "H": 43,
+      "I": 44,
+      "J": 45,
+      "K": 46,
+      "L": 47,
+      "M": 48,
+      "N": 49,
+      "O": 50,
+      "P": 51,
+      "R": 52,
+      "S": 53,
+      "T": 54,
+      "U": 55,
+      "V": 56,
+      "W": 57,
+      "X": 58,
+      "Y": 59,
+      "Z": 60,
+      "[": 61,
+      "\\": 62,
+      "]": 63,
+      "^": 64,
+      "_": 65,
+      "`": 66,
+      "a": 67,
+      "b": 68,
+      "c": 69,
+      "d": 70,
+      "e": 71,
+      "f": 72,
+      "g": 73,
+      "h": 74,
+      "i": 75,
+      "j": 76,
+      "k": 77,
+      "l": 78,
+      "m": 79,
+      "n": 80,
+      "o": 81,
+      "p": 82,
+      "q": 83,
+      "r": 84,
+      "s": 85,
+      "t": 86,
+      "u": 87,
+      "v": 88,
+      "w": 89,
+      "x": 90,
+      "y": 91,
+      "z": 92,
+      "{": 93,
+      "|": 94,
+      "}": 95,
+      "~": 96,
+      "¬": 97,
+      "ι": 98,
+      "λ": 99,
+      "π": 100,
+      "σ": 101,
+      "ω": 102,
+      "—": 103,
+      "→": 104,
+      "∅": 105,
+      "∈": 106,
+      "∉": 107,
+      "∧": 108,
+      "∨": 109,
+      "≟": 110,
+      "≠": 111,
+      "≤": 112,
+      "≥": 113,
+      "▷": 114,
+      "✓": 115,
+      "⟨": 116,
+      "⟩": 117,
+      "⟪": 118,
+      "⟫": 119,
+      "er": 120,
+      ",\"": 121,
+      "on": 122,
+      "re": 123,
+      "in": 124,
+      "',": 125,
+      "\",\"": 126,
+      "or": 127,
+      "at": 128,
+      "st": 129,
+      "ar": 130,
+      "ro": 131,
+      "ge": 132,
+      "'.": 133,
+      "se": 134,
+      "':": 135,
+      "en": 136,
+      "al": 137,
+      "co": 138,
+      "ch": 139,
+      "ma": 140,
+      "su": 141,
+      "ut": 142,
+      "de": 143,
+      "pro": 144,
+      "con": 145,
+      "du": 146,
+      "ct": 147,
+      "nd": 148,
+      "it": 149,
+      "er_": 150,
+      "str": 151,
+      "rc": 152,
+      "di": 153,
+      "ion": 154,
+      "for": 155,
+      "produ": 156,
+      "produc": 157,
+      "es": 158,
+      "if": 159,
+      "⟩→": 160,
+      "yp": 161,
+      "ed": 162,
+      "un": 163,
+      "ard": 164,
+      "ip": 165,
+      "mp": 166,
+      "pa": 167,
+      "typ": 168,
+      "ex": 169,
+      "che": 170,
+      "card": 171,
+      "sum": 172,
+      "consum": 173,
+      "\"\"": 174,
+      ")\",\"": 175,
+      "1π": 176,
+      "js": 177,
+      "--": 178,
+      "']": 179,
+      "['": 180,
+      "no": 181,
+      ",⟪": 182,
+      "as": 183,
+      "age": 184,
+      "lo": 185,
+      "ts": 186,
+      "an": 187,
+      "ck": 188,
+      "sy": 189,
+      "one": 190,
+      "gs": 191,
+      "id": 192,
+      "le": 193,
+      "oma": 194,
+      "producer": 195,
+      "()": 196,
+      "None": 197,
+      "li": 198,
+      "mo": 199,
+      "typer": 200,
+      "d_": 201,
+      "consumer": 202,
+      "is": 203,
+      "me": 204,
+      "th": 205,
+      "dic": 206,
+      "fro": 207,
+      "src": 208,
+      "ure": 209,
+      "ent": 210,
+      "ckage": 211,
+      "ca": 212,
+      "fi": 213,
+      "ha": 214,
+      "out": 215,
+      "set": 216,
+      "forge": 217,
+      "package": 218,
+      "\")": 219,
+      "``": 220,
+      "ate": 221,
+      "json": 222,
+      "omadic": 223,
+      "ur": 224,
+      "}⟫": 225,
+      "⟪{": 226,
+      "⟫,\"": 227,
+      "args": 228,
+      "(\"": 229,
+      "_co": 230,
+      "cr": 231,
+      "run": 232,
+      "ti": 233,
+      "ation": 234,
+      "ipt": 235,
+      "cript": 236,
+      "te": 237,
+      "rend": 238,
+      "atomadic": 239,
+      ").": 240,
+      "**": 241,
+      "TS": 242,
+      "ad": 243,
+      "act": 244,
+      "py": 245,
+      "tif": 246,
+      "''": 247,
+      ":\",\"": 248,
+      "='": 249,
+      "[[": 250,
+      "]]": 251,
+      "bo": 252,
+      "ra": 253,
+      "artif": 254,
+      "code": 255,
+      "er_args": 256,
+      "']!": 257,
+      "render_": 258,
+      "artifact": 259,
+      "ON": 260,
+      "_o": 261,
+      "cli": 262,
+      "la": 263,
+      "lt": 264,
+      "ru": 265,
+      "ath": 266,
+      "get": 267,
+      "\",⟪": 268,
+      "EX": 269,
+      "FI": 270,
+      "T_": 271,
+      "ce": 272,
+      "mma": 273,
+      "oc": 274,
+      "pre": 275,
+      "ory": 276,
+      "orche": 277,
+      "sub": 278,
+      "mmand": 279,
+      "orchestr": 280,
+      "Tru": 281,
+      "cal": 282,
+      "pt": 283,
+      "put": 284,
+      "sche": 285,
+      "tur": 286,
+      "zen": 287,
+      "},": 288,
+      "resu": 289,
+      "retur": 290,
+      "mpor": 291,
+      "ext": 292,
+      "not": 293,
+      "frozen": 294,
+      "True": 295,
+      "schema": 296,
+      "result": 297,
+      "return": 298,
+      "frozenset": 299,
+      "_f": 300,
+      "_id": 301,
+      "a4": 302,
+      "av": 303,
+      "dy": 304,
+      "el": 305,
+      "ig": 306,
+      "md_": 307,
+      "sco": 308,
+      "ver": 309,
+      "cho": 310,
+      "demo": 311,
+      "body": 312,
+      "EXTS": 313,
+      "doc": 314,
+      "ect": 315,
+      "fg": 316,
+      "ner": 317,
+      "to": 318,
+      ",\",\"": 319,
+      "ing": 320,
+      "ed_": 321,
+      "output": 322,
+      "test": 323,
+      "\".": 324,
+      "')": 325,
+      "'-": 326,
+      "G_": 327,
+      "_sy": 328,
+      "_orchestr": 329,
+      "ain": 330,
+      "cmd_": 331,
+      "oin": 332,
+      "path": 333,
+      "vo": 334,
+      "err": 335,
+      "ind": 336,
+      "strip": 337,
+      "producer_args": 338,
+      "```": 339,
+      "⟪{'": 340,
+      "a4_sy": 341,
+      "_orchestration": 342,
+      "a4_sy_orchestration": 343,
+      "##": 344,
+      "'⟫": 345,
+      "'}⟫": 346,
+      "({": 347,
+      "+\"": 348,
+      "/`": 349,
+      "CON": 350,
+      "Fal": 351,
+      "RE": 352,
+      "_render_": 353,
+      "ame": 354,
+      "ble": 355,
+      "e_": 356,
+      "impor": 357,
+      "ject": 358,
+      "lin": 359,
+      "ment": 360,
+      "sion": 361,
+      "sha": 362,
+      "red": 363,
+      "chain": 364,
+      "----": 365,
+      "from": 366,
+      "hase": 367,
+      "False": 368,
+      "\"]": 369,
+      "Ex": 370,
+      "_mo": 371,
+      "_demo": 372,
+      "bal": 373,
+      "ec": 374,
+      "he": 375,
+      "join": 376,
+      "name": 377,
+      "pp": 378,
+      "phase": 379,
+      "⟨⟩→": 380,
+      "inal": 381,
+      "ated": 382,
+      "ature": 383,
+      "stan": 384,
+      "confi": 385,
+      "\"\"\"": 386,
+      "']}": 387,
+      "the": 388,
+      "cache": 389,
+      "atomadic_": 390,
+      "cli_demo": 391,
+      "preset": 392,
+      "returncode": 393,
+      "CONFI": 394,
+      "import": 395,
+      "Exit": 396,
+      "'⟫,\"": 397,
+      "(⟪{": 398,
+      "[\"": 399,
+      "app": 400,
+      "ces": 401,
+      "em": 402,
+      "ise": 403,
+      "jav": 404,
+      "text": 405,
+      "int": 406,
+      "def": 407,
+      "ction": 408,
+      "ith": 409,
+      "unction": 410,
+      "ascript": 411,
+      "local": 412,
+      "sys": 413,
+      "thon": 414,
+      "_comp": 415,
+      "tier": 416,
+      "python": 417,
+      "raise": 418,
+      "score": 419,
+      "nerg": 420,
+      "atomadic_forge": 421,
+      "javascript": 422,
+      "\"⟫,\"": 423,
+      "'}": 424,
+      "Ar": 425,
+      "DI": 426,
+      "a0": 427,
+      "a1": 428,
+      "a2": 429,
+      "a3": 430,
+      "eature": 431,
+      "final": 432,
+      "mis": 433,
+      "pen": 434,
+      "pip": 435,
+      "tr": 436,
+      "ul": 437,
+      "und": 438,
+      "with": 439,
+      "},\"": 440,
+      "}',": 441,
+      "erge": 442,
+      "invo": 443,
+      "secho": 444,
+      "command": 445,
+      "constan": 446,
+      "ctx": 447,
+      "escript": 448,
+      "typescript": 449,
+      "ang": 450,
+      "synerg": 451,
+      "config": 452,
+      "CONFIG_": 453,
+      "unctions": 454,
+      "DIR": 455,
+      "invok": 456,
+      "constants": 457,
+      "\",": 458,
+      "('": 459,
+      "(\",\"": 460,
+      "))": 461,
+      ".\",\"": 462,
+      "3ω": 463,
+      "RI": 464,
+      "__": 465,
+      "_output": 466,
+      "and": 467,
+      "able": 468,
+      "fn": 469,
+      "ly": 470,
+      "merge": 471,
+      "os": 472,
+      "ot": 473,
+      "vi": 474,
+      ",\",⟪": 475,
+      "red_": 476,
+      "env": 477,
+      "uto": 478,
+      "proces": 479,
+      "er_fn": 480,
+      "dir": 481,
+      "ifi": 482,
+      "node": 483,
+      "ash": 484,
+      "low": 485,
+      "ider": 486,
+      "idate": 487,
+      "list": 488,
+      "capt": 489,
+      "_command": 490,
+      "raject": 491,
+      "T_EXTS": 492,
+      "'}⟫)": 493,
+      "head": 494,
+      "cli_demo_": 495,
+      "(⟪{'.": 496,
+      "'})": 497,
+      "synergy": 498,
+      "osit": 499,
+      "process": 500,
+      "capture": 501,
+      "rajectory": 502,
+      "!=": 503,
+      "'{": 504,
+      "',\",⟪": 505,
+      ":\",⟪": 506,
+      "AL": 507,
+      "CRI": 508,
+      "ES": 509,
+      "E_": 510,
+      "For": 511,
+      "LA": 512,
+      "LO": 513,
+      "Lit": 514,
+      "PT_EXTS": 515,
+      "RO": 516,
+      "SE": 517,
+      "[(\"": 518,
+      "]\"⟫,\"": 519,
+      "_P": 520,
+      "_d": 521,
+      "_q": 522,
+      "_s": 523,
+      "_t": 524,
+      "_at": 525,
+      "_ro": 526,
+      "_doc": 527,
+      "_cache": 528,
+      "_constants": 529,
+      "ad_": 530,
+      "auto": 531,
+      "fo": 532,
+      "glo": 533,
+      "g_f": 534,
+      "ke": 535,
+      "k_constants": 536,
+      "ml": 537,
+      "mory": 538,
+      "open": 539,
+      "par": 540,
+      "pure": 541,
+      "so": 542,
+      "vider": 543,
+      "eral": 544,
+      "rep": 545,
+      "state": 546,
+      "end": 547,
+      "utable": 548,
+      "dump": 549,
+      "ndidate": 550,
+      "string": 551,
+      "unifi": 552,
+      "exc": 553,
+      "exec": 554,
+      "consumer_args": 555,
+      "load": 556,
+      "omain": 557,
+      "memory": 558,
+      "candidate": 559,
+      "file": 560,
+      "\")]": 561,
+      "**:": 562,
+      "_omis": 563,
+      "_og_f": 564,
+      "subprocess": 565,
+      "_functions": 566,
+      "ign": 567,
+      "igno": 568,
+      "ed_cli": 569,
+      "tests": 570,
+      "cmd_a": 571,
+      "cmd_b": 572,
+      "lines": 573,
+      "shared_": 574,
+      "\"])": 575,
+      "_mo_comp": 576,
+      "bal_": 577,
+      "phase_omis": 578,
+      "a0_q": 579,
+      "a1_at": 580,
+      "a2_mo_comp": 581,
+      "a3_og_f": 582,
+      "eatures": 583,
+      "pipe": 584,
+      "osites": 585,
+      "capture_output": 586,
+      "CRIPT_EXTS": 587,
+      "Forge": 588,
+      "Literal": 589,
+      "_root": 590,
+      "_docstring": 591,
+      "global_": 592,
+      "dumps": 593,
+      "unified_cli": 594,
+      "executable": 595,
+      "candidate_id": 596,
+      "phase_omission": 597,
+      "a0_qk_constants": 598,
+      "a1_at_functions": 599,
+      "a2_mo_composites": 600,
+      "a3_og_features": 601,
+      "\"+": 602,
+      ")+\"": 603,
+      "->": 604,
+      ".\"\"\"": 605,
+      "An": 606,
+      "D_": 607,
+      "LI": 608,
+      "ME": 609,
+      "NO": 610,
+      "Path": 611,
+      "RC": 612,
+      "TE": 613,
+      "[]": 614,
+      "_artifact": 615,
+      "_dir": 616,
+      "be": 617,
+      "bash": 618,
+      "cfg": 619,
+      "ff": 620,
+      "gment": 621,
+      "ht": 622,
+      "ic": 623,
+      "iz": 624,
+      "ire": 625,
+      "lit": 626,
+      "lla": 627,
+      "lang": 628,
+      "md": 629,
+      "mm": 630,
+      "nt": 631,
+      "plit": 632,
+      "rr": 633,
+      "rst": 634,
+      "ss": 635,
+      "ted": 636,
+      "up": 637,
+      "}`": 638,
+      "⟫)": 639,
+      "⟫,⟪": 640,
+      "ary": 641,
+      "segment": 642,
+      "main": 643,
+      "utf": 644,
+      "provider": 645,
+      "pay": 646,
+      "().": 647,
+      "json_artifact": 648,
+      "FIL": 649,
+      "ce_": 650,
+      "scout": 651,
+      "version": 652,
+      "line": 653,
+      "intent": 654,
+      "defa": 655,
+      "unds": 656,
+      "'}),": 657,
+      "_trajectory": 658,
+      "key": 659,
+      "parts": 660,
+      "llama": 661,
+      "rror": 662,
+      "(⟪": 663,
+      "([\"": 664,
+      "))\",\"": 665,
+      "/\"+": 666,
+      "AS": 667,
+      "At": 668,
+      "Con": 669,
+      "CLI": 670,
+      "DE": 671,
+      "GNO": 672,
+      "IGNO": 673,
+      "NA": 674,
+      "Run": 675,
+      "SRC": 676,
+      "YP": 677,
+      "_EXTS": 678,
+      "_bal": 679,
+      "_tier": 680,
+      "_score": 681,
+      "_CONFIG_": 682,
+      "_head": 683,
+      "_memory": 684,
+      "_pipe": 685,
+      "_version": 686,
+      "`{": 687,
+      "ai": 688,
+      "ack": 689,
+      "by": 690,
+      "back": 691,
+      "cl": 692,
+      "cle": 693,
+      "dat": 694,
+      "date": 695,
+      "domain": 696,
+      "echo": 697,
+      "her": 698,
+      "hel": 699,
+      "ir": 700,
+      "ist": 701,
+      "len": 702,
+      "lback": 703,
+      "min": 704,
+      "split": 705,
+      "tmp": 706,
+      "uage": 707,
+      "venv": 708,
+      "}\\": 709,
+      "}'⟫": 710,
+      "read_": 711,
+      "in_memory": 712,
+      "\",\"\",\"": 713,
+      "attr": 714,
+      "arget": 715,
+      "rounds": 716,
+      "ses": 717,
+      "ents": 718,
+      "all": 719,
+      "align": 720,
+      "cherr": 721,
+      "del": 722,
+      "project": 723,
+      "ited": 724,
+      "item": 725,
+      "er_lines": 726,
+      "dict": 727,
+      "⟩→[": 728,
+      "pare": 729,
+      "type": 730,
+      "exited": 731,
+      ")\",\"[": 732,
+      "ass": 733,
+      "aned": 734,
+      "ance_": 735,
+      "())": 736,
+      "fix": 737,
+      "first": 738,
+      "out_command": 739,
+      "tier_": 740,
+      "time": 741,
+      "ations": 742,
+      "**{": 743,
+      "pytest": 744,
+      "'''": 745,
+      "'''⟫,\"": 746,
+      "lable": 747,
+      "getattr": 748,
+      "subcommand": 749,
+      "callback": 750,
+      "extend": 751,
+      "notated": 752,
+      "schema_id": 753,
+      "schema_version": 754,
+      "_idx": 755,
+      "ed_subcommand": 756,
+      "')]": 757,
+      "indent": 758,
+      "({'": 759,
+      "({\",⟪": 760,
+      "+\"/": 761,
+      "RED_": 762,
+      "e_with": 763,
+      "local_": 764,
+      "score_trajectory": 765,
+      "Args": 766,
+      "ults": 767,
+      "},\"⟫,\"": 768,
+      "},\"⟫,⟪": 769,
+      "DIRS": 770,
+      "invoked_subcommand": 771,
+      "invoke_with": 772,
+      "merged": 773,
+      "cli_demo_returncode": 774,
+      "AL_CONFIG_": 775,
+      "ROO": 776,
+      "_PRE": 777,
+      "_dt": 778,
+      "open_idx": 779,
+      "ignore": 780,
+      "shared_schema": 781,
+      "Annotated": 782,
+      "ize": 783,
+      "payload": 784,
+      "FILE_": 785,
+      "defaults": 786,
+      "([\"@": 787,
+      "))\",\"\"])": 788,
+      "Atomadic": 789,
+      "Context": 790,
+      "IGNORED_": 791,
+      "_balance_": 792,
+      "_header_lines": 793,
+      "cleaned": 794,
+      "data": 795,
+      "help": 796,
+      "in_memory_pipe": 797,
+      "cherry": 798,
+      "items": 799,
+      "invoke_without_command": 800,
+      "AL_CONFIG_DIR": 801,
+      "IGNORED_DIRS": 802,
+      "\":": 803,
+      "',\",\"": 804,
+      "(\"\"": 805,
+      ")[": 806,
+      ")∨": 807,
+      ")]\"⟫,\"": 808,
+      ")⟫)": 809,
+      ".\\": 810,
+      "00": 811,
+      ":.": 812,
+      ":[": 813,
+      "?\"": 814,
+      "AU": 815,
+      "AV": 816,
+      "Dire": 817,
+      "ER": 818,
+      "Error": 819,
+      "FAU": 820,
+      "Gen": 821,
+      "HON": 822,
+      "JS": 823,
+      "JAV": 824,
+      "LL": 825,
+      "LT_": 826,
+      "PY": 827,
+      "TI": 828,
+      "Te": 829,
+      "TYP": 830,
+      "THON": 831,
+      "_S": 832,
+      "_producer": 833,
+      "_consumer": 834,
+      "_key": 835,
+      "are": 836,
+      "ast": 837,
+      "adic": 838,
+      "ds": 839,
+      "dout": 840,
+      "ew": 841,
+      "eed": 842,
+      "ever": 843,
+      "find": 844,
+      "gu": 845,
+      "git": 846,
+      "iv": 847,
+      "kg": 848,
+      "kind": 849,
+      "lv": 850,
+      "les": 851,
+      "mon": 852,
+      "mat": 853,
+      "mar": 854,
+      "mjs": 855,
+      "mbo": 856,
+      "ose": 857,
+      "pec": 858,
+      "pic": 859,
+      "pkg": 860,
+      "ration": 861,
+      "sv": 862,
+      "target": 863,
+      "ui": 864,
+      "urc": 865,
+      "val": 866,
+      "wr": 867,
+      "wor": 868,
+      "war": 869,
+      "|\\": 870,
+      "|----": 871,
+      "erme": 872,
+      "erated": 873,
+      "ings": 874,
+      "\",\"\",⟪": 875,
+      "\",\"##": 876,
+      "stall": 877,
+      "stdout": 878,
+      "arc": 879,
+      "arg": 880,
+      "ropic": 881,
+      "ged": 882,
+      "gener": 883,
+      "cod": 884,
+      "cover": 885,
+      "utc": 886,
+      "ded": 887,
+      "conver": 888,
+      "dule": 889,
+      "duration": 890,
+      "ctory": 891,
+      "diate": 892,
+      "format": 893,
+      "forwar": 894,
+      "producer_fn": 895,
+      "exce": 896,
+      "consumer_fn": 897,
+      "leted": 898,
+      "lib": 899,
+      "this": 900,
+      "thropic": 901,
+      "url": 902,
+      "}⟫)": 903,
+      "_comm": 904,
+      "run_": 905,
+      "get_docstring": 906,
+      "prefix": 907,
+      ",\",\")": 908,
+      "strip_comm": 909,
+      "```\\": 910,
+      "'⟫+": 911,
+      "'⟫,⟪": 912,
+      "({'.": 913,
+      "_render_phase_omission": 914,
+      "_render_json_artifact": 915,
+      "']}.\"\"\"": 916,
+      "cli_demo_command": 917,
+      "interme": 918,
+      "_completed": 919,
+      "Argu": 920,
+      "final_score": 921,
+      "try": 922,
+      "CONFIG_FILE_": 923,
+      ".\",\"-": 924,
+      "lower": 925,
+      "headline": 926,
+      "cli_demo_stdout": 927,
+      "ESCRIPT_EXTS": 928,
+      "LAN": 929,
+      "LOC": 930,
+      "SETS": 931,
+      "sourc": 932,
+      "repo": 933,
+      "[]\",\"": 934,
+      "language": 935,
+      "}`'⟫,⟪": 936,
+      "(⟪(": 937,
+      "ASCRIPT_EXTS": 938,
+      "DEFAU": 939,
+      "NAME": 940,
+      "domains": 941,
+      "rounds_completed": 942,
+      "alignment": 943,
+      "parent": 944,
+      "_PRESETS": 945,
+      ")∨\"\"": 946,
+      "Directory": 947,
+      "Generated": 948,
+      "JSON": 949,
+      "JAVASCRIPT_EXTS": 950,
+      "LLM": 951,
+      "PYTHON": 952,
+      "TYPESCRIPT_EXTS": 953,
+      "monadic": 954,
+      "mark": 955,
+      "mbol": 956,
+      "coverage": 957,
+      "converged": 958,
+      "duration_s": 959,
+      "forwarded": 960,
+      "except": 961,
+      "strip_comments": 962,
+      "']}.\"\"\"'''⟫,\"": 963,
+      "intermediate": 964,
+      "Argument": 965,
+      "CONFIG_FILE_NAME": 966,
+      "DEFAULT_": 967,
+      "PYTHON_EXTS": 968,
+      "\"(": 969,
+      "\"⟫)": 970,
+      "'#": 971,
+      "'\",\"": 972,
+      "'--": 973,
+      ")\\": 974,
+      "*.": 975,
+      "-{": 976,
+      "-')": 977,
+      ".')]": 978,
+      "//": 979,
+      "/{": 980,
+      "0f": 981,
+      "25": 982,
+      ":\"\"": 983,
+      "://": 984,
+      "=\"": 985,
+      "=⟪{'": 986,
+      "AG": 987,
+      "AI": 988,
+      "BAL_CONFIG_DIR": 989,
+      "CO": 990,
+      "Co": 991,
+      "De": 992,
+      "EC": 993,
+      "EM": 994,
+      "GU": 995,
+      "GLO": 996,
+      "ITS": 997,
+      "Impor": 998,
+      "Int": 999,
+      "KG_": 1000,
+      "Kind": 1001,
+      "MP": 1002,
+      "MME": 1003,
+      "NT_": 1004,
+      "OSE": 1005,
+      "PKG_": 1006,
+      "Se": 1007,
+      "Sy": 1008,
+      "Script": 1009,
+      "Ti": 1010,
+      "Typ": 1011,
+      "The": 1012,
+      "Za": 1013,
+      "[:": 1014,
+      "].": 1015,
+      "]⟩→": 1016,
+      "]}'⟫": 1017,
+      "]:\"\"": 1018,
+      "_se": 1019,
+      "_for": 1020,
+      "_json": 1021,
+      "_la": 1022,
+      "_EX": 1023,
+      "_md_": 1024,
+      "_name": 1025,
+      "_confi": 1026,
+      "_file": 1027,
+      "_candidate_id": 1028,
+      "_line": 1029,
+      "_parts": 1030,
+      "_first": 1031,
+      "`\",\"": 1032,
+      "`.\\": 1033,
+      "af": 1034,
+      "apt": 1035,
+      "but": 1036,
+      "bel": 1037,
+      "bul": 1038,
+      "bui": 1039,
+      "ci": 1040,
+      "cer": 1041,
+      "cro": 1042,
+      "cjs": 1043,
+      "css": 1044,
+      "do": 1045,
+      "eb": 1046,
+      "eg": 1047,
+      "ep": 1048,
+      "evo": 1049,
+      "fre": 1050,
+      "feature": 1051,
+      "ful": 1052,
+      "functions": 1053,
+      "feed": 1054,
+      "hex": 1055,
+      "hig": 1056,
+      "hash": 1057,
+      "ide": 1058,
+      "ies": 1059,
+      "ice": 1060,
+      "ibut": 1061,
+      "jp": 1062,
+      "kt": 1063,
+      "kdir": 1064,
+      "ld": 1065,
+      "ll": 1066,
+      "ler": 1067,
+      "l_parts": 1068,
+      "mes": 1069,
+      "myp": 1070,
+      "m_name": 1071,
+      "mkdir": 1072,
+      "nforge": 1073,
+      "next": 1074,
+      "off": 1075,
+      "ollama": 1076,
+      "oformat": 1077,
+      "pr": 1078,
+      "poin": 1079,
+      "ry": 1080,
+      "ser": 1081,
+      "sor": 1082,
+      "script": 1083,
+      "scode": 1084,
+      "sign": 1085,
+      "sses": 1086,
+      "saf": 1087,
+      "tp": 1088,
+      "ub": 1089,
+      "um": 1090,
+      "ude": 1091,
+      "ult": 1092,
+      "v1": 1093,
+      "vscode": 1094,
+      "wh": 1095,
+      "wn": 1096,
+      "ward": 1097,
+      "wire": 1098,
+      "web": 1099,
+      "woff": 1100,
+      "xt": 1101,
+      "yout": 1102,
+      "yel": 1103,
+      "y_cache": 1104,
+      "zone": 1105,
+      "{'": 1106,
+      "}'": 1107,
+      "∅)": 1108,
+      "ers": 1109,
+      "erers": 1110,
+      ",\"⟫,\"": 1111,
+      "reco": 1112,
+      "rees": 1113,
+      "read": 1114,
+      "rename": 1115,
+      "revi": 1116,
+      "rel_parts": 1117,
+      "ini": 1118,
+      "inde": 1119,
+      "input": 1120,
+      "instan": 1121,
+      "install": 1122,
+      "ors": 1123,
+      "ators": 1124,
+      "stem": 1125,
+      "step": 1126,
+      "gest": 1127,
+      "gemin": 1128,
+      "'./": 1129,
+      "see": 1130,
+      "secon": 1131,
+      "enfor": 1132,
+      "encode": 1133,
+      "encod": 1134,
+      "chit": 1135,
+      "dete": 1136,
+      "descript": 1137,
+      "stribut": 1138,
+      "dist": 1139,
+      "digest": 1140,
+      "distribut": 1141,
+      "ional": 1142,
+      "unt": 1143,
+      "mpfile": 1144,
+      "mpose": 1145,
+      "pan": 1146,
+      "pass": 1147,
+      "pair": 1148,
+      "exp": 1149,
+      "exist": 1150,
+      "\"\"\"\"": 1151,
+      "jsx": 1152,
+      "'])": 1153,
+      "'],": 1154,
+      "now": 1155,
+      "asses": 1156,
+      "asci": 1157,
+      "log": 1158,
+      "load_": 1159,
+      "tsx": 1160,
+      "anthropic": 1161,
+      "symbol": 1162,
+      "(),": 1163,
+      "model": 1164,
+      "module": 1165,
+      "is_": 1166,
+      "isoformat": 1167,
+      "isinstan": 1168,
+      "entry": 1169,
+      "cabul": 1170,
+      "forged": 1171,
+      "\")).": 1172,
+      "(\"^": 1173,
+      "_count": 1174,
+      "times": 1175,
+      "tempfile": 1176,
+      "renderers": 1177,
+      ").')]": 1178,
+      "adapt": 1179,
+      "pycache": 1180,
+      "codeError": 1181,
+      "render_tests": 1182,
+      "artifact_md_": 1183,
+      "_of": 1184,
+      "_ollama": 1185,
+      "lace": 1186,
+      "laude": 1187,
+      "ruff": 1188,
+      "T_TE": 1189,
+      "orchestrate": 1190,
+      "orchestrators": 1191,
+      "callable": 1192,
+      "mporary": 1193,
+      "avai": 1194,
+      "else": 1195,
+      "choice": 1196,
+      "toml": 1197,
+      "to_tier": 1198,
+      "output_root": 1199,
+      "'))\",\"": 1200,
+      "vocabul": 1201,
+      "```\",\"\",⟪": 1202,
+      "_render_shared_schema": 1203,
+      "_render_in_memory_pipe": 1204,
+      "e_intent": 1205,
+      "shap": 1206,
+      "sha25": 1207,
+      "from_tier": 1208,
+      "_model": 1209,
+      "⟨⟩→[": 1210,
+      "atures": 1211,
+      "CONFIG": 1212,
+      "'⟫,\"\",⟪": 1213,
+      "apply": 1214,
+      "commands": 1215,
+      "angler": 1216,
+      "config_file": 1217,
+      "__pycache": 1218,
+      "merge_confi": 1219,
+      "via": 1220,
+      "'})}⟫": 1221,
+      "LATE": 1222,
+      "_domain": 1223,
+      "fore": 1224,
+      "found": 1225,
+      "openai": 1226,
+      "replace": 1227,
+      "stateful": 1228,
+      "endations": 1229,
+      "loads": 1230,
+      "shared_vocabul": 1231,
+      "_docstring_first": 1232,
+      "global_path": 1233,
+      "global_cfg": 1234,
+      "before": 1235,
+      "html": 1236,
+      "http": 1237,
+      "lang_la": 1238,
+      "mmendations": 1239,
+      "update": 1240,
+      "upward": 1241,
+      "keys": 1242,
+      "class": 1243,
+      "classes": 1244,
+      "datetime": 1245,
+      "read_text": 1246,
+      "read_config_file": 1247,
+      "\",\"\",\"```": 1248,
+      "project_root": 1249,
+      "project_dir": 1250,
+      "tier_inde": 1251,
+      "tier_distribut": 1252,
+      "timezone": 1253,
+      "pytest_cache": 1254,
+      "local_path": 1255,
+      "local_cfg": 1256,
+      "ROOT": 1257,
+      "ROOT_TE": 1258,
+      "_balance_pair": 1259,
+      "(\"\",": 1260,
+      "TIER": 1261,
+      "Temporary": 1262,
+      "every": 1263,
+      "findings": 1264,
+      "gitignore": 1265,
+      "ivate": 1266,
+      "lve": 1267,
+      "less": 1268,
+      "wrangler": 1269,
+      "workt": 1270,
+      "|--------": 1271,
+      "generated": 1272,
+      "LANGU": 1273,
+      "LOCAL_CONFIG_DIR": 1274,
+      "sources": 1275,
+      "JSONDe": 1276,
+      "markdo": 1277,
+      "DEFAULT_CONFIG": 1278,
+      "COMME": 1279,
+      "EMITS": 1280,
+      "GLOBAL_CONFIG_DIR": 1281,
+      "Intent": 1282,
+      "MPLATE": 1283,
+      "NT_RE": 1284,
+      "OSError": 1285,
+      "PKG_ROOT_TE": 1286,
+      "Tier": 1287,
+      "]}'⟫)": 1288,
+      "_EXT": 1289,
+      "build": 1290,
+      "free": 1291,
+      "hexdigest": 1292,
+      "higher": 1293,
+      "hashlib": 1294,
+      "idea": 1295,
+      "llm_name": 1296,
+      "mypy_cache": 1297,
+      "private": 1298,
+      "points": 1299,
+      "signatures": 1300,
+      "safe_intent": 1301,
+      "yellow": 1302,
+      "recommendations": 1303,
+      "readme": 1304,
+      "review": 1305,
+      "inputs": 1306,
+      "gemini": 1307,
+      "seconds": 1308,
+      "enforces": 1309,
+      "encoding": 1310,
+      "chitect": 1311,
+      "detect": 1312,
+      "description": 1313,
+      "exists": 1314,
+      "symbol_count": 1315,
+      "isinstance": 1316,
+      "timespec": 1317,
+      "adapter": 1318,
+      "render_tests_": 1319,
+      "artifact_md_path": 1320,
+      "ruff_cache": 1321,
+      "available": 1322,
+      "sha256": 1323,
+      "__pycache__": 1324,
+      "merge_configs": 1325,
+      "shared_vocabulary": 1326,
+      "_docstring_first_line": 1327,
+      "lang_label": 1328,
+      "tier_index": 1329,
+      "tier_distribution": 1330,
+      "TemporaryDirectory": 1331,
+      "worktrees": 1332,
+      "LANGUAG": 1333,
+      "JSONDecodeError": 1334,
+      "markdown": 1335,
+      "COMMENT_RE": 1336,
+      "PKG_ROOT_TEMPLATE": 1337,
+      "\"#": 1338,
+      "\"~": 1339,
+      "\"+\"": 1340,
+      "\"'{": 1341,
+      "\"⟫,⟪": 1342,
+      "\"?\"": 1343,
+      "'(": 1344,
+      "'/": 1345,
+      "')\",\"": 1346,
+      "'\")": 1347,
+      "').": 1348,
+      "'```": 1349,
+      "(?": 1350,
+      "()\",\"": 1351,
+      ")(": 1352,
+      "),": 1353,
+      "):": 1354,
+      ")?": 1355,
+      ")]": 1356,
+      ")≥": 1357,
+      "),\"": 1358,
+      ")\")": 1359,
+      "):\",\"": 1360,
+      ")[\"": 1361,
+      ")\"⟫,\"": 1362,
+      ")'}": 1363,
+      ")\"])": 1364,
+      "+⟪": 1365,
+      "+',": 1366,
+      "-]": 1367,
+      "-|--------": 1368,
+      ".\")": 1369,
+      ".\"⟫,\"": 1370,
+      "/\"": 1371,
+      "/.": 1372,
+      "/\\": 1373,
+      "/\".": 1374,
+      "/'⟫+": 1375,
+      "11": 1376,
+      "1_": 1377,
+      "1f": 1378,
+      "100": 1379,
+      "2_": 1380,
+      "200": 1381,
+      "34": 1382,
+      "40": 1383,
+      "4ι": 1384,
+      "434": 1385,
+      "75": 1386,
+      "7B": 1387,
+      "7b": 1388,
+      "9_": 1389,
+      ":\"": 1390,
+      ":\\": 1391,
+      "=[": 1392,
+      "=\",": 1393,
+      ">=": 1394,
+      "AP": 1395,
+      "Auto": 1396,
+      "BLOC": 1397,
+      "CE": 1398,
+      "C_EXTS": 1399,
+      "Claude": 1400,
+      "DO": 1401,
+      "DS": 1402,
+      "Di": 1403,
+      "Dur": 1404,
+      "Dec": 1405,
+      "ED": 1406,
+      "EF": 1407,
+      "ED_": 1408,
+      "Final": 1409,
+      "FEC": 1410,
+      "F_EXT": 1411,
+      "GP": 1412,
+      "Go": 1413,
+      "Gem": 1414,
+      "GED": 1415,
+      "IN": 1416,
+      "In": 1417,
+      "IT_": 1418,
+      "IDE": 1419,
+      "Jav": 1420,
+      "JEC": 1421,
+      "K_": 1422,
+      "La": 1423,
+      "Lang": 1424,
+      "L_S": 1425,
+      "Liv": 1426,
+      "Ma": 1427,
+      "Man": 1428,
+      "Merge": 1429,
+      "MES": 1430,
+      "MAI": 1431,
+      "MAP": 1432,
+      "NG_": 1433,
+      "NE_": 1434,
+      "N_EXT": 1435,
+      "OU": 1436,
+      "Opt": 1437,
+      "Open": 1438,
+      "Ollama": 1439,
+      "OF_EXT": 1440,
+      "Pa": 1441,
+      "Pl": 1442,
+      "Pro": 1443,
+      "Phase": 1444,
+      "Pass": 1445,
+      "R_": 1446,
+      "Re": 1447,
+      "Ro": 1448,
+      "Sco": 1449,
+      "Sha": 1450,
+      "Sur": 1451,
+      "Ste": 1452,
+      "Th": 1453,
+      "TRI": 1454,
+      "Trajectory": 1455,
+      "TTI": 1456,
+      "Ver": 1457,
+      "VER": 1458,
+      "VIDE": 1459,
+      "Wh": 1460,
+      "Wor": 1461,
+      "WED_": 1462,
+      "[{": 1463,
+      "[\",\"": 1464,
+      "\\\\": 1465,
+      "](": 1466,
+      "][": 1467,
+      "]⟫": 1468,
+      "]\")": 1469,
+      "],\",\"": 1470,
+      "]\",": 1471,
+      "],\"⟫,\"": 1472,
+      "]\"⟫,⟪": 1473,
+      "_n": 1474,
+      "_en": 1475,
+      "_pro": 1476,
+      "_str": 1477,
+      "_sum": 1478,
+      "_consum": 1479,
+      "_src": 1480,
+      "_pre": 1481,
+      "_result": 1482,
+      "__f": 1483,
+      "_to": 1484,
+      "_strip": 1485,
+      "_chain": 1486,
+      "_preset": 1487,
+      "_import": 1488,
+      "_int": 1489,
+      "_pen": 1490,
+      "_and": 1491,
+      "_LI": 1492,
+      "_NA": 1493,
+      "_dict": 1494,
+      "_type": 1495,
+      "_wor": 1496,
+      "_utc": 1497,
+      "_url": 1498,
+      "_prefix": 1499,
+      "_Generated": 1500,
+      "_step": 1501,
+      "_pan": 1502,
+      "_asci": 1503,
+      "_log": 1504,
+      "_is_": 1505,
+      "_apply": 1506,
+      "_readme": 1507,
+      "_adapter": 1508,
+      "_markdown": 1509,
+      "_BLOC": 1510,
+      "_IN": 1511,
+      "`)": 1512,
+      "`--": 1513,
+      "`/`": 1514,
+      "am": 1515,
+      "abo": 1516,
+      "ace": 1517,
+      "aider": 1518,
+      "aml": 1519,
+      "aScript": 1520,
+      "acro": 1521,
+      "bmp": 1522,
+      "bra": 1523,
+      "car": 1524,
+      "cit": 1525,
+      "can": 1526,
+      "cur": 1527,
+      "claude": 1528,
+      "df": 1529,
+      "der": 1530,
+      "don": 1531,
+      "ets": 1532,
+      "eScript": 1533,
+      "ft": 1534,
+      "fer": 1535,
+      "ftest": 1536,
+      "function": 1537,
+      "few": 1538,
+      "face": 1539,
+      "ger": 1540,
+      "gat": 1541,
+      "gif": 1542,
+      "gle": 1543,
+      "gith": 1544,
+      "gist": 1545,
+      "hg": 1546,
+      "ho": 1547,
+      "hard": 1548,
+      "has": 1549,
+      "io": 1550,
+      "ico": 1551,
+      "istr": 1552,
+      "i_trajectory": 1553,
+      "ium": 1554,
+      "ks": 1555,
+      "ker": 1556,
+      "kit": 1557,
+      "ls": 1558,
+      "llow": 1559,
+      "lations": 1560,
+      "mal": 1561,
+      "mary": 1562,
+      "mult": 1563,
+      "mistr": 1564,
+      "ng": 1565,
+      "ns": 1566,
+      "nu": 1567,
+      "nti": 1568,
+      "npip": 1569,
+      "npytest": 1570,
+      "need": 1571,
+      "never": 1572,
+      "nImpor": 1573,
+      "nTh": 1574,
+      "n_Generated": 1575,
+      "nam": 1576,
+      "od": 1577,
+      "of": 1578,
+      "ou": 1579,
+      "ogle": 1580,
+      "olations": 1581,
+      "ppt": 1582,
+      "posit": 1583,
+      "pdf": 1584,
+      "png": 1585,
+      "qui": 1586,
+      "rg": 1587,
+      "ries": 1588,
+      "spa": 1589,
+      "sav": 1590,
+      "sing": 1591,
+      "same": 1592,
+      "sass": 1593,
+      "spec": 1594,
+      "scss": 1595,
+      "tf": 1596,
+      "ty": 1597,
+      "tes": 1598,
+      "tas": 1599,
+      "ture": 1600,
+      "tain": 1601,
+      "trajectory": 1602,
+      "tup": 1603,
+      "tError": 1604,
+      "txt": 1605,
+      "t_int": 1606,
+      "ttf": 1607,
+      "ug": 1608,
+      "ual": 1609,
+      "uct": 1610,
+      "ues": 1611,
+      "ve": 1612,
+      "ves": 1613,
+      "voc": 1614,
+      "vel": 1615,
+      "v2_": 1616,
+      "wer": 1617,
+      "wra": 1618,
+      "wav": 1619,
+      "wir": 1620,
+      "ware": 1621,
+      "xls": 1622,
+      "yml": 1623,
+      "yKind": 1624,
+      "yaml": 1625,
+      "you": 1626,
+      "z0": 1627,
+      "zer": 1628,
+      "|{": 1629,
+      "}/": 1630,
+      "};": 1631,
+      "}}⟫": 1632,
+      "}'}⟫": 1633,
+      "}->": 1634,
+      "}.\"⟫,\"": 1635,
+      "}],\"⟫,\"": 1636,
+      "}|{": 1637,
+      "→\".": 1638,
+      "∨\"(": 1639,
+      "≟\"": 1640,
+      "✓\":": 1641,
+      "⟪[": 1642,
+      "erent": 1643,
+      ",\"(\",\"": 1644,
+      ",\"[\",\"": 1645,
+      "only": 1646,
+      "onger": 1647,
+      "real": 1648,
+      "recon": 1649,
+      "reso": 1650,
+      "re_log": 1651,
+      "regist": 1652,
+      "requi": 1653,
+      "init": 1654,
+      "instr": 1655,
+      "info": 1656,
+      "inval": 1657,
+      "inser": 1658,
+      "infer": 1659,
+      "invoc": 1660,
+      "\",\"\")": 1661,
+      "\",\"\",": 1662,
+      "ort": 1663,
+      "oral": 1664,
+      "orconfig": 1665,
+      "order": 1666,
+      "ormal": 1667,
+      "ated_": 1668,
+      "at_utc": 1669,
+      "sts": 1670,
+      "stat": 1671,
+      "star": 1672,
+      "stand": 1673,
+      "st_s": 1674,
+      "stub": 1675,
+      "architect": 1676,
+      "sets": 1677,
+      "separ": 1678,
+      "enum": 1679,
+      "alone": 1680,
+      "almo": 1681,
+      "ally": 1682,
+      "alty": 1683,
+      "cov": 1684,
+      "coher": 1685,
+      "compose": 1686,
+      "may": 1687,
+      "manti": 1688,
+      "sure_log": 1689,
+      "utes": 1690,
+      "uture": 1691,
+      "proves": 1692,
+      "conftest": 1693,
+      "dules": 1694,
+      "duser": 1695,
+      "cts": 1696,
+      "its": 1697,
+      "ite_": 1698,
+      "itted": 1699,
+      "itorconfig": 1700,
+      "er_app": 1701,
+      "er_igno": 1702,
+      "er_pay": 1703,
+      "er_inputs": 1704,
+      "stronger": 1705,
+      "divi": 1706,
+      "diff": 1707,
+      "produce": 1708,
+      "produced": 1709,
+      "producer_pay": 1710,
+      "ify": 1711,
+      "⟩→∅": 1712,
+      "edDi": 1713,
+      "editorconfig": 1714,
+      "unti": 1715,
+      "unavailable": 1716,
+      "unspec": 1717,
+      "iply": 1718,
+      "mp3": 1719,
+      "mp4": 1720,
+      "mpt_int": 1721,
+      "passes": 1722,
+      "typer_app": 1723,
+      "expan": 1724,
+      "sumes": 1725,
+      "\"\",": 1726,
+      "\"\",⟪": 1727,
+      ")\",\"\",": 1728,
+      ")\",\"\",\"##": 1729,
+      ")\",\"```\",\"\",⟪": 1730,
+      "js_readme": 1731,
+      "--|--------": 1732,
+      "---|--------": 1733,
+      "']},": 1734,
+      "']]⟫": 1735,
+      "nox": 1736,
+      "assumes": 1737,
+      "lock": 1738,
+      "tswith": 1739,
+      "any": 1740,
+      "annot": 1741,
+      "ckets": 1742,
+      "syn": 1743,
+      "idoc": 1744,
+      "lect": 1745,
+      "level": 1746,
+      "()/": 1747,
+      "()?": 1748,
+      "():\"": 1749,
+      "lied": 1750,
+      "licit": 1751,
+      "ision": 1752,
+      "meth": 1753,
+      "thing": 1754,
+      "fiel": 1755,
+      "hand": 1756,
+      "havi": 1757,
+      "package_json": 1758,
+      "package_prefix": 1759,
+      "\"))": 1760,
+      "urist": 1761,
+      "urally": 1762,
+      "⟪{**{": 1763,
+      "(\"`\",\"": 1764,
+      "(\".\")": 1765,
+      "(\"→\".": 1766,
+      "run_f": 1767,
+      "runner": 1768,
+      "tech": 1769,
+      ").\"\"\"": 1770,
+      "**'⟫+": 1771,
+      "add": 1772,
+      "adoc": 1773,
+      "tify": 1774,
+      "'')": 1775,
+      "'').": 1776,
+      "codeium": 1777,
+      "render_synergy": 1778,
+      "render_gitignore": 1779,
+      "render_readme": 1780,
+      "render_js_readme": 1781,
+      "render_package_json": 1782,
+      "artifact_s": 1783,
+      "_opt": 1784,
+      "clients": 1785,
+      "law": 1786,
+      "layout": 1787,
+      "get_preset": 1788,
+      "FIX": 1789,
+      "T_LA": 1790,
+      "subtr": 1791,
+      "mmandSur": 1792,
+      "schemas": 1793,
+      "elte": 1794,
+      "demo_markdown": 1795,
+      "docx": 1796,
+      "tox": 1797,
+      "tore": 1798,
+      "ed_class": 1799,
+      "output_dir": 1800,
+      "')}⟫": 1801,
+      "')}.\"⟫,\"": 1802,
+      "G_OF_EXT": 1803,
+      "pathlib": 1804,
+      "```\",\"\",\"": 1805,
+      "'⟫)": 1806,
+      "CONVER": 1807,
+      "_render_demo_markdown": 1808,
+      "e_config": 1809,
+      "e_rep": 1810,
+      "e_by": 1811,
+      "imports": 1812,
+      "shared": 1813,
+      "----|\\": 1814,
+      "\"],": 1815,
+      "\"]).": 1816,
+      "_module": 1817,
+      "_modules": 1818,
+      "heurist": 1819,
+      "pped_class": 1820,
+      "phase_chain": 1821,
+      "⟨⟩→∅": 1822,
+      "inalize": 1823,
+      "']}\"⟫)": 1824,
+      "their": 1825,
+      "atomadic_v2_": 1826,
+      "importable": 1827,
+      "'⟫,\"$": 1828,
+      "'⟫,\"\",\"##": 1829,
+      "'⟫,\"```\",\"\",⟪": 1830,
+      "[\"[": 1831,
+      "applied": 1832,
+      "emrg": 1833,
+      "emitted": 1834,
+      "localho": 1835,
+      "nergyKind": 1836,
+      "atomadic_forge_se": 1837,
+      "Architect": 1838,
+      "final_output": 1839,
+      "finalize": 1840,
+      "misc": 1841,
+      "missing": 1842,
+      "under_igno": 1843,
+      "synergies": 1844,
+      "CONFIG_EXTS": 1845,
+      "('[": 1846,
+      "('--": 1847,
+      ".\",\"\",\"##": 1848,
+      "__file": 1849,
+      "otf": 1850,
+      "violations": 1851,
+      "red_segment": 1852,
+      "ified": 1853,
+      "node_modules": 1854,
+      "list_ollama": 1855,
+      "list_pre": 1856,
+      "ALLO": 1857,
+      "ALL_S": 1858,
+      "E_EXTS": 1859,
+      "ROJEC": 1860,
+      "ROVIDE": 1861,
+      "SET_EXTS": 1862,
+      "_PYP": 1863,
+      "_PROVIDE": 1864,
+      "_split": 1865,
+      "_target": 1866,
+      "auto_apply": 1867,
+      "follow": 1868,
+      "soft": 1869,
+      "stateless": 1870,
+      "ignored_segment": 1871,
+      "_root_for": 1872,
+      "_root_of": 1873,
+      "Anthropic": 1874,
+      "NOTE": 1875,
+      "RCE_EXTS": 1876,
+      "[])\",\"": 1877,
+      "[])⟫)": 1878,
+      "best": 1879,
+      "below": 1880,
+      "behavi": 1881,
+      "htm": 1882,
+      "ize_by": 1883,
+      "mdx": 1884,
+      "}`'⟫,\"\",⟪": 1885,
+      "utf8": 1886,
+      "FILES": 1887,
+      "ce_utf8": 1888,
+      "default": 1889,
+      "ASSET_EXTS": 1890,
+      "here": 1891,
+      "minutes": 1892,
+      "}'⟫.": 1893,
+      "}'⟫,⟪": 1894,
+      "\",\"\",\"-": 1895,
+      "parens": 1896,
+      "fixture": 1897,
+      "_PREFIX": 1898,
+      "FILE_EXTS": 1899,
+      "_balance_bra": 1900,
+      "_balance_parens": 1901,
+      "\":\"": 1902,
+      "\":\"\",⟪": 1903,
+      "(\"\"\"\",": 1904,
+      ")[:": 1905,
+      "?\"✓\":": 1906,
+      "Tests": 1907,
+      "_STRI": 1908,
+      "_Store": 1909,
+      "findall": 1910,
+      "lve_rep": 1911,
+      "pkg_root_for": 1912,
+      "svg": 1913,
+      "svn": 1914,
+      "svelte": 1915,
+      "validate": 1916,
+      "values": 1917,
+      "write_": 1918,
+      "|------|--------": 1919,
+      "generated_": 1920,
+      "run_auto": 1921,
+      "run_cherry": 1922,
+      "run_recon": 1923,
+      "LANG_OF_EXT": 1924,
+      "source_": 1925,
+      ")∨\"\".": 1926,
+      "marker": 1927,
+      "mbolKind": 1928,
+      "strip_comments_and": 1929,
+      "DEFAULT_LANGUAG": 1930,
+      "Compose": 1931,
+      "CommandSur": 1932,
+      "ImportError": 1933,
+      "Setup": 1934,
+      "Select": 1935,
+      "SynergyKind": 1936,
+      "SymbolKind": 1937,
+      "TypeScript": 1938,
+      "TypedDi": 1939,
+      "]:\"\".": 1940,
+      "_semanti": 1941,
+      "_force_utf8": 1942,
+      "certain": 1943,
+      "certify": 1944,
+      "crosses": 1945,
+      "egg": 1946,
+      "evolve": 1947,
+      "evolve_rep": 1948,
+      "jpg": 1949,
+      "jpeg": 1950,
+      "ollama_model": 1951,
+      "ollama_url": 1952,
+      "sorted": 1953,
+      "why": 1954,
+      "when": 1955,
+      "webm": 1956,
+      "webp": 1957,
+      "woff2": 1958,
+      "}'\"": 1959,
+      "rename_module": 1960,
+      "rename_semanti": 1961,
+      "steps": 1962,
+      "passing": 1963,
+      "expose": 1964,
+      "explicit": 1965,
+      "'])}": 1966,
+      "'])},": 1967,
+      "asciidoc": 1968,
+      "logic": 1969,
+      "load_config": 1970,
+      "load_keys": 1971,
+      "anthropic_key": 1972,
+      "models": 1973,
+      "is_ignored_segment": 1974,
+      "(\"^(": 1975,
+      "shape": 1976,
+      "shaping": 1977,
+      "_models": 1978,
+      "_domains": 1979,
+      "_domain_of": 1980,
+      "openai_key": 1981,
+      "htmlcov": 1982,
+      "https": 1983,
+      "\",\"\",\"```\",": 1984,
+      "TIER_NA": 1985,
+      "TIER_PREFIX": 1986,
+      "everything": 1987,
+      "sources_dir": 1988,
+      "EMITS_IN": 1989,
+      "EMITS_PYP": 1990,
+      "gemini_key": 1991,
+      "detect_ollama": 1992,
+      "render_tests_init": 1993,
+      "render_tests_conftest": 1994,
+      "LANGUAGES": 1995,
+      "\"~/.": 1996,
+      "(?:": 1997,
+      ")?\",\"\",": 1998,
+      ")]\",\"": 1999,
+      "),\"```\",\"\",\"": 2000,
+      ")'}\\": 2001,
+      "-]+',": 2002,
+      "11434": 2003,
+      "1_provider": 2004,
+      "2000": 2005,
+      "=[⟪": 2006,
+      "DOC_EXTS": 2007,
+      "DS_Store": 2008,
+      "Duration": 2009,
+      "Decision": 2010,
+      "EFFEC": 2011,
+      "GPT": 2012,
+      "Google": 2013,
+      "Gemini": 2014,
+      "Install": 2015,
+      "IT_FILES": 2016,
+      "JavaScript": 2017,
+      "K_COMMENT_RE": 2018,
+      "Layout": 2019,
+      "Language": 2020,
+      "Lives": 2021,
+      "Make": 2022,
+      "Manual": 2023,
+      "MergeDecision": 2024,
+      "MAIN_EXT": 2025,
+      "NG_RE": 2026,
+      "NE_COMMENT_RE": 2027,
+      "OURCE_EXTS": 2028,
+      "Option": 2029,
+      "OpenAI": 2030,
+      "Package": 2031,
+      "Plug": 2032,
+      "Provider": 2033,
+      "R_MAP": 2034,
+      "Reproduce": 2035,
+      "Rounds": 2036,
+      "Score": 2037,
+      "Shared": 2038,
+      "Step": 2039,
+      "TTICE": 2040,
+      "Verify": 2041,
+      "What": 2042,
+      "Worker": 2043,
+      "WED_FILE_EXTS": 2044,
+      "\\\\-]+',": 2045,
+      "]\",[\"[": 2046,
+      "_normal": 2047,
+      "_ensure_log": 2048,
+      "_prompt_int": 2049,
+      "_strings": 2050,
+      "_summary": 2051,
+      "_consumer_inputs": 2052,
+      "_src_root_of": 2053,
+      "_result_to": 2054,
+      "__future": 2055,
+      "_strip_opt": 2056,
+      "_penalty": 2057,
+      "_LINE_COMMENT_RE": 2058,
+      "_words": 2059,
+      "_step1_provider": 2060,
+      "_panel": 2061,
+      "_ascii_trajectory": 2062,
+      "_is_under_igno": 2063,
+      "_BLOCK_COMMENT_RE": 2064,
+      "above": 2065,
+      "across": 2066,
+      "carries": 2067,
+      "can_import": 2068,
+      "cursor": 2069,
+      "gates": 2070,
+      "github": 2071,
+      "harder": 2072,
+      "multiply": 2073,
+      "mistral": 2074,
+      "nuxt": 2075,
+      "nImports": 2076,
+      "nThis": 2077,
+      "named": 2078,
+      "pptx": 2079,
+      "positional": 2080,
+      "space": 2081,
+      "save_config": 2082,
+      "tasks": 2083,
+      "were": 2084,
+      "wrapped_class": 2085,
+      "wiring": 2086,
+      "xlsx": 2087,
+      "zero": 2088,
+      "}->{": 2089,
+      ",\"(\",\")\")": 2090,
+      ",\"[\",\"]\")": 2091,
+      "resolve": 2092,
+      "register_fn": 2093,
+      "required": 2094,
+      "instruct": 2095,
+      "invalid": 2096,
+      "insert": 2097,
+      "inferred": 2098,
+      "invocation": 2099,
+      "startswith": 2100,
+      "standard": 2101,
+      "st_size": 2102,
+      "stub_penalty": 2103,
+      "architecturally": 2104,
+      "separated": 2105,
+      "enums": 2106,
+      "almost": 2107,
+      "coherent": 2108,
+      "divide": 2109,
+      "different": 2110,
+      "producer_payload_keys": 2111,
+      "until": 2112,
+      "unspecified": 2113,
+      "expanduser": 2114,
+      "---|------------|\\": 2115,
+      "annotations": 2116,
+      "method": 2117,
+      "field": 2118,
+      "(\"`\",\"'\")": 2119,
+      "(\".\")∧": 2120,
+      "run_finalize": 2121,
+      ").\"\"\"'''⟫,\"": 2122,
+      "render_synergy_adapter": 2123,
+      "artifact_size_by": 2124,
+      "T_LATTICE": 2125,
+      "subtract": 2126,
+      "')}.\"⟫,\"\"]": 2127,
+      "CONVERGED": 2128,
+      "heuristic": 2129,
+      "localhost": 2130,
+      "atomadic_forge_seed_": 2131,
+      "Architecture": 2132,
+      "final_output_type": 2133,
+      "__file__": 2134,
+      "list_ollama_models": 2135,
+      "list_presets": 2136,
+      "ALLOWED_FILE_EXTS": 2137,
+      "ALL_SOURCE_EXTS": 2138,
+      "ROJECT": 2139,
+      "_PROVIDER_MAP": 2140,
+      "_split_words": 2141,
+      "_target_score": 2142,
+      "follows": 2143,
+      "software": 2144,
+      "behavioral": 2145,
+      "default_target_score": 2146,
+      "fixtures": 2147,
+      "_balance_brackets": 2148,
+      "?\"✓\":\"(": 2149,
+      "_STRING_RE": 2150,
+      "write_text": 2151,
+      "|------|-----------|------------|\\": 2152,
+      "generated_at_utc": 2153,
+      "strip_comments_and_strings": 2154,
+      "DEFAULT_LANGUAGE": 2155,
+      "CommandSurface": 2156,
+      "TypedDicts": 2157,
+      "certainly": 2158,
+      "crosses_domains": 2159,
+      "evolve_report": 2160,
+      "rename_semantic": 2161,
+      "explicitly": 2162,
+      "TIER_NAMES": 2163,
+      "EMITS_INIT_FILES": 2164,
+      "EMITS_PYPROJECT": 2165,
+      "),\"```\",\"\",\"##": 2166,
+      "EFFECT_LATTICE": 2167,
+      "_normalize": 2168,
+      "_ensure_log_dir": 2169,
+      "_result_to_dict": 2170,
+      "__future__": 2171,
+      "_strip_optional": 2172,
+      "_is_under_ignored": 2173,
+      "artifact_size_bytes": 2174
+    },
+    "merges": [
+      [
+        "e",
+        "r"
+      ],
+      [
+        ",",
+        "\""
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "'",
+        ","
+      ],
+      [
+        "\"",
+        ",\""
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "'",
+        "."
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "'",
+        ":"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "s",
+        "u"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "p",
+        "ro"
+      ],
+      [
+        "c",
+        "on"
+      ],
+      [
+        "d",
+        "u"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "n",
+        "d"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "er",
+        "_"
+      ],
+      [
+        "st",
+        "r"
+      ],
+      [
+        "r",
+        "c"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "f",
+        "or"
+      ],
+      [
+        "pro",
+        "du"
+      ],
+      [
+        "produ",
+        "c"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "i",
+        "f"
+      ],
+      [
+        "⟩",
+        "→"
+      ],
+      [
+        "y",
+        "p"
+      ],
+      [
+        "e",
+        "d"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "ar",
+        "d"
+      ],
+      [
+        "i",
+        "p"
+      ],
+      [
+        "m",
+        "p"
+      ],
+      [
+        "p",
+        "a"
+      ],
+      [
+        "t",
+        "yp"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "ch",
+        "e"
+      ],
+      [
+        "c",
+        "ard"
+      ],
+      [
+        "su",
+        "m"
+      ],
+      [
+        "con",
+        "sum"
+      ],
+      [
+        "\"",
+        "\""
+      ],
+      [
+        ")",
+        "\",\""
+      ],
+      [
+        "1",
+        "π"
+      ],
+      [
+        "j",
+        "s"
+      ],
+      [
+        "-",
+        "-"
+      ],
+      [
+        "'",
+        "]"
+      ],
+      [
+        "[",
+        "'"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        ",",
+        "⟪"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "a",
+        "ge"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "t",
+        "s"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "c",
+        "k"
+      ],
+      [
+        "s",
+        "y"
+      ],
+      [
+        "on",
+        "e"
+      ],
+      [
+        "g",
+        "s"
+      ],
+      [
+        "i",
+        "d"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "o",
+        "ma"
+      ],
+      [
+        "produc",
+        "er"
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "N",
+        "one"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "typ",
+        "er"
+      ],
+      [
+        "d",
+        "_"
+      ],
+      [
+        "consum",
+        "er"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "di",
+        "c"
+      ],
+      [
+        "f",
+        "ro"
+      ],
+      [
+        "s",
+        "rc"
+      ],
+      [
+        "u",
+        "re"
+      ],
+      [
+        "en",
+        "t"
+      ],
+      [
+        "ck",
+        "age"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "h",
+        "a"
+      ],
+      [
+        "o",
+        "ut"
+      ],
+      [
+        "se",
+        "t"
+      ],
+      [
+        "for",
+        "ge"
+      ],
+      [
+        "pa",
+        "ckage"
+      ],
+      [
+        "\"",
+        ")"
+      ],
+      [
+        "`",
+        "`"
+      ],
+      [
+        "at",
+        "e"
+      ],
+      [
+        "js",
+        "on"
+      ],
+      [
+        "oma",
+        "dic"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "}",
+        "⟫"
+      ],
+      [
+        "⟪",
+        "{"
+      ],
+      [
+        "⟫",
+        ",\""
+      ],
+      [
+        "ar",
+        "gs"
+      ],
+      [
+        "(",
+        "\""
+      ],
+      [
+        "_",
+        "co"
+      ],
+      [
+        "c",
+        "r"
+      ],
+      [
+        "r",
+        "un"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "at",
+        "ion"
+      ],
+      [
+        "ip",
+        "t"
+      ],
+      [
+        "cr",
+        "ipt"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "re",
+        "nd"
+      ],
+      [
+        "at",
+        "omadic"
+      ],
+      [
+        ")",
+        "."
+      ],
+      [
+        "*",
+        "*"
+      ],
+      [
+        "T",
+        "S"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "a",
+        "ct"
+      ],
+      [
+        "p",
+        "y"
+      ],
+      [
+        "t",
+        "if"
+      ],
+      [
+        "'",
+        "'"
+      ],
+      [
+        ":",
+        "\",\""
+      ],
+      [
+        "=",
+        "'"
+      ],
+      [
+        "[",
+        "["
+      ],
+      [
+        "]",
+        "]"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "ar",
+        "tif"
+      ],
+      [
+        "co",
+        "de"
+      ],
+      [
+        "er_",
+        "args"
+      ],
+      [
+        "']",
+        "!"
+      ],
+      [
+        "rend",
+        "er_"
+      ],
+      [
+        "artif",
+        "act"
+      ],
+      [
+        "O",
+        "N"
+      ],
+      [
+        "_",
+        "o"
+      ],
+      [
+        "c",
+        "li"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "l",
+        "t"
+      ],
+      [
+        "r",
+        "u"
+      ],
+      [
+        "at",
+        "h"
+      ],
+      [
+        "ge",
+        "t"
+      ],
+      [
+        "\"",
+        ",⟪"
+      ],
+      [
+        "E",
+        "X"
+      ],
+      [
+        "F",
+        "I"
+      ],
+      [
+        "T",
+        "_"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "m",
+        "ma"
+      ],
+      [
+        "o",
+        "c"
+      ],
+      [
+        "p",
+        "re"
+      ],
+      [
+        "or",
+        "y"
+      ],
+      [
+        "or",
+        "che"
+      ],
+      [
+        "su",
+        "b"
+      ],
+      [
+        "mma",
+        "nd"
+      ],
+      [
+        "orche",
+        "str"
+      ],
+      [
+        "T",
+        "ru"
+      ],
+      [
+        "c",
+        "al"
+      ],
+      [
+        "p",
+        "t"
+      ],
+      [
+        "p",
+        "ut"
+      ],
+      [
+        "s",
+        "che"
+      ],
+      [
+        "t",
+        "ur"
+      ],
+      [
+        "z",
+        "en"
+      ],
+      [
+        "}",
+        ","
+      ],
+      [
+        "re",
+        "su"
+      ],
+      [
+        "re",
+        "tur"
+      ],
+      [
+        "mp",
+        "or"
+      ],
+      [
+        "ex",
+        "t"
+      ],
+      [
+        "no",
+        "t"
+      ],
+      [
+        "fro",
+        "zen"
+      ],
+      [
+        "Tru",
+        "e"
+      ],
+      [
+        "sche",
+        "ma"
+      ],
+      [
+        "resu",
+        "lt"
+      ],
+      [
+        "retur",
+        "n"
+      ],
+      [
+        "frozen",
+        "set"
+      ],
+      [
+        "_",
+        "f"
+      ],
+      [
+        "_",
+        "id"
+      ],
+      [
+        "a",
+        "4"
+      ],
+      [
+        "a",
+        "v"
+      ],
+      [
+        "d",
+        "y"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "i",
+        "g"
+      ],
+      [
+        "m",
+        "d_"
+      ],
+      [
+        "s",
+        "co"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "ch",
+        "o"
+      ],
+      [
+        "de",
+        "mo"
+      ],
+      [
+        "bo",
+        "dy"
+      ],
+      [
+        "EX",
+        "TS"
+      ],
+      [
+        "d",
+        "oc"
+      ],
+      [
+        "e",
+        "ct"
+      ],
+      [
+        "f",
+        "g"
+      ],
+      [
+        "n",
+        "er"
+      ],
+      [
+        "t",
+        "o"
+      ],
+      [
+        ",\"",
+        ",\""
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "ed",
+        "_"
+      ],
+      [
+        "out",
+        "put"
+      ],
+      [
+        "te",
+        "st"
+      ],
+      [
+        "\"",
+        "."
+      ],
+      [
+        "'",
+        ")"
+      ],
+      [
+        "'",
+        "-"
+      ],
+      [
+        "G",
+        "_"
+      ],
+      [
+        "_",
+        "sy"
+      ],
+      [
+        "_",
+        "orchestr"
+      ],
+      [
+        "a",
+        "in"
+      ],
+      [
+        "c",
+        "md_"
+      ],
+      [
+        "o",
+        "in"
+      ],
+      [
+        "p",
+        "ath"
+      ],
+      [
+        "v",
+        "o"
+      ],
+      [
+        "er",
+        "r"
+      ],
+      [
+        "in",
+        "d"
+      ],
+      [
+        "str",
+        "ip"
+      ],
+      [
+        "produc",
+        "er_args"
+      ],
+      [
+        "``",
+        "`"
+      ],
+      [
+        "⟪{",
+        "'"
+      ],
+      [
+        "a4",
+        "_sy"
+      ],
+      [
+        "_orchestr",
+        "ation"
+      ],
+      [
+        "a4_sy",
+        "_orchestration"
+      ],
+      [
+        "#",
+        "#"
+      ],
+      [
+        "'",
+        "⟫"
+      ],
+      [
+        "'",
+        "}⟫"
+      ],
+      [
+        "(",
+        "{"
+      ],
+      [
+        "+",
+        "\""
+      ],
+      [
+        "/",
+        "`"
+      ],
+      [
+        "C",
+        "ON"
+      ],
+      [
+        "F",
+        "al"
+      ],
+      [
+        "R",
+        "E"
+      ],
+      [
+        "_",
+        "render_"
+      ],
+      [
+        "a",
+        "me"
+      ],
+      [
+        "b",
+        "le"
+      ],
+      [
+        "e",
+        "_"
+      ],
+      [
+        "i",
+        "mpor"
+      ],
+      [
+        "j",
+        "ect"
+      ],
+      [
+        "l",
+        "in"
+      ],
+      [
+        "m",
+        "ent"
+      ],
+      [
+        "s",
+        "ion"
+      ],
+      [
+        "s",
+        "ha"
+      ],
+      [
+        "re",
+        "d"
+      ],
+      [
+        "ch",
+        "ain"
+      ],
+      [
+        "--",
+        "--"
+      ],
+      [
+        "fro",
+        "m"
+      ],
+      [
+        "ha",
+        "se"
+      ],
+      [
+        "Fal",
+        "se"
+      ],
+      [
+        "\"",
+        "]"
+      ],
+      [
+        "E",
+        "x"
+      ],
+      [
+        "_",
+        "mo"
+      ],
+      [
+        "_",
+        "demo"
+      ],
+      [
+        "b",
+        "al"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "h",
+        "e"
+      ],
+      [
+        "j",
+        "oin"
+      ],
+      [
+        "n",
+        "ame"
+      ],
+      [
+        "p",
+        "p"
+      ],
+      [
+        "p",
+        "hase"
+      ],
+      [
+        "⟨",
+        "⟩→"
+      ],
+      [
+        "in",
+        "al"
+      ],
+      [
+        "at",
+        "ed"
+      ],
+      [
+        "at",
+        "ure"
+      ],
+      [
+        "st",
+        "an"
+      ],
+      [
+        "con",
+        "fi"
+      ],
+      [
+        "\"\"",
+        "\""
+      ],
+      [
+        "']",
+        "}"
+      ],
+      [
+        "th",
+        "e"
+      ],
+      [
+        "ca",
+        "che"
+      ],
+      [
+        "atomadic",
+        "_"
+      ],
+      [
+        "cli",
+        "_demo"
+      ],
+      [
+        "pre",
+        "set"
+      ],
+      [
+        "return",
+        "code"
+      ],
+      [
+        "CON",
+        "FI"
+      ],
+      [
+        "impor",
+        "t"
+      ],
+      [
+        "Ex",
+        "it"
+      ],
+      [
+        "'",
+        "⟫,\""
+      ],
+      [
+        "(",
+        "⟪{"
+      ],
+      [
+        "[",
+        "\""
+      ],
+      [
+        "a",
+        "pp"
+      ],
+      [
+        "c",
+        "es"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "i",
+        "se"
+      ],
+      [
+        "j",
+        "av"
+      ],
+      [
+        "t",
+        "ext"
+      ],
+      [
+        "in",
+        "t"
+      ],
+      [
+        "de",
+        "f"
+      ],
+      [
+        "ct",
+        "ion"
+      ],
+      [
+        "it",
+        "h"
+      ],
+      [
+        "un",
+        "ction"
+      ],
+      [
+        "as",
+        "cript"
+      ],
+      [
+        "lo",
+        "cal"
+      ],
+      [
+        "sy",
+        "s"
+      ],
+      [
+        "th",
+        "on"
+      ],
+      [
+        "_co",
+        "mp"
+      ],
+      [
+        "ti",
+        "er"
+      ],
+      [
+        "py",
+        "thon"
+      ],
+      [
+        "ra",
+        "ise"
+      ],
+      [
+        "sco",
+        "re"
+      ],
+      [
+        "ner",
+        "g"
+      ],
+      [
+        "atomadic_",
+        "forge"
+      ],
+      [
+        "jav",
+        "ascript"
+      ],
+      [
+        "\"",
+        "⟫,\""
+      ],
+      [
+        "'",
+        "}"
+      ],
+      [
+        "A",
+        "r"
+      ],
+      [
+        "D",
+        "I"
+      ],
+      [
+        "a",
+        "0"
+      ],
+      [
+        "a",
+        "1"
+      ],
+      [
+        "a",
+        "2"
+      ],
+      [
+        "a",
+        "3"
+      ],
+      [
+        "e",
+        "ature"
+      ],
+      [
+        "f",
+        "inal"
+      ],
+      [
+        "m",
+        "is"
+      ],
+      [
+        "p",
+        "en"
+      ],
+      [
+        "p",
+        "ip"
+      ],
+      [
+        "t",
+        "r"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "u",
+        "nd"
+      ],
+      [
+        "w",
+        "ith"
+      ],
+      [
+        "}",
+        ",\""
+      ],
+      [
+        "}",
+        "',"
+      ],
+      [
+        "er",
+        "ge"
+      ],
+      [
+        "in",
+        "vo"
+      ],
+      [
+        "se",
+        "cho"
+      ],
+      [
+        "co",
+        "mmand"
+      ],
+      [
+        "con",
+        "stan"
+      ],
+      [
+        "ct",
+        "x"
+      ],
+      [
+        "es",
+        "cript"
+      ],
+      [
+        "typ",
+        "escript"
+      ],
+      [
+        "an",
+        "g"
+      ],
+      [
+        "sy",
+        "nerg"
+      ],
+      [
+        "confi",
+        "g"
+      ],
+      [
+        "CONFI",
+        "G_"
+      ],
+      [
+        "unction",
+        "s"
+      ],
+      [
+        "DI",
+        "R"
+      ],
+      [
+        "invo",
+        "k"
+      ],
+      [
+        "constan",
+        "ts"
+      ],
+      [
+        "\"",
+        ","
+      ],
+      [
+        "(",
+        "'"
+      ],
+      [
+        "(",
+        "\",\""
+      ],
+      [
+        ")",
+        ")"
+      ],
+      [
+        ".",
+        "\",\""
+      ],
+      [
+        "3",
+        "ω"
+      ],
+      [
+        "R",
+        "I"
+      ],
+      [
+        "_",
+        "_"
+      ],
+      [
+        "_",
+        "output"
+      ],
+      [
+        "a",
+        "nd"
+      ],
+      [
+        "a",
+        "ble"
+      ],
+      [
+        "f",
+        "n"
+      ],
+      [
+        "l",
+        "y"
+      ],
+      [
+        "m",
+        "erge"
+      ],
+      [
+        "o",
+        "s"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "v",
+        "i"
+      ],
+      [
+        ",\"",
+        ",⟪"
+      ],
+      [
+        "re",
+        "d_"
+      ],
+      [
+        "en",
+        "v"
+      ],
+      [
+        "ut",
+        "o"
+      ],
+      [
+        "pro",
+        "ces"
+      ],
+      [
+        "er_",
+        "fn"
+      ],
+      [
+        "di",
+        "r"
+      ],
+      [
+        "if",
+        "i"
+      ],
+      [
+        "no",
+        "de"
+      ],
+      [
+        "as",
+        "h"
+      ],
+      [
+        "lo",
+        "w"
+      ],
+      [
+        "id",
+        "er"
+      ],
+      [
+        "id",
+        "ate"
+      ],
+      [
+        "li",
+        "st"
+      ],
+      [
+        "ca",
+        "pt"
+      ],
+      [
+        "_co",
+        "mmand"
+      ],
+      [
+        "ra",
+        "ject"
+      ],
+      [
+        "T_",
+        "EXTS"
+      ],
+      [
+        "'}⟫",
+        ")"
+      ],
+      [
+        "he",
+        "ad"
+      ],
+      [
+        "cli_demo",
+        "_"
+      ],
+      [
+        "(⟪{",
+        "'."
+      ],
+      [
+        "'}",
+        ")"
+      ],
+      [
+        "synerg",
+        "y"
+      ],
+      [
+        "os",
+        "it"
+      ],
+      [
+        "proces",
+        "s"
+      ],
+      [
+        "capt",
+        "ure"
+      ],
+      [
+        "raject",
+        "ory"
+      ],
+      [
+        "!",
+        "="
+      ],
+      [
+        "'",
+        "{"
+      ],
+      [
+        "'",
+        ",\",⟪"
+      ],
+      [
+        ":",
+        "\",⟪"
+      ],
+      [
+        "A",
+        "L"
+      ],
+      [
+        "C",
+        "RI"
+      ],
+      [
+        "E",
+        "S"
+      ],
+      [
+        "E",
+        "_"
+      ],
+      [
+        "F",
+        "or"
+      ],
+      [
+        "L",
+        "A"
+      ],
+      [
+        "L",
+        "O"
+      ],
+      [
+        "L",
+        "it"
+      ],
+      [
+        "P",
+        "T_EXTS"
+      ],
+      [
+        "R",
+        "O"
+      ],
+      [
+        "S",
+        "E"
+      ],
+      [
+        "[",
+        "(\""
+      ],
+      [
+        "]",
+        "\"⟫,\""
+      ],
+      [
+        "_",
+        "P"
+      ],
+      [
+        "_",
+        "d"
+      ],
+      [
+        "_",
+        "q"
+      ],
+      [
+        "_",
+        "s"
+      ],
+      [
+        "_",
+        "t"
+      ],
+      [
+        "_",
+        "at"
+      ],
+      [
+        "_",
+        "ro"
+      ],
+      [
+        "_",
+        "doc"
+      ],
+      [
+        "_",
+        "cache"
+      ],
+      [
+        "_",
+        "constants"
+      ],
+      [
+        "a",
+        "d_"
+      ],
+      [
+        "a",
+        "uto"
+      ],
+      [
+        "f",
+        "o"
+      ],
+      [
+        "g",
+        "lo"
+      ],
+      [
+        "g",
+        "_f"
+      ],
+      [
+        "k",
+        "e"
+      ],
+      [
+        "k",
+        "_constants"
+      ],
+      [
+        "m",
+        "l"
+      ],
+      [
+        "m",
+        "ory"
+      ],
+      [
+        "o",
+        "pen"
+      ],
+      [
+        "p",
+        "ar"
+      ],
+      [
+        "p",
+        "ure"
+      ],
+      [
+        "s",
+        "o"
+      ],
+      [
+        "v",
+        "ider"
+      ],
+      [
+        "er",
+        "al"
+      ],
+      [
+        "re",
+        "p"
+      ],
+      [
+        "st",
+        "ate"
+      ],
+      [
+        "en",
+        "d"
+      ],
+      [
+        "ut",
+        "able"
+      ],
+      [
+        "du",
+        "mp"
+      ],
+      [
+        "nd",
+        "idate"
+      ],
+      [
+        "str",
+        "ing"
+      ],
+      [
+        "un",
+        "ifi"
+      ],
+      [
+        "ex",
+        "c"
+      ],
+      [
+        "ex",
+        "ec"
+      ],
+      [
+        "consum",
+        "er_args"
+      ],
+      [
+        "lo",
+        "ad"
+      ],
+      [
+        "oma",
+        "in"
+      ],
+      [
+        "me",
+        "mory"
+      ],
+      [
+        "ca",
+        "ndidate"
+      ],
+      [
+        "fi",
+        "le"
+      ],
+      [
+        "\")",
+        "]"
+      ],
+      [
+        "**",
+        ":"
+      ],
+      [
+        "_o",
+        "mis"
+      ],
+      [
+        "_o",
+        "g_f"
+      ],
+      [
+        "sub",
+        "process"
+      ],
+      [
+        "_f",
+        "unctions"
+      ],
+      [
+        "ig",
+        "n"
+      ],
+      [
+        "ig",
+        "no"
+      ],
+      [
+        "ed_",
+        "cli"
+      ],
+      [
+        "test",
+        "s"
+      ],
+      [
+        "cmd_",
+        "a"
+      ],
+      [
+        "cmd_",
+        "b"
+      ],
+      [
+        "lin",
+        "es"
+      ],
+      [
+        "sha",
+        "red_"
+      ],
+      [
+        "\"]",
+        ")"
+      ],
+      [
+        "_mo",
+        "_comp"
+      ],
+      [
+        "bal",
+        "_"
+      ],
+      [
+        "phase",
+        "_omis"
+      ],
+      [
+        "a0",
+        "_q"
+      ],
+      [
+        "a1",
+        "_at"
+      ],
+      [
+        "a2",
+        "_mo_comp"
+      ],
+      [
+        "a3",
+        "_og_f"
+      ],
+      [
+        "eature",
+        "s"
+      ],
+      [
+        "pip",
+        "e"
+      ],
+      [
+        "osit",
+        "es"
+      ],
+      [
+        "capture",
+        "_output"
+      ],
+      [
+        "CRI",
+        "PT_EXTS"
+      ],
+      [
+        "For",
+        "ge"
+      ],
+      [
+        "Lit",
+        "eral"
+      ],
+      [
+        "_ro",
+        "ot"
+      ],
+      [
+        "_doc",
+        "string"
+      ],
+      [
+        "glo",
+        "bal_"
+      ],
+      [
+        "dump",
+        "s"
+      ],
+      [
+        "unifi",
+        "ed_cli"
+      ],
+      [
+        "exec",
+        "utable"
+      ],
+      [
+        "candidate",
+        "_id"
+      ],
+      [
+        "phase_omis",
+        "sion"
+      ],
+      [
+        "a0_q",
+        "k_constants"
+      ],
+      [
+        "a1_at",
+        "_functions"
+      ],
+      [
+        "a2_mo_comp",
+        "osites"
+      ],
+      [
+        "a3_og_f",
+        "eatures"
+      ],
+      [
+        "\"",
+        "+"
+      ],
+      [
+        ")",
+        "+\""
+      ],
+      [
+        "-",
+        ">"
+      ],
+      [
+        ".",
+        "\"\"\""
+      ],
+      [
+        "A",
+        "n"
+      ],
+      [
+        "D",
+        "_"
+      ],
+      [
+        "L",
+        "I"
+      ],
+      [
+        "M",
+        "E"
+      ],
+      [
+        "N",
+        "O"
+      ],
+      [
+        "P",
+        "ath"
+      ],
+      [
+        "R",
+        "C"
+      ],
+      [
+        "T",
+        "E"
+      ],
+      [
+        "[",
+        "]"
+      ],
+      [
+        "_",
+        "artifact"
+      ],
+      [
+        "_",
+        "dir"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "b",
+        "ash"
+      ],
+      [
+        "c",
+        "fg"
+      ],
+      [
+        "f",
+        "f"
+      ],
+      [
+        "g",
+        "ment"
+      ],
+      [
+        "h",
+        "t"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "i",
+        "z"
+      ],
+      [
+        "i",
+        "re"
+      ],
+      [
+        "l",
+        "it"
+      ],
+      [
+        "l",
+        "la"
+      ],
+      [
+        "l",
+        "ang"
+      ],
+      [
+        "m",
+        "d"
+      ],
+      [
+        "m",
+        "m"
+      ],
+      [
+        "n",
+        "t"
+      ],
+      [
+        "p",
+        "lit"
+      ],
+      [
+        "r",
+        "r"
+      ],
+      [
+        "r",
+        "st"
+      ],
+      [
+        "s",
+        "s"
+      ],
+      [
+        "t",
+        "ed"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "}",
+        "`"
+      ],
+      [
+        "⟫",
+        ")"
+      ],
+      [
+        "⟫",
+        ",⟪"
+      ],
+      [
+        "ar",
+        "y"
+      ],
+      [
+        "se",
+        "gment"
+      ],
+      [
+        "ma",
+        "in"
+      ],
+      [
+        "ut",
+        "f"
+      ],
+      [
+        "pro",
+        "vider"
+      ],
+      [
+        "pa",
+        "y"
+      ],
+      [
+        "()",
+        "."
+      ],
+      [
+        "json",
+        "_artifact"
+      ],
+      [
+        "FI",
+        "L"
+      ],
+      [
+        "ce",
+        "_"
+      ],
+      [
+        "sco",
+        "ut"
+      ],
+      [
+        "ver",
+        "sion"
+      ],
+      [
+        "lin",
+        "e"
+      ],
+      [
+        "int",
+        "ent"
+      ],
+      [
+        "def",
+        "a"
+      ],
+      [
+        "und",
+        "s"
+      ],
+      [
+        "'})",
+        ","
+      ],
+      [
+        "_t",
+        "rajectory"
+      ],
+      [
+        "ke",
+        "y"
+      ],
+      [
+        "par",
+        "ts"
+      ],
+      [
+        "lla",
+        "ma"
+      ],
+      [
+        "rr",
+        "or"
+      ],
+      [
+        "(",
+        "⟪"
+      ],
+      [
+        "(",
+        "[\""
+      ],
+      [
+        ")",
+        ")\",\""
+      ],
+      [
+        "/",
+        "\"+"
+      ],
+      [
+        "A",
+        "S"
+      ],
+      [
+        "A",
+        "t"
+      ],
+      [
+        "C",
+        "on"
+      ],
+      [
+        "C",
+        "LI"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "G",
+        "NO"
+      ],
+      [
+        "I",
+        "GNO"
+      ],
+      [
+        "N",
+        "A"
+      ],
+      [
+        "R",
+        "un"
+      ],
+      [
+        "S",
+        "RC"
+      ],
+      [
+        "Y",
+        "P"
+      ],
+      [
+        "_",
+        "EXTS"
+      ],
+      [
+        "_",
+        "bal"
+      ],
+      [
+        "_",
+        "tier"
+      ],
+      [
+        "_",
+        "score"
+      ],
+      [
+        "_",
+        "CONFIG_"
+      ],
+      [
+        "_",
+        "head"
+      ],
+      [
+        "_",
+        "memory"
+      ],
+      [
+        "_",
+        "pipe"
+      ],
+      [
+        "_",
+        "version"
+      ],
+      [
+        "`",
+        "{"
+      ],
+      [
+        "a",
+        "i"
+      ],
+      [
+        "a",
+        "ck"
+      ],
+      [
+        "b",
+        "y"
+      ],
+      [
+        "b",
+        "ack"
+      ],
+      [
+        "c",
+        "l"
+      ],
+      [
+        "c",
+        "le"
+      ],
+      [
+        "d",
+        "at"
+      ],
+      [
+        "d",
+        "ate"
+      ],
+      [
+        "d",
+        "omain"
+      ],
+      [
+        "e",
+        "cho"
+      ],
+      [
+        "h",
+        "er"
+      ],
+      [
+        "h",
+        "el"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "i",
+        "st"
+      ],
+      [
+        "l",
+        "en"
+      ],
+      [
+        "l",
+        "back"
+      ],
+      [
+        "m",
+        "in"
+      ],
+      [
+        "s",
+        "plit"
+      ],
+      [
+        "t",
+        "mp"
+      ],
+      [
+        "u",
+        "age"
+      ],
+      [
+        "v",
+        "env"
+      ],
+      [
+        "}",
+        "\\"
+      ],
+      [
+        "}",
+        "'⟫"
+      ],
+      [
+        "re",
+        "ad_"
+      ],
+      [
+        "in",
+        "_memory"
+      ],
+      [
+        "\",\"",
+        "\",\""
+      ],
+      [
+        "at",
+        "tr"
+      ],
+      [
+        "ar",
+        "get"
+      ],
+      [
+        "ro",
+        "unds"
+      ],
+      [
+        "se",
+        "s"
+      ],
+      [
+        "en",
+        "ts"
+      ],
+      [
+        "al",
+        "l"
+      ],
+      [
+        "al",
+        "ign"
+      ],
+      [
+        "ch",
+        "err"
+      ],
+      [
+        "de",
+        "l"
+      ],
+      [
+        "pro",
+        "ject"
+      ],
+      [
+        "it",
+        "ed"
+      ],
+      [
+        "it",
+        "em"
+      ],
+      [
+        "er_",
+        "lines"
+      ],
+      [
+        "di",
+        "ct"
+      ],
+      [
+        "⟩→",
+        "["
+      ],
+      [
+        "pa",
+        "re"
+      ],
+      [
+        "typ",
+        "e"
+      ],
+      [
+        "ex",
+        "ited"
+      ],
+      [
+        ")\",\"",
+        "["
+      ],
+      [
+        "as",
+        "s"
+      ],
+      [
+        "an",
+        "ed"
+      ],
+      [
+        "an",
+        "ce_"
+      ],
+      [
+        "()",
+        ")"
+      ],
+      [
+        "fi",
+        "x"
+      ],
+      [
+        "fi",
+        "rst"
+      ],
+      [
+        "out",
+        "_command"
+      ],
+      [
+        "ti",
+        "er_"
+      ],
+      [
+        "ti",
+        "me"
+      ],
+      [
+        "ation",
+        "s"
+      ],
+      [
+        "**",
+        "{"
+      ],
+      [
+        "py",
+        "test"
+      ],
+      [
+        "''",
+        "'"
+      ],
+      [
+        "''",
+        "'⟫,\""
+      ],
+      [
+        "la",
+        "ble"
+      ],
+      [
+        "get",
+        "attr"
+      ],
+      [
+        "sub",
+        "command"
+      ],
+      [
+        "cal",
+        "lback"
+      ],
+      [
+        "ext",
+        "end"
+      ],
+      [
+        "not",
+        "ated"
+      ],
+      [
+        "schema",
+        "_id"
+      ],
+      [
+        "schema",
+        "_version"
+      ],
+      [
+        "_id",
+        "x"
+      ],
+      [
+        "ed_",
+        "subcommand"
+      ],
+      [
+        "')",
+        "]"
+      ],
+      [
+        "ind",
+        "ent"
+      ],
+      [
+        "({",
+        "'"
+      ],
+      [
+        "({",
+        "\",⟪"
+      ],
+      [
+        "+\"",
+        "/"
+      ],
+      [
+        "RE",
+        "D_"
+      ],
+      [
+        "e_",
+        "with"
+      ],
+      [
+        "local",
+        "_"
+      ],
+      [
+        "score",
+        "_trajectory"
+      ],
+      [
+        "Ar",
+        "gs"
+      ],
+      [
+        "ul",
+        "ts"
+      ],
+      [
+        "},\"",
+        "⟫,\""
+      ],
+      [
+        "},\"",
+        "⟫,⟪"
+      ],
+      [
+        "DIR",
+        "S"
+      ],
+      [
+        "invok",
+        "ed_subcommand"
+      ],
+      [
+        "invok",
+        "e_with"
+      ],
+      [
+        "merge",
+        "d"
+      ],
+      [
+        "cli_demo_",
+        "returncode"
+      ],
+      [
+        "AL",
+        "_CONFIG_"
+      ],
+      [
+        "RO",
+        "O"
+      ],
+      [
+        "_P",
+        "RE"
+      ],
+      [
+        "_d",
+        "t"
+      ],
+      [
+        "open",
+        "_idx"
+      ],
+      [
+        "igno",
+        "re"
+      ],
+      [
+        "shared_",
+        "schema"
+      ],
+      [
+        "An",
+        "notated"
+      ],
+      [
+        "iz",
+        "e"
+      ],
+      [
+        "pay",
+        "load"
+      ],
+      [
+        "FIL",
+        "E_"
+      ],
+      [
+        "defa",
+        "ults"
+      ],
+      [
+        "([\"",
+        "@"
+      ],
+      [
+        "))\",\"",
+        "\"])"
+      ],
+      [
+        "At",
+        "omadic"
+      ],
+      [
+        "Con",
+        "text"
+      ],
+      [
+        "IGNO",
+        "RED_"
+      ],
+      [
+        "_bal",
+        "ance_"
+      ],
+      [
+        "_head",
+        "er_lines"
+      ],
+      [
+        "cle",
+        "aned"
+      ],
+      [
+        "dat",
+        "a"
+      ],
+      [
+        "hel",
+        "p"
+      ],
+      [
+        "in_memory",
+        "_pipe"
+      ],
+      [
+        "cherr",
+        "y"
+      ],
+      [
+        "item",
+        "s"
+      ],
+      [
+        "invoke_with",
+        "out_command"
+      ],
+      [
+        "AL_CONFIG_",
+        "DIR"
+      ],
+      [
+        "IGNORED_",
+        "DIRS"
+      ],
+      [
+        "\"",
+        ":"
+      ],
+      [
+        "'",
+        ",\",\""
+      ],
+      [
+        "(",
+        "\"\""
+      ],
+      [
+        ")",
+        "["
+      ],
+      [
+        ")",
+        "∨"
+      ],
+      [
+        ")",
+        "]\"⟫,\""
+      ],
+      [
+        ")",
+        "⟫)"
+      ],
+      [
+        ".",
+        "\\"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        ":",
+        "."
+      ],
+      [
+        ":",
+        "["
+      ],
+      [
+        "?",
+        "\""
+      ],
+      [
+        "A",
+        "U"
+      ],
+      [
+        "A",
+        "V"
+      ],
+      [
+        "D",
+        "ire"
+      ],
+      [
+        "E",
+        "R"
+      ],
+      [
+        "E",
+        "rror"
+      ],
+      [
+        "F",
+        "AU"
+      ],
+      [
+        "G",
+        "en"
+      ],
+      [
+        "H",
+        "ON"
+      ],
+      [
+        "J",
+        "S"
+      ],
+      [
+        "J",
+        "AV"
+      ],
+      [
+        "L",
+        "L"
+      ],
+      [
+        "L",
+        "T_"
+      ],
+      [
+        "P",
+        "Y"
+      ],
+      [
+        "T",
+        "I"
+      ],
+      [
+        "T",
+        "e"
+      ],
+      [
+        "T",
+        "YP"
+      ],
+      [
+        "T",
+        "HON"
+      ],
+      [
+        "_",
+        "S"
+      ],
+      [
+        "_",
+        "producer"
+      ],
+      [
+        "_",
+        "consumer"
+      ],
+      [
+        "_",
+        "key"
+      ],
+      [
+        "a",
+        "re"
+      ],
+      [
+        "a",
+        "st"
+      ],
+      [
+        "a",
+        "dic"
+      ],
+      [
+        "d",
+        "s"
+      ],
+      [
+        "d",
+        "out"
+      ],
+      [
+        "e",
+        "w"
+      ],
+      [
+        "e",
+        "ed"
+      ],
+      [
+        "e",
+        "ver"
+      ],
+      [
+        "f",
+        "ind"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "g",
+        "it"
+      ],
+      [
+        "i",
+        "v"
+      ],
+      [
+        "k",
+        "g"
+      ],
+      [
+        "k",
+        "ind"
+      ],
+      [
+        "l",
+        "v"
+      ],
+      [
+        "l",
+        "es"
+      ],
+      [
+        "m",
+        "on"
+      ],
+      [
+        "m",
+        "at"
+      ],
+      [
+        "m",
+        "ar"
+      ],
+      [
+        "m",
+        "js"
+      ],
+      [
+        "m",
+        "bo"
+      ],
+      [
+        "o",
+        "se"
+      ],
+      [
+        "p",
+        "ec"
+      ],
+      [
+        "p",
+        "ic"
+      ],
+      [
+        "p",
+        "kg"
+      ],
+      [
+        "r",
+        "ation"
+      ],
+      [
+        "s",
+        "v"
+      ],
+      [
+        "t",
+        "arget"
+      ],
+      [
+        "u",
+        "i"
+      ],
+      [
+        "u",
+        "rc"
+      ],
+      [
+        "v",
+        "al"
+      ],
+      [
+        "w",
+        "r"
+      ],
+      [
+        "w",
+        "or"
+      ],
+      [
+        "w",
+        "ar"
+      ],
+      [
+        "|",
+        "\\"
+      ],
+      [
+        "|",
+        "----"
+      ],
+      [
+        "er",
+        "me"
+      ],
+      [
+        "er",
+        "ated"
+      ],
+      [
+        "in",
+        "gs"
+      ],
+      [
+        "\",\"",
+        "\",⟪"
+      ],
+      [
+        "\",\"",
+        "##"
+      ],
+      [
+        "st",
+        "all"
+      ],
+      [
+        "st",
+        "dout"
+      ],
+      [
+        "ar",
+        "c"
+      ],
+      [
+        "ar",
+        "g"
+      ],
+      [
+        "ro",
+        "pic"
+      ],
+      [
+        "ge",
+        "d"
+      ],
+      [
+        "ge",
+        "ner"
+      ],
+      [
+        "co",
+        "d"
+      ],
+      [
+        "co",
+        "ver"
+      ],
+      [
+        "ut",
+        "c"
+      ],
+      [
+        "de",
+        "d"
+      ],
+      [
+        "con",
+        "ver"
+      ],
+      [
+        "du",
+        "le"
+      ],
+      [
+        "du",
+        "ration"
+      ],
+      [
+        "ct",
+        "ory"
+      ],
+      [
+        "di",
+        "ate"
+      ],
+      [
+        "for",
+        "mat"
+      ],
+      [
+        "for",
+        "war"
+      ],
+      [
+        "produc",
+        "er_fn"
+      ],
+      [
+        "ex",
+        "ce"
+      ],
+      [
+        "consum",
+        "er_fn"
+      ],
+      [
+        "le",
+        "ted"
+      ],
+      [
+        "li",
+        "b"
+      ],
+      [
+        "th",
+        "is"
+      ],
+      [
+        "th",
+        "ropic"
+      ],
+      [
+        "ur",
+        "l"
+      ],
+      [
+        "}⟫",
+        ")"
+      ],
+      [
+        "_co",
+        "mm"
+      ],
+      [
+        "run",
+        "_"
+      ],
+      [
+        "get",
+        "_docstring"
+      ],
+      [
+        "pre",
+        "fix"
+      ],
+      [
+        ",\",\"",
+        ")"
+      ],
+      [
+        "strip",
+        "_comm"
+      ],
+      [
+        "```",
+        "\\"
+      ],
+      [
+        "'⟫",
+        "+"
+      ],
+      [
+        "'⟫",
+        ",⟪"
+      ],
+      [
+        "({",
+        "'."
+      ],
+      [
+        "_render_",
+        "phase_omission"
+      ],
+      [
+        "_render_",
+        "json_artifact"
+      ],
+      [
+        "']}",
+        ".\"\"\""
+      ],
+      [
+        "cli_demo",
+        "_command"
+      ],
+      [
+        "int",
+        "erme"
+      ],
+      [
+        "_comp",
+        "leted"
+      ],
+      [
+        "Ar",
+        "gu"
+      ],
+      [
+        "final",
+        "_score"
+      ],
+      [
+        "tr",
+        "y"
+      ],
+      [
+        "CONFIG_",
+        "FILE_"
+      ],
+      [
+        ".\",\"",
+        "-"
+      ],
+      [
+        "low",
+        "er"
+      ],
+      [
+        "head",
+        "line"
+      ],
+      [
+        "cli_demo_",
+        "stdout"
+      ],
+      [
+        "ES",
+        "CRIPT_EXTS"
+      ],
+      [
+        "LA",
+        "N"
+      ],
+      [
+        "LO",
+        "C"
+      ],
+      [
+        "SE",
+        "TS"
+      ],
+      [
+        "so",
+        "urc"
+      ],
+      [
+        "rep",
+        "o"
+      ],
+      [
+        "[]",
+        "\",\""
+      ],
+      [
+        "lang",
+        "uage"
+      ],
+      [
+        "}`",
+        "'⟫,⟪"
+      ],
+      [
+        "(⟪",
+        "("
+      ],
+      [
+        "AS",
+        "CRIPT_EXTS"
+      ],
+      [
+        "DE",
+        "FAU"
+      ],
+      [
+        "NA",
+        "ME"
+      ],
+      [
+        "domain",
+        "s"
+      ],
+      [
+        "rounds",
+        "_completed"
+      ],
+      [
+        "align",
+        "ment"
+      ],
+      [
+        "pare",
+        "nt"
+      ],
+      [
+        "_PRE",
+        "SETS"
+      ],
+      [
+        ")∨",
+        "\"\""
+      ],
+      [
+        "Dire",
+        "ctory"
+      ],
+      [
+        "Gen",
+        "erated"
+      ],
+      [
+        "JS",
+        "ON"
+      ],
+      [
+        "JAV",
+        "ASCRIPT_EXTS"
+      ],
+      [
+        "LL",
+        "M"
+      ],
+      [
+        "PY",
+        "THON"
+      ],
+      [
+        "TYP",
+        "ESCRIPT_EXTS"
+      ],
+      [
+        "mon",
+        "adic"
+      ],
+      [
+        "mar",
+        "k"
+      ],
+      [
+        "mbo",
+        "l"
+      ],
+      [
+        "cover",
+        "age"
+      ],
+      [
+        "conver",
+        "ged"
+      ],
+      [
+        "duration",
+        "_s"
+      ],
+      [
+        "forwar",
+        "ded"
+      ],
+      [
+        "exce",
+        "pt"
+      ],
+      [
+        "strip_comm",
+        "ents"
+      ],
+      [
+        "']}.\"\"\"",
+        "'''⟫,\""
+      ],
+      [
+        "interme",
+        "diate"
+      ],
+      [
+        "Argu",
+        "ment"
+      ],
+      [
+        "CONFIG_FILE_",
+        "NAME"
+      ],
+      [
+        "DEFAU",
+        "LT_"
+      ],
+      [
+        "PYTHON",
+        "_EXTS"
+      ],
+      [
+        "\"",
+        "("
+      ],
+      [
+        "\"",
+        "⟫)"
+      ],
+      [
+        "'",
+        "#"
+      ],
+      [
+        "'",
+        "\",\""
+      ],
+      [
+        "'",
+        "--"
+      ],
+      [
+        ")",
+        "\\"
+      ],
+      [
+        "*",
+        "."
+      ],
+      [
+        "-",
+        "{"
+      ],
+      [
+        "-",
+        "')"
+      ],
+      [
+        ".",
+        "')]"
+      ],
+      [
+        "/",
+        "/"
+      ],
+      [
+        "/",
+        "{"
+      ],
+      [
+        "0",
+        "f"
+      ],
+      [
+        "2",
+        "5"
+      ],
+      [
+        ":",
+        "\"\""
+      ],
+      [
+        ":",
+        "//"
+      ],
+      [
+        "=",
+        "\""
+      ],
+      [
+        "=",
+        "⟪{'"
+      ],
+      [
+        "A",
+        "G"
+      ],
+      [
+        "A",
+        "I"
+      ],
+      [
+        "B",
+        "AL_CONFIG_DIR"
+      ],
+      [
+        "C",
+        "O"
+      ],
+      [
+        "C",
+        "o"
+      ],
+      [
+        "D",
+        "e"
+      ],
+      [
+        "E",
+        "C"
+      ],
+      [
+        "E",
+        "M"
+      ],
+      [
+        "G",
+        "U"
+      ],
+      [
+        "G",
+        "LO"
+      ],
+      [
+        "I",
+        "TS"
+      ],
+      [
+        "I",
+        "mpor"
+      ],
+      [
+        "I",
+        "nt"
+      ],
+      [
+        "K",
+        "G_"
+      ],
+      [
+        "K",
+        "ind"
+      ],
+      [
+        "M",
+        "P"
+      ],
+      [
+        "M",
+        "ME"
+      ],
+      [
+        "N",
+        "T_"
+      ],
+      [
+        "O",
+        "SE"
+      ],
+      [
+        "P",
+        "KG_"
+      ],
+      [
+        "S",
+        "e"
+      ],
+      [
+        "S",
+        "y"
+      ],
+      [
+        "S",
+        "cript"
+      ],
+      [
+        "T",
+        "i"
+      ],
+      [
+        "T",
+        "yp"
+      ],
+      [
+        "T",
+        "he"
+      ],
+      [
+        "Z",
+        "a"
+      ],
+      [
+        "[",
+        ":"
+      ],
+      [
+        "]",
+        "."
+      ],
+      [
+        "]",
+        "⟩→"
+      ],
+      [
+        "]",
+        "}'⟫"
+      ],
+      [
+        "]",
+        ":\"\""
+      ],
+      [
+        "_",
+        "se"
+      ],
+      [
+        "_",
+        "for"
+      ],
+      [
+        "_",
+        "json"
+      ],
+      [
+        "_",
+        "la"
+      ],
+      [
+        "_",
+        "EX"
+      ],
+      [
+        "_",
+        "md_"
+      ],
+      [
+        "_",
+        "name"
+      ],
+      [
+        "_",
+        "confi"
+      ],
+      [
+        "_",
+        "file"
+      ],
+      [
+        "_",
+        "candidate_id"
+      ],
+      [
+        "_",
+        "line"
+      ],
+      [
+        "_",
+        "parts"
+      ],
+      [
+        "_",
+        "first"
+      ],
+      [
+        "`",
+        "\",\""
+      ],
+      [
+        "`",
+        ".\\"
+      ],
+      [
+        "a",
+        "f"
+      ],
+      [
+        "a",
+        "pt"
+      ],
+      [
+        "b",
+        "ut"
+      ],
+      [
+        "b",
+        "el"
+      ],
+      [
+        "b",
+        "ul"
+      ],
+      [
+        "b",
+        "ui"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "c",
+        "er"
+      ],
+      [
+        "c",
+        "ro"
+      ],
+      [
+        "c",
+        "js"
+      ],
+      [
+        "c",
+        "ss"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "e",
+        "b"
+      ],
+      [
+        "e",
+        "g"
+      ],
+      [
+        "e",
+        "p"
+      ],
+      [
+        "e",
+        "vo"
+      ],
+      [
+        "f",
+        "re"
+      ],
+      [
+        "f",
+        "eature"
+      ],
+      [
+        "f",
+        "ul"
+      ],
+      [
+        "f",
+        "unctions"
+      ],
+      [
+        "f",
+        "eed"
+      ],
+      [
+        "h",
+        "ex"
+      ],
+      [
+        "h",
+        "ig"
+      ],
+      [
+        "h",
+        "ash"
+      ],
+      [
+        "i",
+        "de"
+      ],
+      [
+        "i",
+        "es"
+      ],
+      [
+        "i",
+        "ce"
+      ],
+      [
+        "i",
+        "but"
+      ],
+      [
+        "j",
+        "p"
+      ],
+      [
+        "k",
+        "t"
+      ],
+      [
+        "k",
+        "dir"
+      ],
+      [
+        "l",
+        "d"
+      ],
+      [
+        "l",
+        "l"
+      ],
+      [
+        "l",
+        "er"
+      ],
+      [
+        "l",
+        "_parts"
+      ],
+      [
+        "m",
+        "es"
+      ],
+      [
+        "m",
+        "yp"
+      ],
+      [
+        "m",
+        "_name"
+      ],
+      [
+        "m",
+        "kdir"
+      ],
+      [
+        "n",
+        "forge"
+      ],
+      [
+        "n",
+        "ext"
+      ],
+      [
+        "o",
+        "ff"
+      ],
+      [
+        "o",
+        "llama"
+      ],
+      [
+        "o",
+        "format"
+      ],
+      [
+        "p",
+        "r"
+      ],
+      [
+        "p",
+        "oin"
+      ],
+      [
+        "r",
+        "y"
+      ],
+      [
+        "s",
+        "er"
+      ],
+      [
+        "s",
+        "or"
+      ],
+      [
+        "s",
+        "cript"
+      ],
+      [
+        "s",
+        "code"
+      ],
+      [
+        "s",
+        "ign"
+      ],
+      [
+        "s",
+        "ses"
+      ],
+      [
+        "s",
+        "af"
+      ],
+      [
+        "t",
+        "p"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "u",
+        "m"
+      ],
+      [
+        "u",
+        "de"
+      ],
+      [
+        "u",
+        "lt"
+      ],
+      [
+        "v",
+        "1"
+      ],
+      [
+        "v",
+        "scode"
+      ],
+      [
+        "w",
+        "h"
+      ],
+      [
+        "w",
+        "n"
+      ],
+      [
+        "w",
+        "ard"
+      ],
+      [
+        "w",
+        "ire"
+      ],
+      [
+        "w",
+        "eb"
+      ],
+      [
+        "w",
+        "off"
+      ],
+      [
+        "x",
+        "t"
+      ],
+      [
+        "y",
+        "out"
+      ],
+      [
+        "y",
+        "el"
+      ],
+      [
+        "y",
+        "_cache"
+      ],
+      [
+        "z",
+        "one"
+      ],
+      [
+        "{",
+        "'"
+      ],
+      [
+        "}",
+        "'"
+      ],
+      [
+        "∅",
+        ")"
+      ],
+      [
+        "er",
+        "s"
+      ],
+      [
+        "er",
+        "ers"
+      ],
+      [
+        ",\"",
+        "⟫,\""
+      ],
+      [
+        "re",
+        "co"
+      ],
+      [
+        "re",
+        "es"
+      ],
+      [
+        "re",
+        "ad"
+      ],
+      [
+        "re",
+        "name"
+      ],
+      [
+        "re",
+        "vi"
+      ],
+      [
+        "re",
+        "l_parts"
+      ],
+      [
+        "in",
+        "i"
+      ],
+      [
+        "in",
+        "de"
+      ],
+      [
+        "in",
+        "put"
+      ],
+      [
+        "in",
+        "stan"
+      ],
+      [
+        "in",
+        "stall"
+      ],
+      [
+        "or",
+        "s"
+      ],
+      [
+        "at",
+        "ors"
+      ],
+      [
+        "st",
+        "em"
+      ],
+      [
+        "st",
+        "ep"
+      ],
+      [
+        "ge",
+        "st"
+      ],
+      [
+        "ge",
+        "min"
+      ],
+      [
+        "'.",
+        "/"
+      ],
+      [
+        "se",
+        "e"
+      ],
+      [
+        "se",
+        "con"
+      ],
+      [
+        "en",
+        "for"
+      ],
+      [
+        "en",
+        "code"
+      ],
+      [
+        "en",
+        "cod"
+      ],
+      [
+        "ch",
+        "it"
+      ],
+      [
+        "de",
+        "te"
+      ],
+      [
+        "de",
+        "script"
+      ],
+      [
+        "str",
+        "ibut"
+      ],
+      [
+        "di",
+        "st"
+      ],
+      [
+        "di",
+        "gest"
+      ],
+      [
+        "di",
+        "stribut"
+      ],
+      [
+        "ion",
+        "al"
+      ],
+      [
+        "un",
+        "t"
+      ],
+      [
+        "mp",
+        "file"
+      ],
+      [
+        "mp",
+        "ose"
+      ],
+      [
+        "pa",
+        "n"
+      ],
+      [
+        "pa",
+        "ss"
+      ],
+      [
+        "pa",
+        "ir"
+      ],
+      [
+        "ex",
+        "p"
+      ],
+      [
+        "ex",
+        "ist"
+      ],
+      [
+        "\"\"",
+        "\"\""
+      ],
+      [
+        "js",
+        "x"
+      ],
+      [
+        "']",
+        ")"
+      ],
+      [
+        "']",
+        ","
+      ],
+      [
+        "no",
+        "w"
+      ],
+      [
+        "as",
+        "ses"
+      ],
+      [
+        "as",
+        "ci"
+      ],
+      [
+        "lo",
+        "g"
+      ],
+      [
+        "lo",
+        "ad_"
+      ],
+      [
+        "ts",
+        "x"
+      ],
+      [
+        "an",
+        "thropic"
+      ],
+      [
+        "sy",
+        "mbol"
+      ],
+      [
+        "()",
+        ","
+      ],
+      [
+        "mo",
+        "del"
+      ],
+      [
+        "mo",
+        "dule"
+      ],
+      [
+        "is",
+        "_"
+      ],
+      [
+        "is",
+        "oformat"
+      ],
+      [
+        "is",
+        "instan"
+      ],
+      [
+        "ent",
+        "ry"
+      ],
+      [
+        "ca",
+        "bul"
+      ],
+      [
+        "forge",
+        "d"
+      ],
+      [
+        "\")",
+        ")."
+      ],
+      [
+        "(\"",
+        "^"
+      ],
+      [
+        "_co",
+        "unt"
+      ],
+      [
+        "ti",
+        "mes"
+      ],
+      [
+        "te",
+        "mpfile"
+      ],
+      [
+        "rend",
+        "erers"
+      ],
+      [
+        ").",
+        "')]"
+      ],
+      [
+        "ad",
+        "apt"
+      ],
+      [
+        "py",
+        "cache"
+      ],
+      [
+        "code",
+        "Error"
+      ],
+      [
+        "render_",
+        "tests"
+      ],
+      [
+        "artifact",
+        "_md_"
+      ],
+      [
+        "_o",
+        "f"
+      ],
+      [
+        "_o",
+        "llama"
+      ],
+      [
+        "la",
+        "ce"
+      ],
+      [
+        "la",
+        "ude"
+      ],
+      [
+        "ru",
+        "ff"
+      ],
+      [
+        "T_",
+        "TE"
+      ],
+      [
+        "orchestr",
+        "ate"
+      ],
+      [
+        "orchestr",
+        "ators"
+      ],
+      [
+        "cal",
+        "lable"
+      ],
+      [
+        "mpor",
+        "ary"
+      ],
+      [
+        "av",
+        "ai"
+      ],
+      [
+        "el",
+        "se"
+      ],
+      [
+        "cho",
+        "ice"
+      ],
+      [
+        "to",
+        "ml"
+      ],
+      [
+        "to",
+        "_tier"
+      ],
+      [
+        "output",
+        "_root"
+      ],
+      [
+        "')",
+        ")\",\""
+      ],
+      [
+        "vo",
+        "cabul"
+      ],
+      [
+        "```",
+        "\",\"\",⟪"
+      ],
+      [
+        "_render_",
+        "shared_schema"
+      ],
+      [
+        "_render_",
+        "in_memory_pipe"
+      ],
+      [
+        "e_",
+        "intent"
+      ],
+      [
+        "sha",
+        "p"
+      ],
+      [
+        "sha",
+        "25"
+      ],
+      [
+        "from",
+        "_tier"
+      ],
+      [
+        "_mo",
+        "del"
+      ],
+      [
+        "⟨⟩→",
+        "["
+      ],
+      [
+        "ature",
+        "s"
+      ],
+      [
+        "CONFI",
+        "G"
+      ],
+      [
+        "'⟫,\"",
+        "\",⟪"
+      ],
+      [
+        "app",
+        "ly"
+      ],
+      [
+        "command",
+        "s"
+      ],
+      [
+        "ang",
+        "ler"
+      ],
+      [
+        "config",
+        "_file"
+      ],
+      [
+        "__",
+        "pycache"
+      ],
+      [
+        "merge",
+        "_confi"
+      ],
+      [
+        "vi",
+        "a"
+      ],
+      [
+        "'})",
+        "}⟫"
+      ],
+      [
+        "LA",
+        "TE"
+      ],
+      [
+        "_d",
+        "omain"
+      ],
+      [
+        "fo",
+        "re"
+      ],
+      [
+        "fo",
+        "und"
+      ],
+      [
+        "open",
+        "ai"
+      ],
+      [
+        "rep",
+        "lace"
+      ],
+      [
+        "state",
+        "ful"
+      ],
+      [
+        "end",
+        "ations"
+      ],
+      [
+        "load",
+        "s"
+      ],
+      [
+        "shared_",
+        "vocabul"
+      ],
+      [
+        "_docstring",
+        "_first"
+      ],
+      [
+        "global_",
+        "path"
+      ],
+      [
+        "global_",
+        "cfg"
+      ],
+      [
+        "be",
+        "fore"
+      ],
+      [
+        "ht",
+        "ml"
+      ],
+      [
+        "ht",
+        "tp"
+      ],
+      [
+        "lang",
+        "_la"
+      ],
+      [
+        "mm",
+        "endations"
+      ],
+      [
+        "up",
+        "date"
+      ],
+      [
+        "up",
+        "ward"
+      ],
+      [
+        "key",
+        "s"
+      ],
+      [
+        "cl",
+        "ass"
+      ],
+      [
+        "cl",
+        "asses"
+      ],
+      [
+        "date",
+        "time"
+      ],
+      [
+        "read_",
+        "text"
+      ],
+      [
+        "read_",
+        "config_file"
+      ],
+      [
+        "\",\"\",\"",
+        "```"
+      ],
+      [
+        "project",
+        "_root"
+      ],
+      [
+        "project",
+        "_dir"
+      ],
+      [
+        "tier_",
+        "inde"
+      ],
+      [
+        "tier_",
+        "distribut"
+      ],
+      [
+        "time",
+        "zone"
+      ],
+      [
+        "pytest",
+        "_cache"
+      ],
+      [
+        "local_",
+        "path"
+      ],
+      [
+        "local_",
+        "cfg"
+      ],
+      [
+        "ROO",
+        "T"
+      ],
+      [
+        "ROO",
+        "T_TE"
+      ],
+      [
+        "_balance_",
+        "pair"
+      ],
+      [
+        "(\"\"",
+        ","
+      ],
+      [
+        "TI",
+        "ER"
+      ],
+      [
+        "Te",
+        "mporary"
+      ],
+      [
+        "ever",
+        "y"
+      ],
+      [
+        "find",
+        "ings"
+      ],
+      [
+        "git",
+        "ignore"
+      ],
+      [
+        "iv",
+        "ate"
+      ],
+      [
+        "lv",
+        "e"
+      ],
+      [
+        "les",
+        "s"
+      ],
+      [
+        "wr",
+        "angler"
+      ],
+      [
+        "wor",
+        "kt"
+      ],
+      [
+        "|----",
+        "----"
+      ],
+      [
+        "gener",
+        "ated"
+      ],
+      [
+        "LAN",
+        "GU"
+      ],
+      [
+        "LOC",
+        "AL_CONFIG_DIR"
+      ],
+      [
+        "sourc",
+        "es"
+      ],
+      [
+        "JSON",
+        "De"
+      ],
+      [
+        "mark",
+        "do"
+      ],
+      [
+        "DEFAULT_",
+        "CONFIG"
+      ],
+      [
+        "CO",
+        "MME"
+      ],
+      [
+        "EM",
+        "ITS"
+      ],
+      [
+        "GLO",
+        "BAL_CONFIG_DIR"
+      ],
+      [
+        "Int",
+        "ent"
+      ],
+      [
+        "MP",
+        "LATE"
+      ],
+      [
+        "NT_",
+        "RE"
+      ],
+      [
+        "OSE",
+        "rror"
+      ],
+      [
+        "PKG_",
+        "ROOT_TE"
+      ],
+      [
+        "Ti",
+        "er"
+      ],
+      [
+        "]}'⟫",
+        ")"
+      ],
+      [
+        "_EX",
+        "T"
+      ],
+      [
+        "bui",
+        "ld"
+      ],
+      [
+        "fre",
+        "e"
+      ],
+      [
+        "hex",
+        "digest"
+      ],
+      [
+        "hig",
+        "her"
+      ],
+      [
+        "hash",
+        "lib"
+      ],
+      [
+        "ide",
+        "a"
+      ],
+      [
+        "ll",
+        "m_name"
+      ],
+      [
+        "myp",
+        "y_cache"
+      ],
+      [
+        "pr",
+        "ivate"
+      ],
+      [
+        "poin",
+        "ts"
+      ],
+      [
+        "sign",
+        "atures"
+      ],
+      [
+        "saf",
+        "e_intent"
+      ],
+      [
+        "yel",
+        "low"
+      ],
+      [
+        "reco",
+        "mmendations"
+      ],
+      [
+        "read",
+        "me"
+      ],
+      [
+        "revi",
+        "ew"
+      ],
+      [
+        "input",
+        "s"
+      ],
+      [
+        "gemin",
+        "i"
+      ],
+      [
+        "secon",
+        "ds"
+      ],
+      [
+        "enfor",
+        "ces"
+      ],
+      [
+        "encod",
+        "ing"
+      ],
+      [
+        "chit",
+        "ect"
+      ],
+      [
+        "dete",
+        "ct"
+      ],
+      [
+        "descript",
+        "ion"
+      ],
+      [
+        "exist",
+        "s"
+      ],
+      [
+        "symbol",
+        "_count"
+      ],
+      [
+        "isinstan",
+        "ce"
+      ],
+      [
+        "times",
+        "pec"
+      ],
+      [
+        "adapt",
+        "er"
+      ],
+      [
+        "render_tests",
+        "_"
+      ],
+      [
+        "artifact_md_",
+        "path"
+      ],
+      [
+        "ruff",
+        "_cache"
+      ],
+      [
+        "avai",
+        "lable"
+      ],
+      [
+        "sha25",
+        "6"
+      ],
+      [
+        "__pycache",
+        "__"
+      ],
+      [
+        "merge_confi",
+        "gs"
+      ],
+      [
+        "shared_vocabul",
+        "ary"
+      ],
+      [
+        "_docstring_first",
+        "_line"
+      ],
+      [
+        "lang_la",
+        "bel"
+      ],
+      [
+        "tier_inde",
+        "x"
+      ],
+      [
+        "tier_distribut",
+        "ion"
+      ],
+      [
+        "Temporary",
+        "Directory"
+      ],
+      [
+        "workt",
+        "rees"
+      ],
+      [
+        "LANGU",
+        "AG"
+      ],
+      [
+        "JSONDe",
+        "codeError"
+      ],
+      [
+        "markdo",
+        "wn"
+      ],
+      [
+        "COMME",
+        "NT_RE"
+      ],
+      [
+        "PKG_ROOT_TE",
+        "MPLATE"
+      ],
+      [
+        "\"",
+        "#"
+      ],
+      [
+        "\"",
+        "~"
+      ],
+      [
+        "\"",
+        "+\""
+      ],
+      [
+        "\"",
+        "'{"
+      ],
+      [
+        "\"",
+        "⟫,⟪"
+      ],
+      [
+        "\"",
+        "?\""
+      ],
+      [
+        "'",
+        "("
+      ],
+      [
+        "'",
+        "/"
+      ],
+      [
+        "'",
+        ")\",\""
+      ],
+      [
+        "'",
+        "\")"
+      ],
+      [
+        "'",
+        ")."
+      ],
+      [
+        "'",
+        "```"
+      ],
+      [
+        "(",
+        "?"
+      ],
+      [
+        "(",
+        ")\",\""
+      ],
+      [
+        ")",
+        "("
+      ],
+      [
+        ")",
+        ","
+      ],
+      [
+        ")",
+        ":"
+      ],
+      [
+        ")",
+        "?"
+      ],
+      [
+        ")",
+        "]"
+      ],
+      [
+        ")",
+        "≥"
+      ],
+      [
+        ")",
+        ",\""
+      ],
+      [
+        ")",
+        "\")"
+      ],
+      [
+        ")",
+        ":\",\""
+      ],
+      [
+        ")",
+        "[\""
+      ],
+      [
+        ")",
+        "\"⟫,\""
+      ],
+      [
+        ")",
+        "'}"
+      ],
+      [
+        ")",
+        "\"])"
+      ],
+      [
+        "+",
+        "⟪"
+      ],
+      [
+        "+",
+        "',"
+      ],
+      [
+        "-",
+        "]"
+      ],
+      [
+        "-",
+        "|--------"
+      ],
+      [
+        ".",
+        "\")"
+      ],
+      [
+        ".",
+        "\"⟫,\""
+      ],
+      [
+        "/",
+        "\""
+      ],
+      [
+        "/",
+        "."
+      ],
+      [
+        "/",
+        "\\"
+      ],
+      [
+        "/",
+        "\"."
+      ],
+      [
+        "/",
+        "'⟫+"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "_"
+      ],
+      [
+        "1",
+        "f"
+      ],
+      [
+        "1",
+        "00"
+      ],
+      [
+        "2",
+        "_"
+      ],
+      [
+        "2",
+        "00"
+      ],
+      [
+        "3",
+        "4"
+      ],
+      [
+        "4",
+        "0"
+      ],
+      [
+        "4",
+        "ι"
+      ],
+      [
+        "4",
+        "34"
+      ],
+      [
+        "7",
+        "5"
+      ],
+      [
+        "7",
+        "B"
+      ],
+      [
+        "7",
+        "b"
+      ],
+      [
+        "9",
+        "_"
+      ],
+      [
+        ":",
+        "\""
+      ],
+      [
+        ":",
+        "\\"
+      ],
+      [
+        "=",
+        "["
+      ],
+      [
+        "=",
+        "\","
+      ],
+      [
+        ">",
+        "="
+      ],
+      [
+        "A",
+        "P"
+      ],
+      [
+        "A",
+        "uto"
+      ],
+      [
+        "B",
+        "LOC"
+      ],
+      [
+        "C",
+        "E"
+      ],
+      [
+        "C",
+        "_EXTS"
+      ],
+      [
+        "C",
+        "laude"
+      ],
+      [
+        "D",
+        "O"
+      ],
+      [
+        "D",
+        "S"
+      ],
+      [
+        "D",
+        "i"
+      ],
+      [
+        "D",
+        "ur"
+      ],
+      [
+        "D",
+        "ec"
+      ],
+      [
+        "E",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "E",
+        "D_"
+      ],
+      [
+        "F",
+        "inal"
+      ],
+      [
+        "F",
+        "EC"
+      ],
+      [
+        "F",
+        "_EXT"
+      ],
+      [
+        "G",
+        "P"
+      ],
+      [
+        "G",
+        "o"
+      ],
+      [
+        "G",
+        "em"
+      ],
+      [
+        "G",
+        "ED"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "I",
+        "n"
+      ],
+      [
+        "I",
+        "T_"
+      ],
+      [
+        "I",
+        "DE"
+      ],
+      [
+        "J",
+        "av"
+      ],
+      [
+        "J",
+        "EC"
+      ],
+      [
+        "K",
+        "_"
+      ],
+      [
+        "L",
+        "a"
+      ],
+      [
+        "L",
+        "ang"
+      ],
+      [
+        "L",
+        "_S"
+      ],
+      [
+        "L",
+        "iv"
+      ],
+      [
+        "M",
+        "a"
+      ],
+      [
+        "M",
+        "an"
+      ],
+      [
+        "M",
+        "erge"
+      ],
+      [
+        "M",
+        "ES"
+      ],
+      [
+        "M",
+        "AI"
+      ],
+      [
+        "M",
+        "AP"
+      ],
+      [
+        "N",
+        "G_"
+      ],
+      [
+        "N",
+        "E_"
+      ],
+      [
+        "N",
+        "_EXT"
+      ],
+      [
+        "O",
+        "U"
+      ],
+      [
+        "O",
+        "pt"
+      ],
+      [
+        "O",
+        "pen"
+      ],
+      [
+        "O",
+        "llama"
+      ],
+      [
+        "O",
+        "F_EXT"
+      ],
+      [
+        "P",
+        "a"
+      ],
+      [
+        "P",
+        "l"
+      ],
+      [
+        "P",
+        "ro"
+      ],
+      [
+        "P",
+        "hase"
+      ],
+      [
+        "P",
+        "ass"
+      ],
+      [
+        "R",
+        "_"
+      ],
+      [
+        "R",
+        "e"
+      ],
+      [
+        "R",
+        "o"
+      ],
+      [
+        "S",
+        "co"
+      ],
+      [
+        "S",
+        "ha"
+      ],
+      [
+        "S",
+        "ur"
+      ],
+      [
+        "S",
+        "te"
+      ],
+      [
+        "T",
+        "h"
+      ],
+      [
+        "T",
+        "RI"
+      ],
+      [
+        "T",
+        "rajectory"
+      ],
+      [
+        "T",
+        "TI"
+      ],
+      [
+        "V",
+        "er"
+      ],
+      [
+        "V",
+        "ER"
+      ],
+      [
+        "V",
+        "IDE"
+      ],
+      [
+        "W",
+        "h"
+      ],
+      [
+        "W",
+        "or"
+      ],
+      [
+        "W",
+        "ED_"
+      ],
+      [
+        "[",
+        "{"
+      ],
+      [
+        "[",
+        "\",\""
+      ],
+      [
+        "\\",
+        "\\"
+      ],
+      [
+        "]",
+        "("
+      ],
+      [
+        "]",
+        "["
+      ],
+      [
+        "]",
+        "⟫"
+      ],
+      [
+        "]",
+        "\")"
+      ],
+      [
+        "]",
+        ",\",\""
+      ],
+      [
+        "]",
+        "\","
+      ],
+      [
+        "]",
+        ",\"⟫,\""
+      ],
+      [
+        "]",
+        "\"⟫,⟪"
+      ],
+      [
+        "_",
+        "n"
+      ],
+      [
+        "_",
+        "en"
+      ],
+      [
+        "_",
+        "pro"
+      ],
+      [
+        "_",
+        "str"
+      ],
+      [
+        "_",
+        "sum"
+      ],
+      [
+        "_",
+        "consum"
+      ],
+      [
+        "_",
+        "src"
+      ],
+      [
+        "_",
+        "pre"
+      ],
+      [
+        "_",
+        "result"
+      ],
+      [
+        "_",
+        "_f"
+      ],
+      [
+        "_",
+        "to"
+      ],
+      [
+        "_",
+        "strip"
+      ],
+      [
+        "_",
+        "chain"
+      ],
+      [
+        "_",
+        "preset"
+      ],
+      [
+        "_",
+        "import"
+      ],
+      [
+        "_",
+        "int"
+      ],
+      [
+        "_",
+        "pen"
+      ],
+      [
+        "_",
+        "and"
+      ],
+      [
+        "_",
+        "LI"
+      ],
+      [
+        "_",
+        "NA"
+      ],
+      [
+        "_",
+        "dict"
+      ],
+      [
+        "_",
+        "type"
+      ],
+      [
+        "_",
+        "wor"
+      ],
+      [
+        "_",
+        "utc"
+      ],
+      [
+        "_",
+        "url"
+      ],
+      [
+        "_",
+        "prefix"
+      ],
+      [
+        "_",
+        "Generated"
+      ],
+      [
+        "_",
+        "step"
+      ],
+      [
+        "_",
+        "pan"
+      ],
+      [
+        "_",
+        "asci"
+      ],
+      [
+        "_",
+        "log"
+      ],
+      [
+        "_",
+        "is_"
+      ],
+      [
+        "_",
+        "apply"
+      ],
+      [
+        "_",
+        "readme"
+      ],
+      [
+        "_",
+        "adapter"
+      ],
+      [
+        "_",
+        "markdown"
+      ],
+      [
+        "_",
+        "BLOC"
+      ],
+      [
+        "_",
+        "IN"
+      ],
+      [
+        "`",
+        ")"
+      ],
+      [
+        "`",
+        "--"
+      ],
+      [
+        "`",
+        "/`"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "a",
+        "bo"
+      ],
+      [
+        "a",
+        "ce"
+      ],
+      [
+        "a",
+        "ider"
+      ],
+      [
+        "a",
+        "ml"
+      ],
+      [
+        "a",
+        "Script"
+      ],
+      [
+        "a",
+        "cro"
+      ],
+      [
+        "b",
+        "mp"
+      ],
+      [
+        "b",
+        "ra"
+      ],
+      [
+        "c",
+        "ar"
+      ],
+      [
+        "c",
+        "it"
+      ],
+      [
+        "c",
+        "an"
+      ],
+      [
+        "c",
+        "ur"
+      ],
+      [
+        "c",
+        "laude"
+      ],
+      [
+        "d",
+        "f"
+      ],
+      [
+        "d",
+        "er"
+      ],
+      [
+        "d",
+        "on"
+      ],
+      [
+        "e",
+        "ts"
+      ],
+      [
+        "e",
+        "Script"
+      ],
+      [
+        "f",
+        "t"
+      ],
+      [
+        "f",
+        "er"
+      ],
+      [
+        "f",
+        "test"
+      ],
+      [
+        "f",
+        "unction"
+      ],
+      [
+        "f",
+        "ew"
+      ],
+      [
+        "f",
+        "ace"
+      ],
+      [
+        "g",
+        "er"
+      ],
+      [
+        "g",
+        "at"
+      ],
+      [
+        "g",
+        "if"
+      ],
+      [
+        "g",
+        "le"
+      ],
+      [
+        "g",
+        "ith"
+      ],
+      [
+        "g",
+        "ist"
+      ],
+      [
+        "h",
+        "g"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "h",
+        "ard"
+      ],
+      [
+        "h",
+        "as"
+      ],
+      [
+        "i",
+        "o"
+      ],
+      [
+        "i",
+        "co"
+      ],
+      [
+        "i",
+        "str"
+      ],
+      [
+        "i",
+        "_trajectory"
+      ],
+      [
+        "i",
+        "um"
+      ],
+      [
+        "k",
+        "s"
+      ],
+      [
+        "k",
+        "er"
+      ],
+      [
+        "k",
+        "it"
+      ],
+      [
+        "l",
+        "s"
+      ],
+      [
+        "l",
+        "low"
+      ],
+      [
+        "l",
+        "ations"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "m",
+        "ary"
+      ],
+      [
+        "m",
+        "ult"
+      ],
+      [
+        "m",
+        "istr"
+      ],
+      [
+        "n",
+        "g"
+      ],
+      [
+        "n",
+        "s"
+      ],
+      [
+        "n",
+        "u"
+      ],
+      [
+        "n",
+        "ti"
+      ],
+      [
+        "n",
+        "pip"
+      ],
+      [
+        "n",
+        "pytest"
+      ],
+      [
+        "n",
+        "eed"
+      ],
+      [
+        "n",
+        "ever"
+      ],
+      [
+        "n",
+        "Impor"
+      ],
+      [
+        "n",
+        "Th"
+      ],
+      [
+        "n",
+        "_Generated"
+      ],
+      [
+        "n",
+        "am"
+      ],
+      [
+        "o",
+        "d"
+      ],
+      [
+        "o",
+        "f"
+      ],
+      [
+        "o",
+        "u"
+      ],
+      [
+        "o",
+        "gle"
+      ],
+      [
+        "o",
+        "lations"
+      ],
+      [
+        "p",
+        "pt"
+      ],
+      [
+        "p",
+        "osit"
+      ],
+      [
+        "p",
+        "df"
+      ],
+      [
+        "p",
+        "ng"
+      ],
+      [
+        "q",
+        "ui"
+      ],
+      [
+        "r",
+        "g"
+      ],
+      [
+        "r",
+        "ies"
+      ],
+      [
+        "s",
+        "pa"
+      ],
+      [
+        "s",
+        "av"
+      ],
+      [
+        "s",
+        "ing"
+      ],
+      [
+        "s",
+        "ame"
+      ],
+      [
+        "s",
+        "ass"
+      ],
+      [
+        "s",
+        "pec"
+      ],
+      [
+        "s",
+        "css"
+      ],
+      [
+        "t",
+        "f"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "t",
+        "es"
+      ],
+      [
+        "t",
+        "as"
+      ],
+      [
+        "t",
+        "ure"
+      ],
+      [
+        "t",
+        "ain"
+      ],
+      [
+        "t",
+        "rajectory"
+      ],
+      [
+        "t",
+        "up"
+      ],
+      [
+        "t",
+        "Error"
+      ],
+      [
+        "t",
+        "xt"
+      ],
+      [
+        "t",
+        "_int"
+      ],
+      [
+        "t",
+        "tf"
+      ],
+      [
+        "u",
+        "g"
+      ],
+      [
+        "u",
+        "al"
+      ],
+      [
+        "u",
+        "ct"
+      ],
+      [
+        "u",
+        "es"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "v",
+        "es"
+      ],
+      [
+        "v",
+        "oc"
+      ],
+      [
+        "v",
+        "el"
+      ],
+      [
+        "v",
+        "2_"
+      ],
+      [
+        "w",
+        "er"
+      ],
+      [
+        "w",
+        "ra"
+      ],
+      [
+        "w",
+        "av"
+      ],
+      [
+        "w",
+        "ir"
+      ],
+      [
+        "w",
+        "are"
+      ],
+      [
+        "x",
+        "ls"
+      ],
+      [
+        "y",
+        "ml"
+      ],
+      [
+        "y",
+        "Kind"
+      ],
+      [
+        "y",
+        "aml"
+      ],
+      [
+        "y",
+        "ou"
+      ],
+      [
+        "z",
+        "0"
+      ],
+      [
+        "z",
+        "er"
+      ],
+      [
+        "|",
+        "{"
+      ],
+      [
+        "}",
+        "/"
+      ],
+      [
+        "}",
+        ";"
+      ],
+      [
+        "}",
+        "}⟫"
+      ],
+      [
+        "}",
+        "'}⟫"
+      ],
+      [
+        "}",
+        "->"
+      ],
+      [
+        "}",
+        ".\"⟫,\""
+      ],
+      [
+        "}",
+        "],\"⟫,\""
+      ],
+      [
+        "}",
+        "|{"
+      ],
+      [
+        "→",
+        "\"."
+      ],
+      [
+        "∨",
+        "\"("
+      ],
+      [
+        "≟",
+        "\""
+      ],
+      [
+        "✓",
+        "\":"
+      ],
+      [
+        "⟪",
+        "["
+      ],
+      [
+        "er",
+        "ent"
+      ],
+      [
+        ",\"",
+        "(\",\""
+      ],
+      [
+        ",\"",
+        "[\",\""
+      ],
+      [
+        "on",
+        "ly"
+      ],
+      [
+        "on",
+        "ger"
+      ],
+      [
+        "re",
+        "al"
+      ],
+      [
+        "re",
+        "con"
+      ],
+      [
+        "re",
+        "so"
+      ],
+      [
+        "re",
+        "_log"
+      ],
+      [
+        "re",
+        "gist"
+      ],
+      [
+        "re",
+        "qui"
+      ],
+      [
+        "in",
+        "it"
+      ],
+      [
+        "in",
+        "str"
+      ],
+      [
+        "in",
+        "fo"
+      ],
+      [
+        "in",
+        "val"
+      ],
+      [
+        "in",
+        "ser"
+      ],
+      [
+        "in",
+        "fer"
+      ],
+      [
+        "in",
+        "voc"
+      ],
+      [
+        "\",\"",
+        "\")"
+      ],
+      [
+        "\",\"",
+        "\","
+      ],
+      [
+        "or",
+        "t"
+      ],
+      [
+        "or",
+        "al"
+      ],
+      [
+        "or",
+        "config"
+      ],
+      [
+        "or",
+        "der"
+      ],
+      [
+        "or",
+        "mal"
+      ],
+      [
+        "at",
+        "ed_"
+      ],
+      [
+        "at",
+        "_utc"
+      ],
+      [
+        "st",
+        "s"
+      ],
+      [
+        "st",
+        "at"
+      ],
+      [
+        "st",
+        "ar"
+      ],
+      [
+        "st",
+        "and"
+      ],
+      [
+        "st",
+        "_s"
+      ],
+      [
+        "st",
+        "ub"
+      ],
+      [
+        "ar",
+        "chitect"
+      ],
+      [
+        "se",
+        "ts"
+      ],
+      [
+        "se",
+        "par"
+      ],
+      [
+        "en",
+        "um"
+      ],
+      [
+        "al",
+        "one"
+      ],
+      [
+        "al",
+        "mo"
+      ],
+      [
+        "al",
+        "ly"
+      ],
+      [
+        "al",
+        "ty"
+      ],
+      [
+        "co",
+        "v"
+      ],
+      [
+        "co",
+        "her"
+      ],
+      [
+        "co",
+        "mpose"
+      ],
+      [
+        "ma",
+        "y"
+      ],
+      [
+        "ma",
+        "nti"
+      ],
+      [
+        "su",
+        "re_log"
+      ],
+      [
+        "ut",
+        "es"
+      ],
+      [
+        "ut",
+        "ure"
+      ],
+      [
+        "pro",
+        "ves"
+      ],
+      [
+        "con",
+        "ftest"
+      ],
+      [
+        "du",
+        "les"
+      ],
+      [
+        "du",
+        "ser"
+      ],
+      [
+        "ct",
+        "s"
+      ],
+      [
+        "it",
+        "s"
+      ],
+      [
+        "it",
+        "e_"
+      ],
+      [
+        "it",
+        "ted"
+      ],
+      [
+        "it",
+        "orconfig"
+      ],
+      [
+        "er_",
+        "app"
+      ],
+      [
+        "er_",
+        "igno"
+      ],
+      [
+        "er_",
+        "pay"
+      ],
+      [
+        "er_",
+        "inputs"
+      ],
+      [
+        "str",
+        "onger"
+      ],
+      [
+        "di",
+        "vi"
+      ],
+      [
+        "di",
+        "ff"
+      ],
+      [
+        "produc",
+        "e"
+      ],
+      [
+        "produc",
+        "ed"
+      ],
+      [
+        "produc",
+        "er_pay"
+      ],
+      [
+        "if",
+        "y"
+      ],
+      [
+        "⟩→",
+        "∅"
+      ],
+      [
+        "ed",
+        "Di"
+      ],
+      [
+        "ed",
+        "itorconfig"
+      ],
+      [
+        "un",
+        "ti"
+      ],
+      [
+        "un",
+        "available"
+      ],
+      [
+        "un",
+        "spec"
+      ],
+      [
+        "ip",
+        "ly"
+      ],
+      [
+        "mp",
+        "3"
+      ],
+      [
+        "mp",
+        "4"
+      ],
+      [
+        "mp",
+        "t_int"
+      ],
+      [
+        "pa",
+        "sses"
+      ],
+      [
+        "typ",
+        "er_app"
+      ],
+      [
+        "ex",
+        "pan"
+      ],
+      [
+        "sum",
+        "es"
+      ],
+      [
+        "\"\"",
+        ","
+      ],
+      [
+        "\"\"",
+        ",⟪"
+      ],
+      [
+        ")\",\"",
+        "\","
+      ],
+      [
+        ")\",\"",
+        "\",\"##"
+      ],
+      [
+        ")\",\"",
+        "```\",\"\",⟪"
+      ],
+      [
+        "js",
+        "_readme"
+      ],
+      [
+        "--",
+        "|--------"
+      ],
+      [
+        "--",
+        "-|--------"
+      ],
+      [
+        "']",
+        "},"
+      ],
+      [
+        "']",
+        "]⟫"
+      ],
+      [
+        "no",
+        "x"
+      ],
+      [
+        "as",
+        "sumes"
+      ],
+      [
+        "lo",
+        "ck"
+      ],
+      [
+        "ts",
+        "with"
+      ],
+      [
+        "an",
+        "y"
+      ],
+      [
+        "an",
+        "not"
+      ],
+      [
+        "ck",
+        "ets"
+      ],
+      [
+        "sy",
+        "n"
+      ],
+      [
+        "id",
+        "oc"
+      ],
+      [
+        "le",
+        "ct"
+      ],
+      [
+        "le",
+        "vel"
+      ],
+      [
+        "()",
+        "/"
+      ],
+      [
+        "()",
+        "?"
+      ],
+      [
+        "()",
+        ":\""
+      ],
+      [
+        "li",
+        "ed"
+      ],
+      [
+        "li",
+        "cit"
+      ],
+      [
+        "is",
+        "ion"
+      ],
+      [
+        "me",
+        "th"
+      ],
+      [
+        "th",
+        "ing"
+      ],
+      [
+        "fi",
+        "el"
+      ],
+      [
+        "ha",
+        "nd"
+      ],
+      [
+        "ha",
+        "vi"
+      ],
+      [
+        "package",
+        "_json"
+      ],
+      [
+        "package",
+        "_prefix"
+      ],
+      [
+        "\")",
+        ")"
+      ],
+      [
+        "ur",
+        "ist"
+      ],
+      [
+        "ur",
+        "ally"
+      ],
+      [
+        "⟪{",
+        "**{"
+      ],
+      [
+        "(\"",
+        "`\",\""
+      ],
+      [
+        "(\"",
+        ".\")"
+      ],
+      [
+        "(\"",
+        "→\"."
+      ],
+      [
+        "run",
+        "_f"
+      ],
+      [
+        "run",
+        "ner"
+      ],
+      [
+        "te",
+        "ch"
+      ],
+      [
+        ").",
+        "\"\"\""
+      ],
+      [
+        "**",
+        "'⟫+"
+      ],
+      [
+        "ad",
+        "d"
+      ],
+      [
+        "ad",
+        "oc"
+      ],
+      [
+        "tif",
+        "y"
+      ],
+      [
+        "''",
+        ")"
+      ],
+      [
+        "''",
+        ")."
+      ],
+      [
+        "code",
+        "ium"
+      ],
+      [
+        "render_",
+        "synergy"
+      ],
+      [
+        "render_",
+        "gitignore"
+      ],
+      [
+        "render_",
+        "readme"
+      ],
+      [
+        "render_",
+        "js_readme"
+      ],
+      [
+        "render_",
+        "package_json"
+      ],
+      [
+        "artifact",
+        "_s"
+      ],
+      [
+        "_o",
+        "pt"
+      ],
+      [
+        "cli",
+        "ents"
+      ],
+      [
+        "la",
+        "w"
+      ],
+      [
+        "la",
+        "yout"
+      ],
+      [
+        "get",
+        "_preset"
+      ],
+      [
+        "FI",
+        "X"
+      ],
+      [
+        "T_",
+        "LA"
+      ],
+      [
+        "sub",
+        "tr"
+      ],
+      [
+        "mmand",
+        "Sur"
+      ],
+      [
+        "schema",
+        "s"
+      ],
+      [
+        "el",
+        "te"
+      ],
+      [
+        "demo",
+        "_markdown"
+      ],
+      [
+        "doc",
+        "x"
+      ],
+      [
+        "to",
+        "x"
+      ],
+      [
+        "to",
+        "re"
+      ],
+      [
+        "ed_",
+        "class"
+      ],
+      [
+        "output",
+        "_dir"
+      ],
+      [
+        "')",
+        "}⟫"
+      ],
+      [
+        "')",
+        "}.\"⟫,\""
+      ],
+      [
+        "G_",
+        "OF_EXT"
+      ],
+      [
+        "path",
+        "lib"
+      ],
+      [
+        "```",
+        "\",\"\",\""
+      ],
+      [
+        "'⟫",
+        ")"
+      ],
+      [
+        "CON",
+        "VER"
+      ],
+      [
+        "_render_",
+        "demo_markdown"
+      ],
+      [
+        "e_",
+        "config"
+      ],
+      [
+        "e_",
+        "rep"
+      ],
+      [
+        "e_",
+        "by"
+      ],
+      [
+        "impor",
+        "ts"
+      ],
+      [
+        "sha",
+        "red"
+      ],
+      [
+        "----",
+        "|\\"
+      ],
+      [
+        "\"]",
+        ","
+      ],
+      [
+        "\"]",
+        ")."
+      ],
+      [
+        "_mo",
+        "dule"
+      ],
+      [
+        "_mo",
+        "dules"
+      ],
+      [
+        "he",
+        "urist"
+      ],
+      [
+        "pp",
+        "ed_class"
+      ],
+      [
+        "phase",
+        "_chain"
+      ],
+      [
+        "⟨⟩→",
+        "∅"
+      ],
+      [
+        "inal",
+        "ize"
+      ],
+      [
+        "']}",
+        "\"⟫)"
+      ],
+      [
+        "the",
+        "ir"
+      ],
+      [
+        "atomadic_",
+        "v2_"
+      ],
+      [
+        "import",
+        "able"
+      ],
+      [
+        "'⟫,\"",
+        "$"
+      ],
+      [
+        "'⟫,\"",
+        "\",\"##"
+      ],
+      [
+        "'⟫,\"",
+        "```\",\"\",⟪"
+      ],
+      [
+        "[\"",
+        "["
+      ],
+      [
+        "app",
+        "lied"
+      ],
+      [
+        "em",
+        "rg"
+      ],
+      [
+        "em",
+        "itted"
+      ],
+      [
+        "local",
+        "ho"
+      ],
+      [
+        "nerg",
+        "yKind"
+      ],
+      [
+        "atomadic_forge",
+        "_se"
+      ],
+      [
+        "Ar",
+        "chitect"
+      ],
+      [
+        "final",
+        "_output"
+      ],
+      [
+        "final",
+        "ize"
+      ],
+      [
+        "mis",
+        "c"
+      ],
+      [
+        "mis",
+        "sing"
+      ],
+      [
+        "und",
+        "er_igno"
+      ],
+      [
+        "synerg",
+        "ies"
+      ],
+      [
+        "CONFIG_",
+        "EXTS"
+      ],
+      [
+        "('",
+        "["
+      ],
+      [
+        "('",
+        "--"
+      ],
+      [
+        ".\",\"",
+        "\",\"##"
+      ],
+      [
+        "__",
+        "file"
+      ],
+      [
+        "ot",
+        "f"
+      ],
+      [
+        "vi",
+        "olations"
+      ],
+      [
+        "red_",
+        "segment"
+      ],
+      [
+        "ifi",
+        "ed"
+      ],
+      [
+        "node",
+        "_modules"
+      ],
+      [
+        "list",
+        "_ollama"
+      ],
+      [
+        "list",
+        "_pre"
+      ],
+      [
+        "AL",
+        "LO"
+      ],
+      [
+        "AL",
+        "L_S"
+      ],
+      [
+        "E_",
+        "EXTS"
+      ],
+      [
+        "RO",
+        "JEC"
+      ],
+      [
+        "RO",
+        "VIDE"
+      ],
+      [
+        "SE",
+        "T_EXTS"
+      ],
+      [
+        "_P",
+        "YP"
+      ],
+      [
+        "_P",
+        "ROVIDE"
+      ],
+      [
+        "_s",
+        "plit"
+      ],
+      [
+        "_t",
+        "arget"
+      ],
+      [
+        "auto",
+        "_apply"
+      ],
+      [
+        "fo",
+        "llow"
+      ],
+      [
+        "so",
+        "ft"
+      ],
+      [
+        "state",
+        "less"
+      ],
+      [
+        "igno",
+        "red_segment"
+      ],
+      [
+        "_root",
+        "_for"
+      ],
+      [
+        "_root",
+        "_of"
+      ],
+      [
+        "An",
+        "thropic"
+      ],
+      [
+        "NO",
+        "TE"
+      ],
+      [
+        "RC",
+        "E_EXTS"
+      ],
+      [
+        "[]",
+        ")\",\""
+      ],
+      [
+        "[]",
+        ")⟫)"
+      ],
+      [
+        "be",
+        "st"
+      ],
+      [
+        "be",
+        "low"
+      ],
+      [
+        "be",
+        "havi"
+      ],
+      [
+        "ht",
+        "m"
+      ],
+      [
+        "iz",
+        "e_by"
+      ],
+      [
+        "md",
+        "x"
+      ],
+      [
+        "}`",
+        "'⟫,\"\",⟪"
+      ],
+      [
+        "utf",
+        "8"
+      ],
+      [
+        "FIL",
+        "ES"
+      ],
+      [
+        "ce_",
+        "utf8"
+      ],
+      [
+        "defa",
+        "ult"
+      ],
+      [
+        "AS",
+        "SET_EXTS"
+      ],
+      [
+        "her",
+        "e"
+      ],
+      [
+        "min",
+        "utes"
+      ],
+      [
+        "}'⟫",
+        "."
+      ],
+      [
+        "}'⟫",
+        ",⟪"
+      ],
+      [
+        "\",\"\",\"",
+        "-"
+      ],
+      [
+        "pare",
+        "ns"
+      ],
+      [
+        "fix",
+        "ture"
+      ],
+      [
+        "_PRE",
+        "FIX"
+      ],
+      [
+        "FILE_",
+        "EXTS"
+      ],
+      [
+        "_balance_",
+        "bra"
+      ],
+      [
+        "_balance_",
+        "parens"
+      ],
+      [
+        "\":",
+        "\""
+      ],
+      [
+        "\":",
+        "\"\",⟪"
+      ],
+      [
+        "(\"\"",
+        "\"\","
+      ],
+      [
+        ")[",
+        ":"
+      ],
+      [
+        "?\"",
+        "✓\":"
+      ],
+      [
+        "Te",
+        "sts"
+      ],
+      [
+        "_S",
+        "TRI"
+      ],
+      [
+        "_S",
+        "tore"
+      ],
+      [
+        "find",
+        "all"
+      ],
+      [
+        "lv",
+        "e_rep"
+      ],
+      [
+        "pkg",
+        "_root_for"
+      ],
+      [
+        "sv",
+        "g"
+      ],
+      [
+        "sv",
+        "n"
+      ],
+      [
+        "sv",
+        "elte"
+      ],
+      [
+        "val",
+        "idate"
+      ],
+      [
+        "val",
+        "ues"
+      ],
+      [
+        "wr",
+        "ite_"
+      ],
+      [
+        "|----",
+        "--|--------"
+      ],
+      [
+        "gener",
+        "ated_"
+      ],
+      [
+        "run_",
+        "auto"
+      ],
+      [
+        "run_",
+        "cherry"
+      ],
+      [
+        "run_",
+        "recon"
+      ],
+      [
+        "LAN",
+        "G_OF_EXT"
+      ],
+      [
+        "sourc",
+        "e_"
+      ],
+      [
+        ")∨\"\"",
+        "."
+      ],
+      [
+        "mark",
+        "er"
+      ],
+      [
+        "mbol",
+        "Kind"
+      ],
+      [
+        "strip_comments",
+        "_and"
+      ],
+      [
+        "DEFAULT_",
+        "LANGUAG"
+      ],
+      [
+        "Co",
+        "mpose"
+      ],
+      [
+        "Co",
+        "mmandSur"
+      ],
+      [
+        "Impor",
+        "tError"
+      ],
+      [
+        "Se",
+        "tup"
+      ],
+      [
+        "Se",
+        "lect"
+      ],
+      [
+        "Sy",
+        "nergyKind"
+      ],
+      [
+        "Sy",
+        "mbolKind"
+      ],
+      [
+        "Typ",
+        "eScript"
+      ],
+      [
+        "Typ",
+        "edDi"
+      ],
+      [
+        "]:\"\"",
+        "."
+      ],
+      [
+        "_se",
+        "manti"
+      ],
+      [
+        "_for",
+        "ce_utf8"
+      ],
+      [
+        "cer",
+        "tain"
+      ],
+      [
+        "cer",
+        "tify"
+      ],
+      [
+        "cro",
+        "sses"
+      ],
+      [
+        "eg",
+        "g"
+      ],
+      [
+        "evo",
+        "lve"
+      ],
+      [
+        "evo",
+        "lve_rep"
+      ],
+      [
+        "jp",
+        "g"
+      ],
+      [
+        "jp",
+        "eg"
+      ],
+      [
+        "ollama",
+        "_model"
+      ],
+      [
+        "ollama",
+        "_url"
+      ],
+      [
+        "sor",
+        "ted"
+      ],
+      [
+        "wh",
+        "y"
+      ],
+      [
+        "wh",
+        "en"
+      ],
+      [
+        "web",
+        "m"
+      ],
+      [
+        "web",
+        "p"
+      ],
+      [
+        "woff",
+        "2"
+      ],
+      [
+        "}'",
+        "\""
+      ],
+      [
+        "rename",
+        "_module"
+      ],
+      [
+        "rename",
+        "_semanti"
+      ],
+      [
+        "step",
+        "s"
+      ],
+      [
+        "pass",
+        "ing"
+      ],
+      [
+        "exp",
+        "ose"
+      ],
+      [
+        "exp",
+        "licit"
+      ],
+      [
+        "'])",
+        "}"
+      ],
+      [
+        "'])",
+        "},"
+      ],
+      [
+        "asci",
+        "idoc"
+      ],
+      [
+        "log",
+        "ic"
+      ],
+      [
+        "load_",
+        "config"
+      ],
+      [
+        "load_",
+        "keys"
+      ],
+      [
+        "anthropic",
+        "_key"
+      ],
+      [
+        "model",
+        "s"
+      ],
+      [
+        "is_",
+        "ignored_segment"
+      ],
+      [
+        "(\"^",
+        "("
+      ],
+      [
+        "shap",
+        "e"
+      ],
+      [
+        "shap",
+        "ing"
+      ],
+      [
+        "_model",
+        "s"
+      ],
+      [
+        "_domain",
+        "s"
+      ],
+      [
+        "_domain",
+        "_of"
+      ],
+      [
+        "openai",
+        "_key"
+      ],
+      [
+        "html",
+        "cov"
+      ],
+      [
+        "http",
+        "s"
+      ],
+      [
+        "\",\"\",\"```",
+        "\","
+      ],
+      [
+        "TIER",
+        "_NA"
+      ],
+      [
+        "TIER",
+        "_PREFIX"
+      ],
+      [
+        "every",
+        "thing"
+      ],
+      [
+        "sources",
+        "_dir"
+      ],
+      [
+        "EMITS",
+        "_IN"
+      ],
+      [
+        "EMITS",
+        "_PYP"
+      ],
+      [
+        "gemini",
+        "_key"
+      ],
+      [
+        "detect",
+        "_ollama"
+      ],
+      [
+        "render_tests_",
+        "init"
+      ],
+      [
+        "render_tests_",
+        "conftest"
+      ],
+      [
+        "LANGUAG",
+        "ES"
+      ],
+      [
+        "\"~",
+        "/."
+      ],
+      [
+        "(?",
+        ":"
+      ],
+      [
+        ")?",
+        "\",\"\","
+      ],
+      [
+        ")]",
+        "\",\""
+      ],
+      [
+        "),\"",
+        "```\",\"\",\""
+      ],
+      [
+        ")'}",
+        "\\"
+      ],
+      [
+        "-]",
+        "+',"
+      ],
+      [
+        "11",
+        "434"
+      ],
+      [
+        "1_",
+        "provider"
+      ],
+      [
+        "200",
+        "0"
+      ],
+      [
+        "=[",
+        "⟪"
+      ],
+      [
+        "DO",
+        "C_EXTS"
+      ],
+      [
+        "DS",
+        "_Store"
+      ],
+      [
+        "Dur",
+        "ation"
+      ],
+      [
+        "Dec",
+        "ision"
+      ],
+      [
+        "EF",
+        "FEC"
+      ],
+      [
+        "GP",
+        "T"
+      ],
+      [
+        "Go",
+        "ogle"
+      ],
+      [
+        "Gem",
+        "ini"
+      ],
+      [
+        "In",
+        "stall"
+      ],
+      [
+        "IT_",
+        "FILES"
+      ],
+      [
+        "Jav",
+        "aScript"
+      ],
+      [
+        "K_",
+        "COMMENT_RE"
+      ],
+      [
+        "La",
+        "yout"
+      ],
+      [
+        "Lang",
+        "uage"
+      ],
+      [
+        "Liv",
+        "es"
+      ],
+      [
+        "Ma",
+        "ke"
+      ],
+      [
+        "Man",
+        "ual"
+      ],
+      [
+        "Merge",
+        "Decision"
+      ],
+      [
+        "MAI",
+        "N_EXT"
+      ],
+      [
+        "NG_",
+        "RE"
+      ],
+      [
+        "NE_",
+        "COMMENT_RE"
+      ],
+      [
+        "OU",
+        "RCE_EXTS"
+      ],
+      [
+        "Opt",
+        "ion"
+      ],
+      [
+        "Open",
+        "AI"
+      ],
+      [
+        "Pa",
+        "ckage"
+      ],
+      [
+        "Pl",
+        "ug"
+      ],
+      [
+        "Pro",
+        "vider"
+      ],
+      [
+        "R_",
+        "MAP"
+      ],
+      [
+        "Re",
+        "produce"
+      ],
+      [
+        "Ro",
+        "unds"
+      ],
+      [
+        "Sco",
+        "re"
+      ],
+      [
+        "Sha",
+        "red"
+      ],
+      [
+        "Ste",
+        "p"
+      ],
+      [
+        "TTI",
+        "CE"
+      ],
+      [
+        "Ver",
+        "ify"
+      ],
+      [
+        "Wh",
+        "at"
+      ],
+      [
+        "Wor",
+        "ker"
+      ],
+      [
+        "WED_",
+        "FILE_EXTS"
+      ],
+      [
+        "\\\\",
+        "-]+',"
+      ],
+      [
+        "]\",",
+        "[\"["
+      ],
+      [
+        "_n",
+        "ormal"
+      ],
+      [
+        "_en",
+        "sure_log"
+      ],
+      [
+        "_pro",
+        "mpt_int"
+      ],
+      [
+        "_str",
+        "ings"
+      ],
+      [
+        "_sum",
+        "mary"
+      ],
+      [
+        "_consum",
+        "er_inputs"
+      ],
+      [
+        "_src",
+        "_root_of"
+      ],
+      [
+        "_result",
+        "_to"
+      ],
+      [
+        "__f",
+        "uture"
+      ],
+      [
+        "_strip",
+        "_opt"
+      ],
+      [
+        "_pen",
+        "alty"
+      ],
+      [
+        "_LI",
+        "NE_COMMENT_RE"
+      ],
+      [
+        "_wor",
+        "ds"
+      ],
+      [
+        "_step",
+        "1_provider"
+      ],
+      [
+        "_pan",
+        "el"
+      ],
+      [
+        "_asci",
+        "i_trajectory"
+      ],
+      [
+        "_is_",
+        "under_igno"
+      ],
+      [
+        "_BLOC",
+        "K_COMMENT_RE"
+      ],
+      [
+        "abo",
+        "ve"
+      ],
+      [
+        "acro",
+        "ss"
+      ],
+      [
+        "car",
+        "ries"
+      ],
+      [
+        "can",
+        "_import"
+      ],
+      [
+        "cur",
+        "sor"
+      ],
+      [
+        "gat",
+        "es"
+      ],
+      [
+        "gith",
+        "ub"
+      ],
+      [
+        "hard",
+        "er"
+      ],
+      [
+        "mult",
+        "iply"
+      ],
+      [
+        "mistr",
+        "al"
+      ],
+      [
+        "nu",
+        "xt"
+      ],
+      [
+        "nImpor",
+        "ts"
+      ],
+      [
+        "nTh",
+        "is"
+      ],
+      [
+        "nam",
+        "ed"
+      ],
+      [
+        "ppt",
+        "x"
+      ],
+      [
+        "posit",
+        "ional"
+      ],
+      [
+        "spa",
+        "ce"
+      ],
+      [
+        "sav",
+        "e_config"
+      ],
+      [
+        "tas",
+        "ks"
+      ],
+      [
+        "wer",
+        "e"
+      ],
+      [
+        "wra",
+        "pped_class"
+      ],
+      [
+        "wir",
+        "ing"
+      ],
+      [
+        "xls",
+        "x"
+      ],
+      [
+        "zer",
+        "o"
+      ],
+      [
+        "}->",
+        "{"
+      ],
+      [
+        ",\"(\",\"",
+        ")\")"
+      ],
+      [
+        ",\"[\",\"",
+        "]\")"
+      ],
+      [
+        "reso",
+        "lve"
+      ],
+      [
+        "regist",
+        "er_fn"
+      ],
+      [
+        "requi",
+        "red"
+      ],
+      [
+        "instr",
+        "uct"
+      ],
+      [
+        "inval",
+        "id"
+      ],
+      [
+        "inser",
+        "t"
+      ],
+      [
+        "infer",
+        "red"
+      ],
+      [
+        "invoc",
+        "ation"
+      ],
+      [
+        "star",
+        "tswith"
+      ],
+      [
+        "stand",
+        "ard"
+      ],
+      [
+        "st_s",
+        "ize"
+      ],
+      [
+        "stub",
+        "_penalty"
+      ],
+      [
+        "architect",
+        "urally"
+      ],
+      [
+        "separ",
+        "ated"
+      ],
+      [
+        "enum",
+        "s"
+      ],
+      [
+        "almo",
+        "st"
+      ],
+      [
+        "coher",
+        "ent"
+      ],
+      [
+        "divi",
+        "de"
+      ],
+      [
+        "diff",
+        "erent"
+      ],
+      [
+        "producer_pay",
+        "load_keys"
+      ],
+      [
+        "unti",
+        "l"
+      ],
+      [
+        "unspec",
+        "ified"
+      ],
+      [
+        "expan",
+        "duser"
+      ],
+      [
+        "---|--------",
+        "----|\\"
+      ],
+      [
+        "annot",
+        "ations"
+      ],
+      [
+        "meth",
+        "od"
+      ],
+      [
+        "fiel",
+        "d"
+      ],
+      [
+        "(\"`\",\"",
+        "'\")"
+      ],
+      [
+        "(\".\")",
+        "∧"
+      ],
+      [
+        "run_f",
+        "inalize"
+      ],
+      [
+        ").\"\"\"",
+        "'''⟫,\""
+      ],
+      [
+        "render_synergy",
+        "_adapter"
+      ],
+      [
+        "artifact_s",
+        "ize_by"
+      ],
+      [
+        "T_LA",
+        "TTICE"
+      ],
+      [
+        "subtr",
+        "act"
+      ],
+      [
+        "')}.\"⟫,\"",
+        "\"]"
+      ],
+      [
+        "CONVER",
+        "GED"
+      ],
+      [
+        "heurist",
+        "ic"
+      ],
+      [
+        "localho",
+        "st"
+      ],
+      [
+        "atomadic_forge_se",
+        "ed_"
+      ],
+      [
+        "Architect",
+        "ure"
+      ],
+      [
+        "final_output",
+        "_type"
+      ],
+      [
+        "__file",
+        "__"
+      ],
+      [
+        "list_ollama",
+        "_models"
+      ],
+      [
+        "list_pre",
+        "sets"
+      ],
+      [
+        "ALLO",
+        "WED_FILE_EXTS"
+      ],
+      [
+        "ALL_S",
+        "OURCE_EXTS"
+      ],
+      [
+        "ROJEC",
+        "T"
+      ],
+      [
+        "_PROVIDE",
+        "R_MAP"
+      ],
+      [
+        "_split",
+        "_words"
+      ],
+      [
+        "_target",
+        "_score"
+      ],
+      [
+        "follow",
+        "s"
+      ],
+      [
+        "soft",
+        "ware"
+      ],
+      [
+        "behavi",
+        "oral"
+      ],
+      [
+        "default",
+        "_target_score"
+      ],
+      [
+        "fixture",
+        "s"
+      ],
+      [
+        "_balance_bra",
+        "ckets"
+      ],
+      [
+        "?\"✓\":",
+        "\"("
+      ],
+      [
+        "_STRI",
+        "NG_RE"
+      ],
+      [
+        "write_",
+        "text"
+      ],
+      [
+        "|------|--------",
+        "---|------------|\\"
+      ],
+      [
+        "generated_",
+        "at_utc"
+      ],
+      [
+        "strip_comments_and",
+        "_strings"
+      ],
+      [
+        "DEFAULT_LANGUAG",
+        "E"
+      ],
+      [
+        "CommandSur",
+        "face"
+      ],
+      [
+        "TypedDi",
+        "cts"
+      ],
+      [
+        "certain",
+        "ly"
+      ],
+      [
+        "crosses",
+        "_domains"
+      ],
+      [
+        "evolve_rep",
+        "ort"
+      ],
+      [
+        "rename_semanti",
+        "c"
+      ],
+      [
+        "explicit",
+        "ly"
+      ],
+      [
+        "TIER_NA",
+        "MES"
+      ],
+      [
+        "EMITS_IN",
+        "IT_FILES"
+      ],
+      [
+        "EMITS_PYP",
+        "ROJECT"
+      ],
+      [
+        "),\"```\",\"\",\"",
+        "##"
+      ],
+      [
+        "EFFEC",
+        "T_LATTICE"
+      ],
+      [
+        "_normal",
+        "ize"
+      ],
+      [
+        "_ensure_log",
+        "_dir"
+      ],
+      [
+        "_result_to",
+        "_dict"
+      ],
+      [
+        "__future",
+        "__"
+      ],
+      [
+        "_strip_opt",
+        "ional"
+      ],
+      [
+        "_is_under_igno",
+        "red"
+      ],
+      [
+        "artifact_size_by",
+        "tes"
+      ]
+    ]
+  }
+}
