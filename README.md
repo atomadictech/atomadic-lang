@@ -6,7 +6,7 @@ compression layer for sovereign AI systems, complementing **Atomadic**,
 
 > **`.atm` is a verified intermediate representation for AI-emitted code, not a source language.** The relationship to surface code (Python, eventually JS/Rust/etc.) is the same as `wat` to `wasm`, or `.proto` to protobuf: humans author in a familiar surface, the toolchain compiles to a dense, structurally-verified, edge-deployable IR. The IR is what gets stored, transmitted, masked at decode time, and verified.
 
-**Status**: v2.6 (post-swarm-audit pivot). 11 milestones shipped in one session, then a 4-critic hostile review forced a reframing and 9 critical bug fixes.
+**Status**: v3.4.0 — pre-alpha. 344 tests passing (including a property-based round-trip fuzzer that runs ~1,800 randomised cases per `pytest`), W-grammar classifier with 32 token roles, `match`/`case` body-form lowering, byte-identical round-trip enforced as the canonical invariant.
 
 ---
 
@@ -22,6 +22,7 @@ A runnable system for:
 | Verify round-trip | `python -m atomadic_lang roundtrip <atm-file>` | Check `parse + re-emit == original` byte-identically |
 | Measure density | `python -m atomadic_lang density <py> <atm> -t <tokenizer>` | Compare cl100k tokens vs `.atm` BPE tokens |
 | Run §1 latency benchmark | `python -m atomadic_lang benchmark -t tokenizer.json` | Mask + state + refinement + logit-application timing |
+| W-grammar audit + enforce | `python -m atomadic_lang wgrammar-audit <tok> --enforce` | Classify every BPE merge by structural role; exit non-zero if overfit fraction exceeds the anchored bound |
 
 ## Why "IR, not source language"
 
@@ -70,7 +71,7 @@ python -m atomadic_lang roundtrip calc.atm
 # Latency benchmark (corrected v2.6 methodology — all components per §1 lemma)
 python -m atomadic_lang benchmark --tokenizer tokenizer.json
 
-# Run all 200+ tests
+# Run all 344+ tests (includes ~1,800 property-based round-trip cases)
 pytest tests/
 ```
 
@@ -84,8 +85,22 @@ src/atomadic_lang/
 ├── a1_at_functions/   pure helpers: parse, lower, emit, mask eval, AST-walk refinement eval
 ├── a2_mo_composites/  stateful: BPE trainer, corpus collector
 ├── a3_og_features/    orchestrators: lower / raise / tokenize / latency / synthetic-corpus
-└── a4_sy_orchestration/  Typer CLI (7 subcommands)
+└── a4_sy_orchestration/  Typer CLI (8 subcommands)
 ```
+
+## Body-form coverage
+
+The Python → `.atm` lowerer recognises (in priority order):
+
+1. **Refinement** — `if cond: raise ValueError(...); return expr` → `pre ¬cond ; body expr`
+2. **Inline** — single `return expr` (BinOp, Compare, Call, Name, Constant, ternary, list/dict/set/generator comprehension, lambda, f-string)
+3. **`match`/`case`** (v3.3) — single `match` statement with literal / singleton / OR-pattern / wildcard cases → nested ternary chain
+4. **Sequence** — multi-statement bodies with assign / aug-assign / ann-assign / bare-call ending in return → `(s1 ; s2 ; ... ; ret)`
+5. **Structural fallback** — anything else preserved verbatim via `ast.unparse` inside `⟪...⟫` markers (totality-preserving)
+
+## Round-trip property — defended by Hypothesis fuzzer
+
+`tests/test_property_roundtrip.py` (v3.4) uses Hypothesis to generate randomised function bodies in the supported lowering subset and asserts byte-identical round-trip across thousands of cases per run. Seven strategies cover every recognised inline body form including the `match`/`case` v3.3 path. The property `lower → emit → parse → re-emit == emit` is now infrastructure rather than an empirical claim.
 
 ## Documentation
 

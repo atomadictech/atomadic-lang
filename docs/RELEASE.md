@@ -31,7 +31,7 @@ the temporary environment to clean up normally.
 Expected state as of this release-hardening pass:
 
 - Ruff passes.
-- Pytest reports `208 passed, 2 xfailed`.
+- Pytest reports `344 passed, 2 xfailed` (or higher as new tests are added — the property-based fuzzer adds ~1,800 inner cases per run, defending the round-trip invariant).
 - Package build creates an sdist and wheel with `atomadic_lang/py.typed`.
 - `calc.atm` round-trips byte-identically.
 - Forge wire verdict is `PASS`.
