@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atomadic-lang"
-version = "3.3.0"
+version = "3.4.0"
 description = "Atomadic Lang (.atm) — a verified intermediate representation for AI-emitted code."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,6 +31,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "build>=1.2",
+    "hypothesis>=6.100",
     "pytest>=8.0",
     "ruff>=0.6",
 ]

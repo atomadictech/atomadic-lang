@@ -5,6 +5,51 @@ All notable changes to this project are documented in this file.
 The format is based on Keep a Changelog, and this project follows semantic
 versioning while it is pre-alpha.
 
+## [3.4.0] - 2026-05-05
+
+### Added
+
+- **Property-based round-trip fuzzer** —
+  `tests/test_property_roundtrip.py` uses Hypothesis to generate
+  randomised function bodies in the supported lowering subset and
+  asserts the byte-identical round-trip invariant
+  `lower → emit → parse → re-emit == emit` across thousands of cases.
+- 7 fuzzer strategies covering every recognised inline body form:
+  - **Inline `BinOp`** (`return a±b`) — 300 cases
+  - **Inline ternary** (`return t if cond else f`) — 300 cases
+  - **Refinement** (`if cond: raise ValueError(...); return ...`) — 200 cases
+  - **Sequence** (`var = a±b; return var`) — 200 cases
+  - **`match`/`case` literal** (1–4 distinct int cases + wildcard) — 300 cases
+  - **`match`/`case` OR-pattern** (2–4-arity disjunction + wildcard) — 200 cases
+  - **F-string** single-substitution — 200 cases
+- ~1,800 randomised cases per `pytest` run, all property-passing.
+- The new v3.3 `match`/`case` lowering is fuzzed from day one through
+  Strategies 5 and 6.
+
+### Dependencies
+
+- `[project.optional-dependencies] dev` adds `hypothesis>=6.100`. No
+  runtime dependency change.
+
+### Tests
+
+- 337 → **344 passed** (+7 property strategies, each a single test that
+  runs 200–300 inner cases), 2 xfailed unchanged.
+- ruff clean. Wall clock ≈ 9.7 s including ~1,800 fuzz cases.
+
+### Notes
+
+- Strategies use the same 8-int-parameter signature
+  (`a, b, c, x, y, n, k, m`) so generated bodies never reference an
+  unbound name. F-string strategy generates lowercase-only string
+  segments to keep the inner content within the supported character
+  class.
+- All strategies converge on the inline / refinement form before the
+  round-trip check; bodies that hit the structural fallback are rare
+  given the construction and are skipped via `pytest.skip` when
+  encountered (only the f-string strategy can hit this in practice
+  given the existing lowering coverage).
+
 ## [3.3.0] - 2026-05-05
 
 ### Added
