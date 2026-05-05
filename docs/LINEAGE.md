@@ -1408,3 +1408,11 @@ v2.7 measured the overfit. v2.8 named it: 52% of v1.5's vocabulary is role-untyp
 
 **Next milestone (v2.9)**: smallest possible application of the v2.8 audit — train a v1.6 BPE on lowered-only corpus (drop structural-fallback `⟪…⟫`-containing decls before training). Re-audit. Re-measure hold-out density. Targets: overfit fraction < 0.20, hold-out density ≥ 1.5×. Both are achievable without BitDistill or new hardware.
 
+---
+
+## Continued in CHANGELOG
+
+The v0 → v2.8 arc above is the internal-milestone log. From `3.1.0` onward
+the project moved to a tagged-release rhythm; per-release entries live in
+[`CHANGELOG.md`](../CHANGELOG.md) at the repository root.
+

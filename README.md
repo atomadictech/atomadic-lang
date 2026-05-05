@@ -110,7 +110,7 @@ Read in this order:
 2. **[PORTFOLIO.md](docs/PORTFOLIO.md)** — how Lang fits the Atomadic ecosystem.
 3. **[SWARM_AUDIT.md](docs/SWARM_AUDIT.md)** — 4-critic hostile review and the v2.6 corrections it forced.
 4. **[PAPER_v2.md](docs/PAPER_v2.md)** — submission-draft writeup of v0→v2.0 (with v2.6 §7.1 corrections).
-5. **[LINEAGE.md](docs/LINEAGE.md)** — append-only milestone log. v0 → v2.6 entries.
+5. **[LINEAGE.md](docs/LINEAGE.md)** — append-only milestone log, v0 → v2.8 entries (the internal-milestone arc); [CHANGELOG.md](CHANGELOG.md) continues the timeline from `3.1.0` onward.
 6. **[REFINED_DESIGN.md](docs/REFINED_DESIGN.md)** — single coherent design doc post-BEP-6.
 7. **[BREAKTHROUGHS.md](docs/BREAKTHROUGHS.md)** — 17 novel claims with cycle-by-cycle audit notes.
 8. **[EPIPHANIES.md](docs/EPIPHANIES.md)** — 35+ design/process insights.
