@@ -4,4 +4,4 @@ The toolchain compiles tier-organized Python packages to a dense, structurally
 verified `.atm` IR with byte-identical round-trip and a custom 4096-vocab BPE.
 """
 
-__version__ = "3.1.0"
+__version__ = "3.2.0"

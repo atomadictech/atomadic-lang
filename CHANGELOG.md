@@ -5,6 +5,36 @@ All notable changes to this project are documented in this file.
 The format is based on Keep a Changelog, and this project follows semantic
 versioning while it is pre-alpha.
 
+## [3.2.0] - 2026-05-05
+
+### Added
+
+- **Path A.3 — W-grammar classifier coverage for encoding noise + Python
+  dunders.** Two new legal token roles in `a0/wgrammar.py`:
+  - `ENCODING_NOISE` — recognises tokens that are entirely encoding
+    artifacts: replacement char `�`, non-breaking space, zero-width
+    space / non-joiner / joiner, line separator, paragraph separator,
+    BOM. These show up in real corpora when source files cross
+    encoding boundaries (Windows cp1252 → UTF-8 round-trips, etc.) and
+    have no structural meaning. Classifying them as legal-but-noisy
+    keeps them out of the `UNKNOWN` overfit signal where they would
+    otherwise dominate.
+  - `DUNDER` — recognises Python double-underscore identifiers
+    (`__init__`, `__main__`, `__name__`, `__class__`, `__repr__`) and
+    bare runs (`__`, `___`, `____`). Pattern dispatch order puts
+    `DUNDER` before `IDENT_FRAG` so `__init__` is correctly classified
+    as a dunder rather than a generic identifier fragment; single-
+    underscore identifiers like `_init` and `init_` continue to
+    classify as `IDENT_FRAG`.
+- 13 new unit tests covering the new role coverage; total test count
+  311 → 326.
+
+### Changed
+
+- `wgrammar.py` module docstring stripped of stale references; classifier
+  documentation now describes the role lattice without referring to
+  any specific corpus / hold-out finding.
+
 ## [3.1.0] - 2026-05-05
 
 Pre-alpha verified IR for AI-emitted code. Snapshot release after a

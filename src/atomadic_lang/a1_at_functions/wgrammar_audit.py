@@ -26,6 +26,7 @@ from ..a0_qk_constants.wgrammar import (
     PATTERN_DISPATCH,
     ROLE_COMPARATOR,
     ROLE_EFFECT_SIGIL,
+    ROLE_ENCODING_NOISE,
     ROLE_KEYWORD,
     ROLE_LOGIC,
     ROLE_MEMBERSHIP,
@@ -62,6 +63,8 @@ _DIRECT_ROLE_LOOKUP: Final[dict[str, TokenRole]] = {
     # v3.0 — punctuation + unicode decoration as legal roles.
     **{tok: TokenRole.PUNCTUATION for tok in ROLE_PUNCTUATION},
     **{tok: TokenRole.UNICODE_DECORATIVE for tok in ROLE_UNICODE_DECORATIVE},
+    # v3.2 Path A.3 — encoding-noise singles via direct lookup.
+    **{tok: TokenRole.ENCODING_NOISE for tok in ROLE_ENCODING_NOISE},
 }
 
 

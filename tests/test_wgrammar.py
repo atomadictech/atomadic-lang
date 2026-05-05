@@ -253,7 +253,7 @@ def test_classify_token_v3_path_a2_roles(token: str, expected: TokenRole) -> Non
 
 
 def test_v3_new_roles_are_legal() -> None:
-    """All v3.0 + Path A.2 roles must be in LEGAL_ROLES."""
+    """All v3.0 + Path A.2 + Path A.3 roles must be in LEGAL_ROLES."""
     for role in (
         # Path A
         TokenRole.PUNCTUATION,
@@ -267,8 +267,44 @@ def test_v3_new_roles_are_legal() -> None:
         TokenRole.ATM_PARAM_TAG,
         TokenRole.COMPOSITE_TYPE_TAG,
         TokenRole.STRING_JUNCTION,
+        # Path A.3
+        TokenRole.ENCODING_NOISE,
+        TokenRole.DUNDER,
     ):
-        assert role in LEGAL_ROLES, f"v3.0 role {role.name} missing from LEGAL_ROLES"
+        assert role in LEGAL_ROLES, f"v3.0+ role {role.name} missing from LEGAL_ROLES"
+
+
+@pytest.mark.parametrize("token,expected", [
+    # ENCODING_NOISE — single chars (direct lookup)
+    ("�", TokenRole.ENCODING_NOISE),                  # replacement
+    (" ", TokenRole.ENCODING_NOISE),                  # non-breaking space
+    ("​", TokenRole.ENCODING_NOISE),                  # zero-width space
+    ("﻿", TokenRole.ENCODING_NOISE),                  # BOM
+    # ENCODING_NOISE — multi-char runs (pattern fallback)
+    ("� ", TokenRole.ENCODING_NOISE),
+    ("​‌‍", TokenRole.ENCODING_NOISE),
+    # DUNDER
+    ("__", TokenRole.DUNDER),
+    ("___", TokenRole.DUNDER),
+    ("____", TokenRole.DUNDER),
+    ("__init__", TokenRole.DUNDER),
+    ("__main__", TokenRole.DUNDER),
+    ("__name__", TokenRole.DUNDER),
+    ("__class__", TokenRole.DUNDER),
+    ("__repr__", TokenRole.DUNDER),
+])
+def test_classify_token_v3_path_a3_roles(token: str, expected: TokenRole) -> None:
+    """v3.2 Path A.3: encoding-noise + dunder coverage."""
+    assert classify_token(token) == expected
+
+
+def test_dunder_takes_priority_over_ident_frag() -> None:
+    """Dispatch order must put DUNDER before IDENT_FRAG so __init__ is DUNDER."""
+    # __init__ is a valid ident shape but is more-specifically a dunder.
+    assert classify_token("__init__") == TokenRole.DUNDER
+    # Plain ident with single underscore stays IDENT_FRAG.
+    assert classify_token("_init") == TokenRole.IDENT_FRAG
+    assert classify_token("init_") == TokenRole.IDENT_FRAG
 
 
 # --- a1 audit_vocab -----------------------------------------------------

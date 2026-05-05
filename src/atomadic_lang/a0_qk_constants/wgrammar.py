@@ -1,18 +1,15 @@
 """Tier a0 — W-grammar (Van Wijngaarden two-level grammar) constants for BPE merge auditing.
 
-This module encodes the **structural-role lattice** for `.atm` BPE tokens. It is
-the data backbone of breakthrough B-016: a custom-trained BPE will, by
-construction, learn high-frequency *corpus* merges. Some of those merges are
-also high-*structural*-frequency (e.g. ``1π``, ``⟩→i``) — those generalise.
-Others are corpus-specific (e.g. ``add⟨``, ``b:i⟩``) — those overfit.
+This module encodes the **structural-role lattice** for `.atm` BPE tokens.
+A custom-trained BPE will, by construction, learn high-frequency *corpus*
+merges. Some of those merges are also high-*structural*-frequency
+(e.g. ``1π``, ``⟩→i``) — those generalise. Others are corpus-specific
+(e.g. ``add⟨``, ``b:i⟩``) — those overfit.
 
 The W-grammar partitions every BPE-emitted token into a structural role.
 A merge is **W-grammar-legal** iff its merged content has a known role
 (per [a1/wgrammar_audit.py](../a1_at_functions/wgrammar_audit.py)). Merges
 without a known role are flagged as overfit signals.
-
-This addresses the v2.7 hold-out density finding: corpus-frequency merges
-overfit a training corpus, but role-pair merges generalise across corpora.
 
 Lookup tables only. Zero logic.
 """
@@ -67,7 +64,10 @@ class TokenRole(IntEnum):
     ATM_PARAM_TAG = 27      # ⟨ident, ⟨ident:, ⟨ident:s, name:s, _count:i, s:i
     COMPOSITE_TYPE_TAG = 28 # s:[s], s:[_], :s⟩, :s⟩→, :s⟩→s, :_⟩→, (s,_), s:(s,_)
     STRING_JUNCTION = 29    # (", [", {", ,", =", :", ),
-    UNKNOWN = 30            # token shape not classified — overfit signal
+    # v3.2 Path A.3 — encoding-noise + dunder coverage.
+    ENCODING_NOISE = 30     # replacement char, NBSP, zero-widths, BOM, surrogate halves
+    DUNDER = 31             # __, ___, __init__, __main__, __name__
+    UNKNOWN = 32            # token shape not classified — overfit signal
 
 
 # --- Role membership tables ----------------------------------------------
@@ -145,6 +145,24 @@ ROLE_UNICODE_DECORATIVE: Final[frozenset[str]] = frozenset({
 })
 
 
+# v3.2 Path A.3 — encoding artifacts (replacement char, non-breaking space,
+# zero-width chars, BOM, surrogate halves) that show up when corpora cross
+# encoding boundaries (Windows cp1252 → UTF-8 round-trips, etc.). These are
+# universally meaningless byte-level noise — classified as legal-but-noisy
+# rather than UNKNOWN because their presence in a corpus is corpus-encoding
+# state, not corpus-specific structural information.
+ROLE_ENCODING_NOISE: Final[frozenset[str]] = frozenset({
+    "�",  # replacement character (substituted for un-decodable bytes)
+    " ",  # non-breaking space
+    "​",  # zero-width space
+    "‌",  # zero-width non-joiner
+    "‍",  # zero-width joiner
+    " ",  # line separator
+    " ",  # paragraph separator
+    "﻿",  # byte-order mark (BOM)
+})
+
+
 # --- Compound-form patterns ---------------------------------------------
 #
 # Patterns used by a1/wgrammar_audit.py to recognise multi-character tokens
@@ -210,6 +228,27 @@ PATTERN_EXPR_BIGRAM: Final[str] = (
     r"|[A-Za-z_0-9]+[+\-*/%][A-Za-z_0-9]+"           # a+b, x*y, self+1
     r"|[A-Za-z_0-9]+[≠≤≥≟<>=][0-9A-Za-z_]*"          # b≠0, x<10, n≥0
     r")$"
+)
+
+
+# v3.2 Path A.3 — DUNDER: Python double-underscore identifiers. e.g.
+# ``__init__``, ``__main__``, ``__name__``, ``__class__``, ``__repr__``;
+# also bare runs like ``__``, ``___``. Universally legitimate in Python
+# source; treated as a distinct role to keep dunder counts auditable.
+PATTERN_DUNDER: Final[str] = (
+    r"^(?:"
+    r"_{2,}"                                          # __, ___, ____
+    r"|_{2,}[A-Za-z][A-Za-z0-9_]*_{2,}"               # __init__, __name__
+    r"|_{2,}[A-Za-z][A-Za-z0-9_]*"                    # __init, __dict
+    r")$"
+)
+
+
+# v3.2 Path A.3 — ENCODING_NOISE: pattern fallback for tokens consisting
+# entirely of encoding artifacts (one or more chars from ROLE_ENCODING_NOISE).
+# Mostly handled by direct lookup; this pattern catches multi-char runs.
+PATTERN_ENCODING_NOISE: Final[str] = (
+    r"^[� ​‌‍  ﻿]+$"
 )
 
 
@@ -319,7 +358,13 @@ PATTERN_DISPATCH: Final[tuple[tuple[TokenRole, str], ...]] = (
     # ``a+b`` doesn't fall through (IDENT_FRAG is ident-only anyway, but
     # ordering keeps EXPR_BIGRAM precedence explicit).
     (TokenRole.EXPR_BIGRAM, PATTERN_EXPR_BIGRAM),
+    # v3.2 Path A.3 — DUNDER must come before IDENT_FRAG because ``__init__``
+    # otherwise falls through to IDENT_FRAG. ENCODING_NOISE comes after the
+    # ident pattern (most encoding-noise chars don't fit ident, but the
+    # explicit pattern catches multi-char runs).
+    (TokenRole.DUNDER, PATTERN_DUNDER),
     (TokenRole.IDENT_FRAG, PATTERN_IDENT_FRAG),
+    (TokenRole.ENCODING_NOISE, PATTERN_ENCODING_NOISE),
     (TokenRole.OP_CHAIN, PATTERN_OPERATOR_CHAIN),
     (TokenRole.OP_CHAIN, PATTERN_COMPARATOR_CHAIN),
 )
@@ -364,4 +409,7 @@ LEGAL_ROLES: Final[frozenset[TokenRole]] = frozenset({
     TokenRole.ATM_PARAM_TAG,
     TokenRole.COMPOSITE_TYPE_TAG,
     TokenRole.STRING_JUNCTION,
+    # v3.2 Path A.3 — encoding-noise + dunder coverage.
+    TokenRole.ENCODING_NOISE,
+    TokenRole.DUNDER,
 })
