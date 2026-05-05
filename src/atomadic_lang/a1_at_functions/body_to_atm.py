@@ -1,6 +1,6 @@
 """Tier a1 — pure conversion of a Python function body AST to an .atm expression.
 
-Handles the v0 / v0.6 / v0.8 subset:
+Handles the v0 / v0.6 / v0.8 / v3.3 subset:
   - single-return bodies → inline form
   - if-raise-then-return bodies → refinement form
   - multi-statement bodies → sequence form ``(s1 ; s2 ; ... ; ret)`` (v0.6)
@@ -12,6 +12,7 @@ Handles the v0 / v0.6 / v0.8 subset:
   - **list comprehensions** (``[e for x in xs]``) → ``[e | x ∈ xs]`` (v0.8)
   - **dict / set / generator comprehensions** → analogous (v0.8)
   - **lambdas** (``lambda x: x*2``) → ``x↦x*2`` (v0.8)
+  - **match/case** (literal/singleton/OR/wildcard) → nested ternary (v3.3)
   - simple BinOp / Compare / Call / Name / Constant expressions
 
 Unsupported constructs lower to a structural placeholder rather than failing.
@@ -82,6 +83,12 @@ def lower_function_body(body: list[ast.stmt]) -> BodyLowering:
         body_expr = _ifreturn_to_ternary(work[0])  # type: ignore[arg-type]
         if body_expr is not None:
             return BodyLowering(pre="", post="", body=body_expr, form="inline")
+
+    # Pattern 2c (v3.3): single match-case statement → nested ternary.
+    if len(work) == 1 and isinstance(work[0], ast.Match):
+        rendered = _match_to_ternary(work[0])
+        if rendered is not None:
+            return BodyLowering(pre="", post="", body=rendered, form="inline")
 
     # Pattern 3 (v0.6): multi-statement body of recognised stmts ending in return.
     # Lowers to a sequence form ``(s1 ; s2 ; ... ; ret_expr)``.
@@ -608,3 +615,120 @@ def _lower_block_as_expr(stmts: list[ast.stmt]) -> str | None:
         return None
     # Strip outer parens — caller will add its own structure.
     return seq[1:-1] if seq.startswith("(") and seq.endswith(")") else seq
+
+
+# --- v3.3: match/case → ternary chain --------------------------------------
+
+
+def _match_to_ternary(match_node: ast.Match) -> str | None:
+    """Lower a single match-case statement to a nested ternary expression.
+
+    Supported case patterns:
+      - ``case <literal>:``      e.g. ``case 1:``, ``case "foo":`` — equality
+      - ``case <singleton>:``    ``case None:``, ``case True:``, ``case False:``
+      - ``case <p1> | <p2>:``    OR of supported sub-patterns — ∨ disjunction
+      - ``case _:``              wildcard — fallthrough else branch
+
+    Each case body must be a single ``return <expr>``. The match must end
+    with a wildcard (``case _:``) so the resulting expression is total.
+
+    Returns None if any case uses unsupported pattern shapes (capture
+    binding, class, sequence, mapping, star, guard) or non-single-return
+    bodies; the caller then falls through to structural placeholder.
+
+    Example::
+
+        match x:
+            case 1: return "one"
+            case 2 | 3: return "small"
+            case _: return "other"
+
+    lowers to ``x≟1?"one":(x≟2∨x≟3?"small":"other")``.
+    """
+    if not match_node.cases:
+        return None
+
+    subject = lower_expr(match_node.subject)
+
+    # Walk cases left-to-right; each case yields (test_expr_or_None, body_expr).
+    branches: list[tuple[str | None, str]] = []
+    saw_wildcard = False
+
+    for case in match_node.cases:
+        if case.guard is not None:
+            return None  # guards not supported in v3.3
+
+        if len(case.body) != 1:
+            return None
+        stmt = case.body[0]
+        if not isinstance(stmt, ast.Return) or stmt.value is None:
+            return None
+        body_expr = lower_expr(stmt.value)
+
+        test = _pattern_to_test(case.pattern, subject)
+        if test == "_":
+            # Wildcard — terminates the chain.
+            saw_wildcard = True
+            branches.append((None, body_expr))
+            break
+        if test is None:
+            return None  # unsupported pattern
+        branches.append((test, body_expr))
+
+    if not saw_wildcard:
+        # No default branch — the expression isn't total. Fall back to
+        # structural rather than emit a partial ternary.
+        return None
+
+    # Build right-associative ternary: t1?b1:(t2?b2:(...:default))
+    # Last branch's test is None (the wildcard); its body is the default.
+    *tested, (_, default) = branches
+    result = default
+    for test, body in reversed(tested):
+        # Parenthesise the false-branch when it is itself a ternary so the
+        # nested form parses unambiguously.
+        rhs = result if ":" not in result or result.startswith("(") else f"({result})"
+        result = f"{test}?{body}:{rhs}"
+    return result
+
+
+def _pattern_to_test(
+    pattern: ast.pattern, subject: str
+) -> str | None:
+    """Lower a match pattern to an .atm test expression against ``subject``.
+
+    Returns:
+      - the literal string ``"_"`` for a wildcard pattern (always matches);
+      - a test expression string for supported literal / singleton / OR
+        patterns;
+      - ``None`` for unsupported pattern shapes (capture, class, sequence,
+        mapping, star).
+    """
+    if isinstance(pattern, ast.MatchValue):
+        return f"{subject}≟{lower_expr(pattern.value)}"
+
+    if isinstance(pattern, ast.MatchSingleton):
+        v = pattern.value
+        if v is None:
+            return f"{subject}≟∅"
+        if v is True:
+            return f"{subject}≟true"
+        if v is False:
+            return f"{subject}≟false"
+        return None
+
+    # Bare wildcard ``_``: MatchAs with no inner pattern AND no name.
+    if isinstance(pattern, ast.MatchAs) and pattern.pattern is None and pattern.name is None:
+        return "_"
+
+    if isinstance(pattern, ast.MatchOr):
+        sub_tests: list[str] = []
+        for sub in pattern.patterns:
+            t = _pattern_to_test(sub, subject)
+            if t in (None, "_"):
+                # OR with wildcard or unsupported sub-pattern → reject.
+                return None
+            sub_tests.append(t)
+        return "∨".join(sub_tests)
+
+    return None

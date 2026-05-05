@@ -619,3 +619,183 @@ def test_lower_listcomp_with_call_filter() -> None:
     out = lower_expr(expr)
     assert "is_valid(x)" in out
     assert out.startswith("[x | x∈xs ? ")
+
+
+# --- v3.3: match/case lowering -------------------------------------------
+
+
+def test_lower_match_literal_int_cases() -> None:
+    src = '''def label(x):
+    match x:
+        case 1: return "one"
+        case 2: return "two"
+        case _: return "other"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    assert out.body == 'x≟1?"one":(x≟2?"two":"other")'
+
+
+def test_lower_match_singleton_none() -> None:
+    src = '''def f(x):
+    match x:
+        case None: return 0
+        case _: return 1
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    assert out.body == "x≟∅?0:1"
+
+
+def test_lower_match_singleton_bool() -> None:
+    src = '''def f(x):
+    match x:
+        case True: return 1
+        case False: return 0
+        case _: return -1
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    # True / False lower to .atm bool keywords true / false.
+    assert out.body == "x≟true?1:(x≟false?0:-1)"
+
+
+def test_lower_match_or_pattern() -> None:
+    src = '''def size(x):
+    match x:
+        case 1 | 2 | 3: return "small"
+        case _: return "big"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    assert out.body == 'x≟1∨x≟2∨x≟3?"small":"big"'
+
+
+def test_lower_match_string_literals() -> None:
+    src = '''def kind(s):
+    match s:
+        case "yes": return 1
+        case "no": return 0
+        case _: return -1
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    assert out.body == 's≟"yes"?1:(s≟"no"?0:-1)'
+
+
+def test_lower_match_two_cases_with_wildcard() -> None:
+    """Boundary: minimum-shape match (one literal + one wildcard)."""
+    src = '''def is_one(x):
+    match x:
+        case 1: return True
+        case _: return False
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+    # Note: our lowerer emits Python True/False bare (lower_expr of Constant).
+    assert "x≟1?" in out.body
+    assert ":" in out.body
+
+
+def test_lower_match_no_wildcard_falls_through_to_structural() -> None:
+    """Without a default branch the expression isn't total — must fall through."""
+    src = '''def partial(x):
+    match x:
+        case 1: return "one"
+        case 2: return "two"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    # No wildcard → structural (the lowerer is total on inputs but partial-
+    # match is rejected as inline; fallback wraps in ⟪…⟫).
+    assert out.form == "structural"
+
+
+def test_lower_match_with_guard_falls_through() -> None:
+    """Guards are not yet supported — case with `if` falls through."""
+    src = '''def f(x):
+    match x:
+        case 1 if x > 0: return "positive one"
+        case _: return "other"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "structural"
+
+
+def test_lower_match_with_capture_pattern_falls_through() -> None:
+    """Capture patterns (case x:) bind variables — not supported in v3.3."""
+    src = '''def f(x):
+    match x:
+        case 1: return "one"
+        case y: return y
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "structural"
+
+
+def test_lower_match_with_class_pattern_falls_through() -> None:
+    """Class patterns (case Point(...):) — not supported in v3.3."""
+    src = '''def f(x):
+    match x:
+        case int(): return "int"
+        case _: return "other"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "structural"
+
+
+def test_match_lowering_is_round_trippable_via_emit_parse() -> None:
+    """The lowered match must emit + parse + re-emit byte-identically."""
+    from atomadic_lang.a1_at_functions.atm_emit import emit_module
+    from atomadic_lang.a1_at_functions.atm_parse import parse_module
+
+    src = '''def label(x):
+    match x:
+        case 1: return "one"
+        case 2 | 3: return "small"
+        case _: return "other"
+'''
+    func = ast.parse(src).body[0]
+    assert isinstance(func, ast.FunctionDef)
+    out = lower_function_body(func.body)
+    assert out.form == "inline"
+
+    # Build a minimal LoweredDecl shape and emit a module.
+    decl = {
+        "tier": 1,
+        "effect": "π",
+        "name": "label",
+        "params": [{"name": "x", "type_sigil": "i"}],
+        "return_sigil": "s",
+        "body_form": "inline",
+        "body": out.body,
+        "pre": "",
+        "post": "",
+        "source_path": "test.py",
+        "source_lineno": 1,
+    }
+    text = emit_module("p", [decl])
+    parsed = parse_module(text)
+    re_emitted = emit_module(parsed["package"], parsed["decls"])
+    assert text == re_emitted, (
+        f"round-trip mismatch:\norig={text!r}\nre={re_emitted!r}"
+    )

@@ -5,6 +5,52 @@ All notable changes to this project are documented in this file.
 The format is based on Keep a Changelog, and this project follows semantic
 versioning while it is pre-alpha.
 
+## [3.3.0] - 2026-05-05
+
+### Added
+
+- **`match`/`case` body-form lowering.** Python 3.10+ `match` statements
+  now lower to nested ternary expressions in `.atm` rather than falling
+  through to the structural placeholder. Two new helpers in
+  `a1/body_to_atm.py`:
+  - `_match_to_ternary(match_node)` — walks the match cases, builds a
+    right-associative ternary chain. Returns `None` (→ structural
+    fallback) if any case is unsupported.
+  - `_pattern_to_test(pattern, subject)` — lowers a single match
+    pattern to a test expression against the subject.
+- Supported case-pattern shapes:
+  - `MatchValue` (literals): `case 1:`, `case "yes":` → `subject≟<lit>`
+  - `MatchSingleton`: `case None:` → `subject≟∅`; `case True/False:`
+    → `subject≟true` / `subject≟false`
+  - `MatchOr`: `case 1 | 2 | 3:` → `subject≟1∨subject≟2∨subject≟3`
+  - `MatchAs(None, None)` (wildcard `case _:`) → fallthrough else branch
+- Unsupported patterns (`MatchAs(name=...)` capture, `MatchClass`,
+  `MatchSequence`, `MatchMapping`, `MatchStar`, guarded cases) cause
+  the lowerer to return `None`, triggering the structural placeholder
+  fallback. The lowerer is total — no input is rejected.
+- Match expressions without a wildcard branch fall back to structural,
+  preserving the totality invariant (the resulting ternary would be
+  partial without a default).
+- 11 new unit tests in `tests/test_lower.py` covering literal-int,
+  string-literal, `None`/`True`/`False` singleton, OR-pattern,
+  two-case minimum, no-wildcard fallback, guard fallback, capture
+  fallback, class-pattern fallback, and **byte-identical round-trip**
+  (`emit → parse → re-emit == original`) on a representative
+  multi-case match.
+
+### Tests
+
+- 326 → **337 passed** (+11), 2 xfailed unchanged.
+- `forge wire` 0 violations, ruff clean.
+
+### Notes
+
+- Lowering preserves left-to-right case ordering: the first matching
+  case wins, exactly as Python's match semantics specify.
+- Right-associative parenthesisation: nested ternaries
+  `t1?b1:(t2?b2:default)` keep the false-branch parsed unambiguously
+  by the existing `cond?a:b` parser.
+
 ## [3.2.0] - 2026-05-05
 
 ### Added
